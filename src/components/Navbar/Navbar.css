@@ -17,18 +17,40 @@
   flex: 1;
 }
 
-.navbar-links {
+.navbar-left {
   display: flex;
-  flex-direction: column;
-  /gap: 10px;
-  align-items: flex-end;
-  margin-top: 35px;
-  margin-right: 38px;
+  align-items: center;
 }
 
-.navbar-links a {
-  text-decoration: none;
+.navbar-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.navbar-icon {
+  margin: 0 10px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
   color: white;
-  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.navbar-icon:hover .icon {
+  color: #007bff;
+}
+
+.navbar-button {
   text-transform: uppercase;
+  margin: 5px 0;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar-button:hover {
+  color: #007bff;
 }
