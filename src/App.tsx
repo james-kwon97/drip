@@ -4,9 +4,9 @@ import './App.css'
 
 function App() {
   return (
-    <div className="background-image">
+    <div className="app-container">
       <Navbar />
-      {/* Other content can go here */}
+      {/* Add other components or content below */}
     </div>
   )
 }

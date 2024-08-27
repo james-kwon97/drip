@@ -25,16 +25,18 @@ function Navbar() {
         <img src={logoImage} alt="Drip Logo" className="logo-image" />
       </div>
       <div className="navbar-right">
-        <a href="#search" className="navbar-icon">
-          <MagnifyingGlassIcon className="icon" />
-        </a>
-        <a href="#shopping" className="navbar-icon">
-          <ShoppingBagIcon className="icon" />
-        </a>
-        <a href="#user" className="navbar-icon">
-          <UserIcon className="icon" />
-        </a>
-        {/* Switch and Maori text */}
+        <div className="icons-container">
+          <a href="#search" className="navbar-icon">
+            <MagnifyingGlassIcon className="icon" />
+          </a>
+          <a href="#shopping" className="navbar-icon">
+            <ShoppingBagIcon className="icon" />
+          </a>
+          <a href="#user" className="navbar-icon">
+            <UserIcon className="icon" />
+          </a>
+        </div>
+        <div className="navbar-language">Māori</div>
       </div>
     </nav>
   )
