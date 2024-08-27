@@ -5,6 +5,7 @@ import {
   UserIcon,
 } from '@heroicons/react/24/outline'
 import './Navbar.css'
+import logoImage from '../../assets/drip_logo.png'
 
 function Navbar() {
   return (
@@ -21,8 +22,8 @@ function Navbar() {
         </a>
         {/* Switch and Maori text */}
       </div>
-      <div className="navbar-logo">
-        <h1>drip:</h1>
+      <div className="navbar-middle">
+        <img src={logoImage} alt="Drip Logo" className="logo-image" />
       </div>
       <div className="navbar-right">
         <a href="#about-us" className="navbar-button">
