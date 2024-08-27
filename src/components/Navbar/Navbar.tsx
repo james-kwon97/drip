@@ -11,6 +11,20 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
+        <a href="#about-us" className="navbar-button">
+          About Us
+        </a>
+        <a href="#shop" className="navbar-button">
+          Shop
+        </a>
+        <a href="#locations" className="navbar-button">
+          Locations
+        </a>
+      </div>
+      <div className="navbar-middle">
+        <img src={logoImage} alt="Drip Logo" className="logo-image" />
+      </div>
+      <div className="navbar-right">
         <a href="#search" className="navbar-icon">
           <MagnifyingGlassIcon className="icon" />
         </a>
@@ -21,20 +35,6 @@ function Navbar() {
           <UserIcon className="icon" />
         </a>
         {/* Switch and Maori text */}
-      </div>
-      <div className="navbar-middle">
-        <img src={logoImage} alt="Drip Logo" className="logo-image" />
-      </div>
-      <div className="navbar-right">
-        <a href="#about-us" className="navbar-button">
-          About Us
-        </a>
-        <a href="#shop" className="navbar-button">
-          Shop
-        </a>
-        <a href="#locations" className="navbar-button">
-          Locations
-        </a>
       </div>
     </nav>
   )

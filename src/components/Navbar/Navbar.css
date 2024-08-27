@@ -1,4 +1,3 @@
-/* Navbar styles */
 .navbar {
   position: fixed;
   top: 0;
@@ -19,13 +18,14 @@
 
 .navbar-left {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 14px;
 }
 
 .navbar-right {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .navbar-icon {
