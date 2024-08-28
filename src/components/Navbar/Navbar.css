@@ -19,12 +19,13 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 14px;
+  font-size: 13px;
   margin-left: 38px;
+  line-height: 0.9;
 }
 
 .navbar-middle img {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .navbar-right {
@@ -35,13 +36,17 @@
   margin-right: 38px;
 }
 
+.icons-container {
+  margin-bottom: 7px;
+}
+
 .navbar-icon {
   margin: 0 10px;
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
+  width: 22px;
+  height: 22px;
   color: white;
   transition: color 0.3s;
 }
@@ -59,15 +64,19 @@
 
 .language-switch {
   display: flex;
-  margin-top: 18px;
+  margin-top: 12px;
   align-items: center;
   margin-right: auto;
   margin-left: 12px;
+  position: relative;
+  bottom: 4px;
 }
 
 .navbar-language {
   color: white;
-  font-size: 14px;
+  font-size: 13px;
   text-transform: uppercase;
   margin-right: 10px;
+  position: relative;
+  top: -0.5px;
 }

@@ -2,7 +2,7 @@
   position: relative;
   display: inline-block;
   width: 34px;
-  height: 19px;
+  height: 18px;
   margin-right: 10px;
 }
 
@@ -21,17 +21,17 @@
   bottom: 0;
   background-color: white;
   transition: 0.4s;
-  border-radius: 19px;
+  border-radius: 18px;
   border: none;
 }
 
 .slider:before {
   position: absolute;
   content: '';
-  height: 15px;
-  width: 15px;
-  left: 2px;
-  bottom: 2px;
+  height: 16px;
+  width: 16px;
+  left: 1px;
+  bottom: 1px;
   background-color: black;
   transition: 0.4s;
   border-radius: 50%;
@@ -46,5 +46,5 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(15px);
+  transform: translateX(16px);
 }
