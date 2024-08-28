@@ -3,6 +3,7 @@
   display: inline-block;
   width: 34px;
   height: 19px;
+  margin-right: 10px;
 }
 
 .switch input {
@@ -27,10 +28,10 @@
 .slider:before {
   position: absolute;
   content: '';
-  height: 17px;
-  width: 17px;
-  left: 1px;
-  bottom: 1px;
+  height: 15px;
+  width: 15px;
+  left: 2px;
+  bottom: 2px;
   background-color: black;
   transition: 0.4s;
   border-radius: 50%;

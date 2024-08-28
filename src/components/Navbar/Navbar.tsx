@@ -11,6 +11,10 @@ import Switch from '../Switch/Switch'
 function Navbar() {
   const [isLanguageSwitchOn, setIsLanguageSwitchOn] = useState(false)
 
+  const handleSwitchChange = () => {
+    setIsLanguageSwitchOn((prev) => !prev)
+  }
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -23,12 +27,6 @@ function Navbar() {
         <a href="#locations" className="navbar-button">
           Locations
         </a>
-        <div className="language-switch">
-          <Switch
-            checked={isLanguageSwitchOn}
-            onChange={setIsLanguageSwitchOn}
-          />
-        </div>
       </div>
       <div className="navbar-middle">
         <img src={logoImage} alt="Drip Logo" className="logo-image" />
@@ -46,11 +44,8 @@ function Navbar() {
           </a>
         </div>
         <div className="language-switch">
-          <Switch
-            defaultChecked={isLanguageSwitchOn}
-            onChange={setIsLanguageSwitchOn}
-          />
-          <span className="language-text">
+          <Switch checked={isLanguageSwitchOn} onChange={handleSwitchChange} />
+          <span className="navbar-language">
             {isLanguageSwitchOn ? 'English' : 'Māori'}
           </span>
         </div>
