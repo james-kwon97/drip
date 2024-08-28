@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
   MagnifyingGlassIcon,
   ShoppingBagIcon,
@@ -6,8 +6,11 @@ import {
 } from '@heroicons/react/24/outline'
 import './Navbar.css'
 import logoImage from '../../assets/drip_logo.png'
+import Switch from '../Switch/Switch'
 
 function Navbar() {
+  const [isLanguageSwitchOn, setIsLanguageSwitchOn] = useState(false)
+
   return (
     <nav className="navbar">
       <div className="navbar-left">
@@ -20,6 +23,12 @@ function Navbar() {
         <a href="#locations" className="navbar-button">
           Locations
         </a>
+        <div className="language-switch">
+          <Switch
+            checked={isLanguageSwitchOn}
+            onChange={setIsLanguageSwitchOn}
+          />
+        </div>
       </div>
       <div className="navbar-middle">
         <img src={logoImage} alt="Drip Logo" className="logo-image" />
@@ -36,7 +45,15 @@ function Navbar() {
             <UserIcon className="icon" />
           </a>
         </div>
-        <div className="navbar-language">Māori</div>
+        <div className="language-switch">
+          <Switch
+            defaultChecked={isLanguageSwitchOn}
+            onChange={setIsLanguageSwitchOn}
+          />
+          <span className="language-text">
+            {isLanguageSwitchOn ? 'English' : 'Māori'}
+          </span>
+        </div>
       </div>
     </nav>
   )
