@@ -4,14 +4,26 @@ body {
   padding: 0;
   height: 100%;
   width: 100%;
+  overflow-x: hidden;
 }
 
 body {
-  background: url('./assets/hero_image.png') no-repeat center center fixed;
-  background-size: cover;
+  background-color: white;
 }
 
-.app-container {
+.app {
+  min-height: 100vh;
+}
+
+.hero-section {
+  height: 100vh;
+  background: url('./assets/hero_image.png') no-repeat center center fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.content-section {
+  background-color: white;
   min-height: 100vh;
 }
 
