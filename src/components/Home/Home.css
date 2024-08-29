@@ -1,0 +1,19 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.icon-container {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.icon-container p {
+  font-size: 14px;
+  margin-top: 18px;
+  color: white;
+  text-transform: uppercase;
+}
