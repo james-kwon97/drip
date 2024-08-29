@@ -46,3 +46,12 @@
   height: 5px;
   margin-left: 5px;
 }
+
+.about-image {
+  width: 787px;
+  height: 427px;
+  margin-top: 70px;
+  margin-right: 38px;
+  display: block;
+  margin-left: auto;
+}

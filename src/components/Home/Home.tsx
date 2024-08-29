@@ -1,6 +1,7 @@
 import React from 'react'
 import './Home.css'
 import arrowIcon from '../../assets/arrow_icon.png'
+import aboutImage from '../../assets/about_image.png'
 
 function Home() {
   return (
@@ -19,6 +20,7 @@ function Home() {
             <img src={arrowIcon} alt="arrow icon" className="arrow-icon" />
           </div>
         </div>
+        <img src={aboutImage} alt="Coffee in a cup" className="about-image" />
         <div className="product-section">
           <h2>Our Products</h2>
           <p>Details about our products will go here.</p>
