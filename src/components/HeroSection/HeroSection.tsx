@@ -2,9 +2,9 @@ import React from 'react'
 import './HeroSection.css'
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
-function Home() {
+function HeroSection() {
   return (
-    <div className="home">
+    <div className="hero-content">
       <div className="icon-container">
         <i
           className="bi bi-mouse"
@@ -16,4 +16,4 @@ function Home() {
   )
 }
 
-export default Home
+export default HeroSection

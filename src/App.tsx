@@ -1,28 +1,19 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import HeroSection from './components/HeroSection/HeroSection'
+import Home from './components/Home/Home'
 
 function App() {
-  const [isScrolled, setIsScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY
-      setIsScrolled(scrollPosition > window.innerHeight)
-    }
-
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
-
   return (
     <div className="app">
       <Navbar />
       <div className="hero-section">
         <HeroSection />
       </div>
-      <div className="content-section">{/* Add other components here */}</div>
+      <div className="content-section">
+        <Home />
+      </div>
     </div>
   )
 }

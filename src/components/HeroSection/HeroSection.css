@@ -1,18 +1,19 @@
-.home {
-  min-height: 100vh;
+.hero-content {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .icon-container {
   text-align: center;
-  margin-bottom: 56px;
 }
 
 .icon-container p {
   font-size: 14px;
   margin-top: 18px;
+  margin-bottom: 56px;
   color: white;
   text-transform: uppercase;
 }

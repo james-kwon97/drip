@@ -8,30 +8,22 @@ body {
 }
 
 body {
-  background-color: white;
+  background-color: white; /* Fallback color */
 }
 
 .app {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-section {
   height: 100vh;
-  background: url('./assets/hero_image.png') no-repeat center center fixed;
+  background: url('./assets/hero_image.png') no-repeat center center;
   background-size: cover;
   position: relative;
 }
 
 .content-section {
   background-color: white;
-  min-height: 100vh;
-}
-
-.navbar {
-  height: 145px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
 }
