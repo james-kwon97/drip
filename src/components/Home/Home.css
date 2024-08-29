@@ -56,6 +56,40 @@
   margin-right: 38px;
   display: block;
   margin-left: auto;
+  margin-bottom: 86px;
 }
 
 /* Products section css */
+
+.product-section {
+  display: flex;
+  align-items: flex-start;
+}
+
+.product {
+  font-size: 22px;
+  line-height: 140%;
+  font-weight: normal;
+  color: #868686;
+  margin-top: 86px;
+  margin-left: 38px;
+  width: auto;
+  height: 31px;
+}
+
+.product-link-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-top: 97px;
+  margin-right: 38px;
+  border-bottom: 1px solid #000000cc;
+  padding-bottom: 8px;
+}
+
+.product-link {
+  font-size: 18px;
+  line-height: 140%;
+  color: #000000cc;
+  text-decoration: none;
+}
