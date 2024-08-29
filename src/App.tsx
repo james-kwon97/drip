@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
-import Home from './components/Home/Home'
+import HeroSection from './components/HeroSection/HeroSection'
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -20,7 +20,7 @@ function App() {
     <div className="app">
       <Navbar />
       <div className="hero-section">
-        <Home />
+        <HeroSection />
       </div>
       <div className="content-section">{/* Add other components here */}</div>
     </div>
