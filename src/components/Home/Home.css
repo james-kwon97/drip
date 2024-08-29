@@ -1,3 +1,5 @@
+/* About section css */
+
 .about-section {
   display: flex;
   align-items: flex-start;
@@ -55,3 +57,5 @@
   display: block;
   margin-left: auto;
 }
+
+/* Products section css */

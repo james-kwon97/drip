@@ -21,9 +21,15 @@ function Home() {
           </div>
         </div>
         <img src={aboutImage} alt="Coffee in a cup" className="about-image" />
+
         <div className="product-section">
-          <h2>Our Products</h2>
-          <p>Details about our products will go here.</p>
+          <h2 className="product">Our Products</h2>
+          <div className="product-link-container">
+            <a href="#products" className="product-link">
+              Shop now
+            </a>
+            <img src={arrowIcon} alt="arrow icon" className="arrow-icon" />
+          </div>
         </div>
         <div className="location-section">
           <h2>Locations</h2>
