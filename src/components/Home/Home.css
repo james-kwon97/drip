@@ -119,16 +119,19 @@
 }
 
 .product-details {
-  text-align: center;
+  color: #000000cc;
+  line-height: 140%;
+  display: flex;
+  justify-content: space-between; /* Align items horizontally */
+  width: 100%; /* Ensure it takes full width of product container */
+  text-align: left; /* Align text to the left */
+  margin-top: 22px;
 }
 
 .product-name {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-size: 20px;
 }
 
 .product-price {
-  display: block;
-  color: #868686;
+  font-size: 18px;
 }
