@@ -2,6 +2,7 @@ import React from 'react'
 import './Home.css'
 import arrowIcon from '../../assets/arrow_icon.png'
 import aboutImage from '../../assets/about_image.png'
+import productImage from '../../assets/product_image.png'
 
 function Home() {
   return (
@@ -23,12 +24,50 @@ function Home() {
         <img src={aboutImage} alt="Coffee in a cup" className="about-image" />
 
         <div className="product-section">
-          <h2 className="product-title">Our Products</h2>
-          <div className="product-link-container">
-            <a href="#products" className="product-link">
-              Shop now
-            </a>
-            <img src={arrowIcon} alt="arrow icon" className="arrow-icon" />
+          <div className="product-header">
+            <h2 className="product-title">Our Products</h2>
+            <div className="product-link-container">
+              <a href="#products" className="product-link">
+                Shop now
+              </a>
+              <img src={arrowIcon} alt="arrow icon" className="arrow-icon" />
+            </div>
+          </div>
+
+          <div className="products">
+            <div className="product">
+              <img
+                src={productImage}
+                alt="Product 1"
+                className="product-image"
+              />
+              <div className="product-details">
+                <span className="product-name">Drip Blend</span>
+                <span className="product-price">From $10.00</span>
+              </div>
+            </div>
+            <div className="product">
+              <img
+                src={productImage}
+                alt="Product 2"
+                className="product-image"
+              />
+              <div className="product-details">
+                <span className="product-name">Drip Blend</span>
+                <span className="product-price">From $15.00</span>
+              </div>
+            </div>
+            <div className="product">
+              <img
+                src={productImage}
+                alt="Product 3"
+                className="product-image"
+              />
+              <div className="product-details">
+                <span className="product-name">Drip Blend</span>
+                <span className="product-price">From $20.00</span>
+              </div>
+            </div>
           </div>
         </div>
         <div className="location-section">
