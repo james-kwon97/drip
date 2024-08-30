@@ -8,7 +8,7 @@ function HeroSection() {
       <div className="icon-container">
         <i
           className="bi bi-mouse"
-          style={{ fontSize: '42px', color: 'white' }}
+          style={{ fontSize: '36px', color: 'white' }}
         ></i>
         <p>scroll down</p>
       </div>
