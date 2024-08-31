@@ -3,6 +3,7 @@ import './Home.css'
 import arrowIcon from '../../assets/arrow_icon.png'
 import aboutImage from '../../assets/about_image.png'
 import productImage from '../../assets/product_image.png'
+import processImage from '../../assets/process_image.png'
 
 function Home() {
   return (
@@ -71,9 +72,22 @@ function Home() {
           </div>
         </div>
 
-        <div className="ingredient-section">
-          <h2>Ingredients</h2>
-          <p>Information about our locations will be provided here.</p>
+        <div className="process-section">
+          <img
+            src={processImage}
+            alt="Coffee bean image"
+            className="process-image"
+          />
+          <div className="process-content">
+            <h2 className="process-title">Our Process</h2>
+            <p className="process-info">
+              Discover the journey of our coffee beans from the source to your
+              cup.
+              {/* Each bean is meticulously selected and freshly roasted to
+              perfection, ensuring rich, bold flavors and unmatched quality in
+              every cup. */}
+            </p>
+          </div>
         </div>
 
         <div className="location-section">

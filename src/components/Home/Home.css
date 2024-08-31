@@ -101,21 +101,19 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin: 30px 38px;
+  margin: 0 38px;
 }
 
 .product {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 30px;
 }
 
 .product-image {
   width: 441px;
   height: 427px;
   object-fit: cover;
-  margin-bottom: 10px;
 }
 
 .product-details {
@@ -126,5 +124,38 @@
   justify-content: space-between;
   width: 100%;
   text-align: left;
-  margin-top: 14px;
+  margin-top: 22px;
+}
+
+/* Process section css */
+
+.process-image {
+  width: 1360px;
+  height: auto;
+  margin: 202px 38px 0;
+}
+
+.process-content {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 58px;
+  margin-left: 38px;
+}
+
+.process-title {
+  font-size: 20px;
+  color: #868686;
+  font-weight: normal;
+  line-height: 140%;
+  margin-right: 35px;
+  margin-top: 0px;
+}
+
+.process-info {
+  font-size: 20px;
+  color: #000000cc;
+  font-weight: normal;
+  line-height: 140%;
+  max-width: 850px;
+  margin-top: 0px;
 }
