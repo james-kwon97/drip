@@ -120,18 +120,11 @@
 
 .product-details {
   color: #000000cc;
+  font-size: 18px;
   line-height: 140%;
   display: flex;
-  justify-content: space-between; /* Align items horizontally */
-  width: 100%; /* Ensure it takes full width of product container */
-  text-align: left; /* Align text to the left */
-  margin-top: 22px;
-}
-
-.product-name {
-  font-size: 20px;
-}
-
-.product-price {
-  font-size: 18px;
+  justify-content: space-between;
+  width: 100%;
+  text-align: left;
+  margin-top: 14px;
 }

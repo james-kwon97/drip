@@ -70,6 +70,12 @@ function Home() {
             </div>
           </div>
         </div>
+
+        <div className="ingredient-section">
+          <h2>Ingredients</h2>
+          <p>Information about our locations will be provided here.</p>
+        </div>
+
         <div className="location-section">
           <h2>Locations</h2>
           <p>Information about our locations will be provided here.</p>
