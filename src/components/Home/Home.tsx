@@ -4,6 +4,7 @@ import arrowIcon from '../../assets/arrow_icon.png'
 import aboutImage from '../../assets/about_image.png'
 import productImage from '../../assets/product_image.png'
 import processImage from '../../assets/process_image.png'
+import locationImage from '../../assets/location_image.png'
 
 function Home() {
   return (
@@ -114,6 +115,11 @@ function Home() {
         </div>
 
         <div className="location-section">
+          <img
+            src={locationImage}
+            alt="Coffee shop interior image"
+            className="location-image"
+          />
           <h2>Locations</h2>
           <p>Information about our locations will be provided here.</p>
         </div>
