@@ -179,7 +179,18 @@
 .process-item {
   display: flex;
   flex-direction: column;
-  width: 33%;
+  width: calc(33% - 32px);
+  position: relative;
+}
+
+.process-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1px;
+  background-color: #d0d0d0;
 }
 
 .process-header {
@@ -197,9 +208,3 @@
   width: 409px;
   margin-top: 0px;
 }
-
-/* .divider {
-  border-right: 10px solid #dfdfdf;
-  height: 100%;
-  margin: 0 20px;
-} */
