@@ -120,8 +120,19 @@ function Home() {
             alt="Coffee shop interior image"
             className="location-image"
           />
-          <h2>Locations</h2>
-          <p>Information about our locations will be provided here.</p>
+          <div className="location-content">
+            <h2>Locations</h2>
+            <p>
+              Enjoy our coffee at one of our premium locations. We have the
+              perfect spot for you!
+            </p>
+            <div className="locations-link-container">
+              <a href="#locations" className="locations-link">
+                Find us
+                <img src={arrowIcon} alt="arrow icon" className="arrow-icon" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
