@@ -90,6 +90,29 @@ function Home() {
           </div>
         </div>
 
+        <div className="process-details">
+          <div className="process-item">
+            <h3 className="process-header">Freshness</h3>
+            <p className="process-text">
+              Savor the vibrant flavors of beans roasted to perfection.
+            </p>
+          </div>
+          <div className="divider"></div>
+          <div className="process-item">
+            <h3 className="process-header">Quality</h3>
+            <p className="process-text">
+              Experience the exceptional taste of top-tier coffee beans.
+            </p>
+          </div>
+          <div className="divider"></div>
+          <div className="process-item">
+            <h3 className="process-header">Precision</h3>
+            <p className="process-text">
+              Enjoy consistently perfect brews crafted with exacting standards.
+            </p>
+          </div>
+        </div>
+
         <div className="location-section">
           <h2>Locations</h2>
           <p>Information about our locations will be provided here.</p>
