@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Switch from '../Switch/Switch' // Make sure this path is correct
+import Switch from '../Switch/Switch'
 import './Footer.css'
 
 const Footer = () => {

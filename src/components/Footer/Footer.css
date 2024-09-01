@@ -65,12 +65,17 @@
 .language-switch {
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 14px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.language-switch .switch {
+  margin-right: 10px;
 }
 
 .footer-language {
   color: #000;
   font-size: 12px;
   text-transform: uppercase;
-  margin-left: 10px;
 }
