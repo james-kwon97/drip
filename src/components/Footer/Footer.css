@@ -8,15 +8,15 @@
 }
 
 .footer-section {
-  font-size: 14px;
+  font-size: 12px;
   flex: 1;
-  margin: 108px 38px 45px 38px;
+  margin: 98px 38px 45px 38px;
 }
 
 .footer-menu {
   list-style: none;
   padding: 0;
-  font-weight: 140%;
+  line-height: 140%;
   text-transform: uppercase;
 }
 
@@ -31,7 +31,7 @@
 
 .footer-contact {
   list-style: none;
-  font-weight: 140%;
+  line-height: 140%;
 }
 
 .footer-contact li {
@@ -47,9 +47,9 @@
   flex: 3;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   margin-top: 32px;
-  margin-right: 36px;
+  padding-right: 38px;
 }
 
 .footer-logo p {
