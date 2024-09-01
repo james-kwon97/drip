@@ -48,3 +48,20 @@ input:focus + .slider {
 input:checked + .slider:before {
   transform: translateX(16px);
 }
+
+/* Inverted styles */
+.switch.inverted .slider {
+  background-color: black;
+}
+
+.switch.inverted .slider:before {
+  background-color: white;
+}
+
+.switch.inverted input:checked + .slider {
+  background-color: black;
+}
+
+.switch.inverted input:checked + .slider:before {
+  background-color: white;
+}

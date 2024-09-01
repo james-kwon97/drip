@@ -4,11 +4,12 @@ import './Switch.css'
 interface SwitchProps {
   checked: boolean
   onChange: (checked: boolean) => void
+  inverted?: boolean
 }
 
-function Switch({ checked, onChange }: SwitchProps) {
+function Switch({ checked, onChange, inverted = false }: SwitchProps) {
   return (
-    <label className="switch">
+    <label className={`switch ${inverted ? 'inverted' : ''}`}>
       <input
         type="checkbox"
         checked={checked}
