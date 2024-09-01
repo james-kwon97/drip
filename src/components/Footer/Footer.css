@@ -46,8 +46,9 @@
 .footer-logo {
   flex: 3;
   display: flex;
-  align-items: center;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
   margin-top: 32px;
   padding-right: 38px;
 }
@@ -58,5 +59,18 @@
   font-weight: normal;
   width: 112px;
   height: 39px;
-  margin: 0;
+  margin: 0 0 10px 0;
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.footer-language {
+  color: #000;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-left: 10px;
 }

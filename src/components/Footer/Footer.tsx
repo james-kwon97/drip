@@ -1,7 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Switch from '../Switch/Switch' // Make sure this path is correct
 import './Footer.css'
 
 const Footer = () => {
+  const [isLanguageSwitchOn, setIsLanguageSwitchOn] = useState(false)
+
+  const handleSwitchChange = () => {
+    setIsLanguageSwitchOn((prev) => !prev)
+  }
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -39,8 +46,17 @@ const Footer = () => {
             <li>
               <a href="#privacy-policy">Privacy Policy</a>
             </li>
-            <li>
-              <a href="#switch-maori">Switch + Māori</a>
+            <li className="language-switch-container">
+              <div className="language-switch">
+                <Switch
+                  checked={isLanguageSwitchOn}
+                  onChange={handleSwitchChange}
+                  inverted={true}
+                />
+                <span className="footer-language">
+                  {isLanguageSwitchOn ? 'English' : 'Māori'}
+                </span>
+              </div>
             </li>
           </ul>
         </div>
