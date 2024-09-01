@@ -1,0 +1,62 @@
+.footer {
+  height: 236px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  font-size: 14px;
+  flex: 1;
+  margin: 108px 38px 45px 38px;
+}
+
+.footer-menu {
+  list-style: none;
+  padding: 0;
+  font-weight: 140%;
+  text-transform: uppercase;
+}
+
+.footer-menu li {
+  margin-bottom: 10px;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-contact {
+  list-style: none;
+  font-weight: 140%;
+}
+
+.footer-contact li {
+  margin-bottom: 10px;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: #000;
+}
+
+.footer-logo {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  margin-right: 36px;
+}
+
+.footer-logo p {
+  font-family: 'EB Garamond', serif;
+  font-size: 64px;
+  font-weight: normal;
+  width: 112px;
+  height: 39px;
+  margin: 0;
+}

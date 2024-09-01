@@ -40,14 +40,16 @@ const Footer = () => {
               <a href="#privacy-policy">Privacy Policy</a>
             </li>
             <li>
-              <a href="#switch-maori">Switch + Maori</a>
+              <a href="#switch-maori">Switch + Māori</a>
             </li>
           </ul>
         </div>
         <div className="footer-section">
-          <ul className="footer-menu">
+          <ul className="footer-contact">
             <li>
-              <a href="#contacts">Contacts</a>
+              <a href="#contacts" className="contact-title">
+                CONTACTS
+              </a>
             </li>
             <li>
               <a href="#email">info@drip.co.nz</a>
