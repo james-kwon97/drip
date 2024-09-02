@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {
   MagnifyingGlassIcon,
   ShoppingBagIcon,
@@ -10,13 +10,32 @@ import Switch from '../Switch/Switch'
 
 function Navbar() {
   const [isLanguageSwitchOn, setIsLanguageSwitchOn] = useState(false)
+  const [color, setColor] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 145) {
+        setColor(true)
+      } else {
+        setColor(false)
+      }
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll)
+
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const handleSwitchChange = () => {
     setIsLanguageSwitchOn((prev) => !prev)
   }
 
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${color ? 'navbar-bg' : ''}`}>
       <div className="navbar-left">
         <a href="#about-us" className="navbar-button">
           About Us
