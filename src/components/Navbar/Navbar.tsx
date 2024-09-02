@@ -14,24 +14,19 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 145) {
-        setColor(true)
-      } else {
-        setColor(false)
-      }
+      const scrollPosition = window.scrollY
+      setColor(scrollPosition >= 145)
     }
 
-    // Add scroll event listener
     window.addEventListener('scroll', handleScroll)
 
-    // Cleanup event listener
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
 
-  const handleSwitchChange = () => {
-    setIsLanguageSwitchOn((prev) => !prev)
+  const handleSwitchChange = (checked: boolean) => {
+    setIsLanguageSwitchOn(checked)
   }
 
   return (
@@ -63,7 +58,11 @@ function Navbar() {
           </a>
         </div>
         <div className="language-switch">
-          <Switch checked={isLanguageSwitchOn} onChange={handleSwitchChange} />
+          <Switch
+            checked={isLanguageSwitchOn}
+            onChange={handleSwitchChange}
+            inverted={color}
+          />
           <span className="navbar-language">
             {isLanguageSwitchOn ? 'English' : 'Māori'}
           </span>
