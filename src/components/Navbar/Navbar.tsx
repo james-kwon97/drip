@@ -6,6 +6,7 @@ import {
 } from '@heroicons/react/24/outline'
 import './Navbar.css'
 import logoImage from '../../assets/drip_logo.png'
+import scrolledLogoImage from '../../assets/black_drip_logo.png'
 import Switch from '../Switch/Switch'
 
 function Navbar() {
@@ -43,7 +44,11 @@ function Navbar() {
         </a>
       </div>
       <div className="navbar-middle">
-        <img src={logoImage} alt="Drip Logo" className="logo-image" />
+        <img
+          src={color ? scrolledLogoImage : logoImage}
+          alt="Drip Logo"
+          className="logo-image"
+        />
       </div>
       <div className="navbar-right">
         <div className="icons-container">

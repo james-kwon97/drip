@@ -109,3 +109,8 @@
 .navbar-bg .navbar-language {
   color: black;
 }
+
+.navbar-bg .navbar-middle img {
+  width: 112px;
+  height: auto;
+}
