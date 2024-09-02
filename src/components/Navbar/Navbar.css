@@ -10,7 +10,7 @@
   align-items: center;
   box-sizing: border-box;
   justify-content: space-between;
-  transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
 .navbar-logo {
@@ -38,12 +38,19 @@
   margin-left: 46px;
 }
 
+.logo-image {
+  height: 100%;
+  object-fit: contain;
+  transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
 .navbar-right {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 29px;
+  margin-left: 0;
 }
 
 .icons-container {
@@ -75,9 +82,7 @@
 .language-switch {
   display: flex;
   margin-top: 12px;
-  align-items: center;
-  margin-right: auto;
-  margin-left: 12px;
+  margin-left: 2px;
   position: relative;
   bottom: 4px;
 }
@@ -86,9 +91,13 @@
   color: white;
   font-size: 13px;
   text-transform: uppercase;
-  margin-right: 10px;
   position: relative;
   top: -0.5px;
+  width: 55px; /* Set a fixed width to fit the longer word */
+  text-align: left; /* Align the text to the left side */
+  white-space: nowrap; /* Prevent the text from wrapping */
+  overflow: hidden; /* Hide any overflow */
+  text-overflow: clip;
 }
 
 /* Css for navbar when scrolled down */
