@@ -13,10 +13,6 @@
   transition: background 0.3s ease-in-out;
 }
 
-.navbar-bg {
-  background: white;
-}
-
 .navbar-logo {
   flex: 1;
 }
@@ -93,4 +89,23 @@
   margin-right: 10px;
   position: relative;
   top: -0.5px;
+}
+
+/* Css for navbar when scrolled down */
+
+.navbar-bg {
+  background: white;
+}
+
+/* Change text color and icon color when navbar-bg is active */
+.navbar-bg .navbar-button {
+  color: black; /* Change menu item text color to black */
+}
+
+.navbar-bg .icon {
+  color: black; /* Change icon color to black */
+}
+
+.navbar-bg .navbar-language {
+  color: black; /* Change language switch text color to black */
 }
