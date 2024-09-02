@@ -82,9 +82,9 @@
 .language-switch {
   display: flex;
   margin-top: 12px;
-  margin-left: 2px;
   position: relative;
   bottom: 4px;
+  left: -2px;
 }
 
 .navbar-language {
@@ -93,10 +93,10 @@
   text-transform: uppercase;
   position: relative;
   top: -0.5px;
-  width: 55px; /* Set a fixed width to fit the longer word */
-  text-align: left; /* Align the text to the left side */
-  white-space: nowrap; /* Prevent the text from wrapping */
-  overflow: hidden; /* Hide any overflow */
+  width: 55px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
   text-overflow: clip;
 }
 
