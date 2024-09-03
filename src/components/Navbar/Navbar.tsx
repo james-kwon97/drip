@@ -36,7 +36,7 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
         <a href="about" className="navbar-button">
           {isEnglish ? 'Mō mātou' : 'About Us'}
         </a>
-        <a href="shop" className="navbar-button">
+        <a href="/products" className="navbar-button">
           {isEnglish ? 'Toa' : 'Shop'}
         </a>
         <a href="locations" className="navbar-button">
