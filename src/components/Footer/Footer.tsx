@@ -14,36 +14,40 @@ function Footer({ isEnglish, onLanguageSwitch }: FooterProps) {
         <div className="footer-section">
           <ul className="footer-menu">
             <li>
-              <a href="#about-us">About Us</a>
+              <a href="#about-us">{isEnglish ? 'Mō mātou' : 'About Us'}</a>
             </li>
             <li>
-              <a href="#shop">Shop</a>
+              <a href="#shop">{isEnglish ? 'Toa' : 'Shop'}</a>
             </li>
             <li>
-              <a href="#locations">Locations</a>
-            </li>
-          </ul>
-        </div>
-        <div className="footer-section">
-          <ul className="footer-menu">
-            <li>
-              <a href="#account">Account</a>
-            </li>
-            <li>
-              <a href="#cart">Cart</a>
-            </li>
-            <li>
-              <a href="#shipping">Shipping</a>
+              <a href="#locations">{isEnglish ? 'Wāhi' : 'Locations'}</a>
             </li>
           </ul>
         </div>
         <div className="footer-section">
           <ul className="footer-menu">
             <li>
-              <a href="#terms-of-use">Terms of Use</a>
+              <a href="#account">{isEnglish ? 'Pūkete' : 'Account'}</a>
             </li>
             <li>
-              <a href="#privacy-policy">Privacy Policy</a>
+              <a href="#cart">{isEnglish ? 'Kāri' : 'Cart'}</a>
+            </li>
+            <li>
+              <a href="#shipping">{isEnglish ? 'Tukunga' : 'Shipping'}</a>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <ul className="footer-menu">
+            <li>
+              <a href="#terms-of-use">
+                {isEnglish ? 'Ngā Tikanga' : 'Terms of Use'}
+              </a>
+            </li>
+            <li>
+              <a href="#privacy-policy">
+                {isEnglish ? 'Kaupapahere Tūmataiti' : 'Privacy Policy'}
+              </a>
             </li>
             <li className="language-switch-container">
               <div className="language-switch">
@@ -53,7 +57,7 @@ function Footer({ isEnglish, onLanguageSwitch }: FooterProps) {
                   inverted={true}
                 />
                 <span className="footer-language">
-                  {isEnglish ? 'English' : 'Māori'}
+                  {isEnglish ? 'Māori' : 'English'}
                 </span>
               </div>
             </li>
@@ -63,7 +67,7 @@ function Footer({ isEnglish, onLanguageSwitch }: FooterProps) {
           <ul className="footer-contact">
             <li>
               <a href="#contacts" className="contact-title">
-                CONTACTS
+                {isEnglish ? 'WHAKAPĀ' : 'CONTACTS'}
               </a>
             </li>
             <li>
