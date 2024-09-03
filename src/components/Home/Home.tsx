@@ -6,7 +6,11 @@ import productImage from '../../assets/product_image.png'
 import processImage from '../../assets/process_image.png'
 import locationImage from '../../assets/location_image.png'
 
-function Home({ isEnglish }) {
+interface HomeProps {
+  isEnglish: boolean
+}
+
+function Home({ isEnglish }: HomeProps) {
   return (
     <div className="home">
       <div className="main-content">
@@ -47,7 +51,9 @@ function Home({ isEnglish }) {
                 className="product-image"
               />
               <div className="product-details">
-                <span className="product-name">Drip Blend</span>
+                <span className="product-name">
+                  {isEnglish ? 'Drip ranunga' : 'Drip Blend'}
+                </span>
                 <span className="product-price">
                   {isEnglish ? 'Mai $10.00' : 'From $10.00'}
                 </span>
@@ -60,7 +66,9 @@ function Home({ isEnglish }) {
                 className="product-image"
               />
               <div className="product-details">
-                <span className="product-name">Drip Blend</span>
+                <span className="product-name">
+                  {isEnglish ? 'Drip ranunga' : 'Drip Blend'}
+                </span>
                 <span className="product-price">
                   {isEnglish ? 'Mai $15.00' : 'From $15.00'}
                 </span>
@@ -73,7 +81,9 @@ function Home({ isEnglish }) {
                 className="product-image"
               />
               <div className="product-details">
-                <span className="product-name">Drip Blend</span>
+                <span className="product-name">
+                  {isEnglish ? 'Drip ranunga' : 'Drip Blend'}
+                </span>
                 <span className="product-price">
                   {isEnglish ? 'Mai $20.00' : 'From $20.00'}
                 </span>
