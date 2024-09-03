@@ -1,14 +1,16 @@
 .navbar {
   position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
   height: 145px;
-  z-index: 1;
+  z-index: 100;
   background: transparent;
   display: flex;
   align-items: center;
   box-sizing: border-box;
   justify-content: space-between;
+  transition: background 0.4s ease-in-out, height 0.4s ease-in-out;
 }
 
 .navbar-logo {
@@ -36,12 +38,19 @@
   margin-left: 46px;
 }
 
+.logo-image {
+  height: 100%;
+  object-fit: contain;
+  transition: height 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
 .navbar-right {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-right: 29px;
+  margin-left: 0;
 }
 
 .icons-container {
@@ -73,18 +82,45 @@
 .language-switch {
   display: flex;
   margin-top: 12px;
-  align-items: center;
-  margin-right: auto;
-  margin-left: 12px;
   position: relative;
   bottom: 4px;
+  left: -2px;
 }
 
 .navbar-language {
   color: white;
   font-size: 13px;
   text-transform: uppercase;
-  margin-right: 10px;
   position: relative;
   top: -0.5px;
+  width: 55px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: clip;
+}
+
+/* Css for navbar when scrolled down */
+
+.navbar-bg {
+  background: white;
+  height: 100px;
+}
+
+.navbar-bg .navbar-button {
+  color: black;
+}
+
+.navbar-bg .icon {
+  color: black;
+}
+
+.navbar-bg .navbar-language {
+  color: black;
+}
+
+.navbar-bg .navbar-middle img {
+  margin-top: 0;
+  width: 112px;
+  height: auto;
 }
