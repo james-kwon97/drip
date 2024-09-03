@@ -9,8 +9,12 @@ import logoImage from '../../assets/drip_logo.png'
 import scrolledLogoImage from '../../assets/black_drip_logo.png'
 import Switch from '../Switch/Switch'
 
-function Navbar() {
-  const [isLanguageSwitchOn, setIsLanguageSwitchOn] = useState(false)
+interface NavbarProps {
+  isEnglish: boolean
+  onLanguageSwitch: () => void
+}
+
+function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
   const [color, setColor] = useState(false)
 
   useEffect(() => {
@@ -25,10 +29,6 @@ function Navbar() {
       window.removeEventListener('scroll', handleScroll)
     }
   }, [])
-
-  const handleSwitchChange = (checked: boolean) => {
-    setIsLanguageSwitchOn(checked)
-  }
 
   return (
     <nav className={`navbar ${color ? 'navbar-bg' : ''}`}>
@@ -64,12 +64,12 @@ function Navbar() {
         </div>
         <div className="language-switch">
           <Switch
-            checked={isLanguageSwitchOn}
-            onChange={handleSwitchChange}
+            checked={isEnglish}
+            onChange={onLanguageSwitch}
             inverted={color}
           />
           <span className="navbar-language">
-            {isLanguageSwitchOn ? 'English' : 'Māori'}
+            {isEnglish ? 'English' : 'Māori'}
           </span>
         </div>
       </div>

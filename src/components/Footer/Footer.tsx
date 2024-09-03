@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Switch from '../Switch/Switch'
 import './Footer.css'
 
-const Footer = () => {
-  const [isLanguageSwitchOn, setIsLanguageSwitchOn] = useState(false)
+interface FooterProps {
+  isEnglish: boolean
+  onLanguageSwitch: () => void
+}
 
-  const handleSwitchChange = () => {
-    setIsLanguageSwitchOn((prev) => !prev)
-  }
-
+function Footer({ isEnglish, onLanguageSwitch }: FooterProps) {
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -49,12 +48,12 @@ const Footer = () => {
             <li className="language-switch-container">
               <div className="language-switch">
                 <Switch
-                  checked={isLanguageSwitchOn}
-                  onChange={handleSwitchChange}
+                  checked={isEnglish}
+                  onChange={onLanguageSwitch}
                   inverted={true}
                 />
                 <span className="footer-language">
-                  {isLanguageSwitchOn ? 'English' : 'Māori'}
+                  {isEnglish ? 'English' : 'Māori'}
                 </span>
               </div>
             </li>
