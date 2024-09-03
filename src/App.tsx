@@ -6,7 +6,7 @@ import Home from './components/Home/Home'
 import Footer from './components/Footer/Footer'
 
 function App() {
-  const [isEnglish, setIsEnglish] = useState(true)
+  const [isEnglish, setIsEnglish] = useState(false)
 
   const handleLanguageSwitch = () => {
     setIsEnglish(!isEnglish)
