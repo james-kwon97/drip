@@ -34,13 +34,13 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
     <nav className={`navbar ${color ? 'navbar-bg' : ''}`}>
       <div className="navbar-left">
         <a href="#about-us" className="navbar-button">
-          About Us
+          {isEnglish ? 'Mō mātou' : 'About Us'}
         </a>
         <a href="#shop" className="navbar-button">
-          Shop
+          {isEnglish ? 'Toa' : 'Shop'}
         </a>
         <a href="#locations" className="navbar-button">
-          Locations
+          {isEnglish ? 'Wāhi' : 'Locations'}
         </a>
       </div>
       <div className="navbar-middle">
