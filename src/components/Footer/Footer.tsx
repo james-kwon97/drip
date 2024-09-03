@@ -71,10 +71,18 @@ function Footer({ isEnglish, onLanguageSwitch }: FooterProps) {
               </a>
             </li>
             <li>
-              <a href="#email">info@drip.co.nz</a>
+              <a href="mailto:info@drip.co.nz" target="_blank">
+                info@drip.co.nz
+              </a>
             </li>
             <li>
-              <a href="#id">@drip_nz</a>
+              <a
+                href="https://www.instagram.com/drip__nz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @drip_nz
+              </a>
             </li>
           </ul>
         </div>

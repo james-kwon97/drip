@@ -30,9 +30,14 @@
   pointer-events: none;
 }
 
+.mouse-gif {
+  width: 24px;
+  height: auto;
+}
+
 .icon-container p {
   font-size: 12px;
-  margin-top: 14px;
+  margin-top: 16px;
   margin-bottom: 40px;
   color: white;
   text-transform: uppercase;
