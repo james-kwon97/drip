@@ -6,19 +6,20 @@ import productImage from '../../assets/product_image.png'
 import processImage from '../../assets/process_image.png'
 import locationImage from '../../assets/location_image.png'
 
-function Home() {
+function Home({ isEnglish }) {
   return (
     <div className="home">
       <div className="main-content">
         <div className="about-section">
-          <h2 className="about">About</h2>
+          <h2 className="about">{isEnglish ? 'Mō' : 'About'}</h2>
           <p className="about-info">
-            You’ll be greeted by stunning visuals of our freshly brewed
-            beverages, delicious pastries, and cozy atmosphere.
+            {isEnglish
+              ? 'Ka whakatau mai koe i ngā whakaahua whakamīharo o ā mātou inu hou, ngā pihikete reka, me te wairua mahana.'
+              : 'You’ll be greeted by stunning visuals of our freshly brewed beverages, delicious pastries, and cozy atmosphere.'}
           </p>
           <div className="about-link-container">
             <a href="#about-us" className="about-link">
-              About Us
+              {isEnglish ? 'Mō mātou' : 'About Us'}
             </a>
             <img src={arrowIcon} alt="arrow icon" className="arrow-icon" />
           </div>
@@ -27,10 +28,12 @@ function Home() {
 
         <div className="product-section">
           <div className="product-header">
-            <h2 className="product-title">Our Products</h2>
+            <h2 className="product-title">
+              {isEnglish ? 'Ā Mātou Hua' : 'Our Products'}
+            </h2>
             <div className="product-link-container">
               <a href="#products" className="product-link">
-                Shop now
+                {isEnglish ? 'Hoko inaianei' : 'Shop now'}
               </a>
               <img src={arrowIcon} alt="arrow icon" className="arrow-icon" />
             </div>
@@ -45,7 +48,9 @@ function Home() {
               />
               <div className="product-details">
                 <span className="product-name">Drip Blend</span>
-                <span className="product-price">From $10.00</span>
+                <span className="product-price">
+                  {isEnglish ? 'Mai $10.00' : 'From $10.00'}
+                </span>
               </div>
             </div>
             <div className="product">
@@ -56,7 +61,9 @@ function Home() {
               />
               <div className="product-details">
                 <span className="product-name">Drip Blend</span>
-                <span className="product-price">From $15.00</span>
+                <span className="product-price">
+                  {isEnglish ? 'Mai $15.00' : 'From $15.00'}
+                </span>
               </div>
             </div>
             <div className="product">
@@ -67,7 +74,9 @@ function Home() {
               />
               <div className="product-details">
                 <span className="product-name">Drip Blend</span>
-                <span className="product-price">From $20.00</span>
+                <span className="product-price">
+                  {isEnglish ? 'Mai $20.00' : 'From $20.00'}
+                </span>
               </div>
             </div>
           </div>
@@ -80,36 +89,48 @@ function Home() {
             className="process-image"
           />
           <div className="process-content">
-            <h2 className="process-title">Our Process</h2>
+            <h2 className="process-title">
+              {isEnglish ? 'Tō Mātou Tukanga' : 'Our Process'}
+            </h2>
             <p className="process-info">
-              Discover the journey of our coffee beans from the source to your
-              cup.
-              {/* Each bean is meticulously selected and freshly roasted to
-              perfection, ensuring rich, bold flavors and unmatched quality in
-              every cup. */}
+              {isEnglish
+                ? 'Tirohia te haerenga o ā mātou pīni kawhe mai i te takenga mai ki tō kapu.'
+                : 'Discover the journey of our coffee beans from the source to your cup.'}
             </p>
           </div>
         </div>
 
         <div className="process-details">
           <div className="process-item">
-            <h3 className="process-header">Freshness</h3>
+            <h3 className="process-header">
+              {isEnglish ? 'Hou' : 'Freshness'}
+            </h3>
             <p className="process-text">
-              Savor the vibrant flavors of beans roasted to perfection.
+              {isEnglish
+                ? 'Kia reka te kīnaki ngāwari o ngā pīni kua tōtō ki te tino pai.'
+                : 'Savor the vibrant flavors of beans roasted to perfection.'}
             </p>
           </div>
           <div className="divider"></div>
           <div className="process-item">
-            <h3 className="process-header">Quality</h3>
+            <h3 className="process-header">
+              {isEnglish ? 'Kounga' : 'Quality'}
+            </h3>
             <p className="process-text">
-              Experience the exceptional taste of top-tier coffee beans.
+              {isEnglish
+                ? 'Wheakohia te kīnaki tino pai o ngā pīni kawhe tino taumata.'
+                : 'Experience the exceptional taste of top-tier coffee beans.'}
             </p>
           </div>
           <div className="divider"></div>
           <div className="process-item">
-            <h3 className="process-header">Precision</h3>
+            <h3 className="process-header">
+              {isEnglish ? 'Tika' : 'Precision'}
+            </h3>
             <p className="process-text">
-              Enjoy consistently perfect brews crafted with exacting standards.
+              {isEnglish
+                ? 'Kia pai tonu te inu kawhe kua oti te hanga me ngā paerewa tino tiketike.'
+                : 'Enjoy consistently perfect brews crafted with exacting standards.'}
             </p>
           </div>
         </div>
@@ -121,14 +142,15 @@ function Home() {
             className="location-image"
           />
           <div className="location-content">
-            <h2>Locations</h2>
+            <h2>{isEnglish ? 'Wāhi' : 'Locations'}</h2>
             <p>
-              Enjoy our coffee at one of our premium locations. We have the
-              perfect spot for you!
+              {isEnglish
+                ? 'Kia pai ai tō inu kawhe ki tētahi o ā mātou wāhi rangatira. He wāhi pai mōu!'
+                : 'Enjoy our coffee at one of our premium locations. We have the perfect spot for you!'}
             </p>
             <div className="locations-link-container">
               <a href="#locations" className="locations-link">
-                Find us
+                {isEnglish ? 'Kimihia mātou' : 'Find us'}
                 <img src={arrowIcon} alt="arrow icon" className="arrow-icon" />
               </a>
             </div>
