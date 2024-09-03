@@ -17,12 +17,12 @@
 }
 
 .about-info {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 140%;
   color: #000000cc;
   width: 669px;
   height: 62px;
-  margin-top: 87px;
+  margin-top: 88px;
   margin-left: 35px;
 }
 
@@ -154,12 +154,12 @@
 }
 
 .process-info {
-  font-size: 20px;
+  font-size: 18px;
   color: #000000cc;
   font-weight: normal;
   line-height: 140%;
   max-width: 850px;
-  margin-top: 0px;
+  margin-top: 1px;
   margin-bottom: 0px;
 }
 
@@ -212,19 +212,18 @@
 .location-section {
   display: flex;
   align-items: flex-start;
-  margin: 191px 120px 108px 38px;
+  margin: 191px 38px 108px 38px;
 }
 
 .location-image {
   width: 787px;
   height: 427px;
-  margin-right: 137px;
+  margin-right: 120px;
 }
 
 .location-content {
   display: flex;
   flex-direction: column;
-  max-width: calc(100% - 787px - 38px);
 }
 
 .location-content h2 {
@@ -235,11 +234,12 @@
 }
 
 .location-content p {
-  font-size: 20px;
+  font-size: 18px;
   color: #000000cc;
   line-height: 140%;
   margin-top: 0;
   margin-bottom: 0;
+  width: 400px;
 }
 
 .locations-link {
@@ -249,8 +249,7 @@
   display: inline-flex;
   align-items: center;
   border-bottom: 1px solid #000000cc;
-  padding-bottom: 4px;
-  margin-top: 222px;
+  margin-top: 260px;
 }
 
 .arrow-icon {
