@@ -9,8 +9,12 @@ import logoImage from '../../assets/drip_logo.png'
 import scrolledLogoImage from '../../assets/black_drip_logo.png'
 import Switch from '../Switch/Switch'
 
-function Navbar() {
-  const [isLanguageSwitchOn, setIsLanguageSwitchOn] = useState(false)
+interface NavbarProps {
+  isEnglish: boolean
+  onLanguageSwitch: () => void
+}
+
+function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
   const [color, setColor] = useState(false)
 
   useEffect(() => {
@@ -26,21 +30,17 @@ function Navbar() {
     }
   }, [])
 
-  const handleSwitchChange = (checked: boolean) => {
-    setIsLanguageSwitchOn(checked)
-  }
-
   return (
     <nav className={`navbar ${color ? 'navbar-bg' : ''}`}>
       <div className="navbar-left">
-        <a href="#about-us" className="navbar-button">
-          About Us
+        <a href="about" className="navbar-button">
+          {isEnglish ? 'Mō mātou' : 'About Us'}
         </a>
-        <a href="#shop" className="navbar-button">
-          Shop
+        <a href="shop" className="navbar-button">
+          {isEnglish ? 'Toa' : 'Shop'}
         </a>
-        <a href="#locations" className="navbar-button">
-          Locations
+        <a href="locations" className="navbar-button">
+          {isEnglish ? 'Wāhi' : 'Locations'}
         </a>
       </div>
       <div className="navbar-middle">
@@ -64,12 +64,12 @@ function Navbar() {
         </div>
         <div className="language-switch">
           <Switch
-            checked={isLanguageSwitchOn}
-            onChange={handleSwitchChange}
+            checked={isEnglish}
+            onChange={onLanguageSwitch}
             inverted={color}
           />
           <span className="navbar-language">
-            {isLanguageSwitchOn ? 'English' : 'Māori'}
+            {isEnglish ? 'English' : 'Māori'}
           </span>
         </div>
       </div>

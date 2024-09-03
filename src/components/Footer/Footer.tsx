@@ -1,60 +1,63 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Switch from '../Switch/Switch'
 import './Footer.css'
 
-const Footer = () => {
-  const [isLanguageSwitchOn, setIsLanguageSwitchOn] = useState(false)
+interface FooterProps {
+  isEnglish: boolean
+  onLanguageSwitch: () => void
+}
 
-  const handleSwitchChange = () => {
-    setIsLanguageSwitchOn((prev) => !prev)
-  }
-
+function Footer({ isEnglish, onLanguageSwitch }: FooterProps) {
   return (
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-section">
           <ul className="footer-menu">
             <li>
-              <a href="#about-us">About Us</a>
+              <a href="#about-us">{isEnglish ? 'Mō mātou' : 'About Us'}</a>
             </li>
             <li>
-              <a href="#shop">Shop</a>
+              <a href="#shop">{isEnglish ? 'Toa' : 'Shop'}</a>
             </li>
             <li>
-              <a href="#locations">Locations</a>
-            </li>
-          </ul>
-        </div>
-        <div className="footer-section">
-          <ul className="footer-menu">
-            <li>
-              <a href="#account">Account</a>
-            </li>
-            <li>
-              <a href="#cart">Cart</a>
-            </li>
-            <li>
-              <a href="#shipping">Shipping</a>
+              <a href="#locations">{isEnglish ? 'Wāhi' : 'Locations'}</a>
             </li>
           </ul>
         </div>
         <div className="footer-section">
           <ul className="footer-menu">
             <li>
-              <a href="#terms-of-use">Terms of Use</a>
+              <a href="#account">{isEnglish ? 'Pūkete' : 'Account'}</a>
             </li>
             <li>
-              <a href="#privacy-policy">Privacy Policy</a>
+              <a href="#cart">{isEnglish ? 'Kāri' : 'Cart'}</a>
+            </li>
+            <li>
+              <a href="#shipping">{isEnglish ? 'Tukunga' : 'Shipping'}</a>
+            </li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <ul className="footer-menu">
+            <li>
+              <a href="#terms-of-use">
+                {isEnglish ? 'Ngā Tikanga' : 'Terms of Use'}
+              </a>
+            </li>
+            <li>
+              <a href="#privacy-policy">
+                {isEnglish ? 'Kaupapahere Tūmataiti' : 'Privacy Policy'}
+              </a>
             </li>
             <li className="language-switch-container">
               <div className="language-switch">
                 <Switch
-                  checked={isLanguageSwitchOn}
-                  onChange={handleSwitchChange}
+                  checked={isEnglish}
+                  onChange={onLanguageSwitch}
                   inverted={true}
                 />
                 <span className="footer-language">
-                  {isLanguageSwitchOn ? 'English' : 'Māori'}
+                  {isEnglish ? 'Māori' : 'English'}
                 </span>
               </div>
             </li>
@@ -64,14 +67,22 @@ const Footer = () => {
           <ul className="footer-contact">
             <li>
               <a href="#contacts" className="contact-title">
-                CONTACTS
+                {isEnglish ? 'WHAKAPĀ' : 'CONTACTS'}
               </a>
             </li>
             <li>
-              <a href="#email">info@drip.co.nz</a>
+              <a href="mailto:info@drip.co.nz" target="_blank">
+                info@drip.co.nz
+              </a>
             </li>
             <li>
-              <a href="#id">@drip_nz</a>
+              <a
+                href="https://www.instagram.com/drip__nz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                @drip_nz
+              </a>
             </li>
           </ul>
         </div>
