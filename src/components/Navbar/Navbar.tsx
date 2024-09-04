@@ -81,11 +81,13 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
         </a>
       </div>
       <div className="navbar-middle">
-        <img
-          src={color ? scrolledLogoImage : logoImage}
-          alt="Drip Logo"
-          className="logo-image"
-        />
+        <a href="/">
+          <img
+            src={color ? scrolledLogoImage : logoImage}
+            alt="Drip Logo"
+            className="logo-image"
+          />
+        </a>
       </div>
       <div className="navbar-right">
         <div className="icons-container">
