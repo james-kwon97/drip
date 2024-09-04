@@ -1,5 +1,35 @@
+.about-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .about-image {
-  margin-top: 105px;
   width: 896px;
   height: auto;
+  margin: 155px auto 0 auto;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-content h1 {
+  color: #868686;
+  font-size: 16px;
+  margin-top: 66px;
+  margin-bottom: 10px;
+}
+
+.about-content p {
+  color: #000000cc;
+  font-size: 16px;
+  width: 52%;
+  text-align: center;
+  line-height: 140%;
+  margin-top: 0;
+  margin-bottom: 216px;
 }

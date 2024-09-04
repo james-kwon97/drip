@@ -1,6 +1,5 @@
 import React from 'react'
 import Navbar from '../Navbar/Navbar'
-import Footer from '../Footer/Footer'
 import './About.css'
 import aboutImage from '../../assets/about_page.png'
 
@@ -24,13 +23,11 @@ function About({ isEnglish, onLanguageSwitch }: AboutProps) {
           <h1>{isEnglish ? 'Mō Mātou' : 'About Us'}</h1>
           <p>
             {isEnglish
-              ? 'He kamupene kawhe matou e aro ana ki te kounga me te pono. Ka whakapau kaha matou ki te whakarato i nga hua kawhe pai rawa atu me te tautoko i nga hapori kawhe.'
-              : 'We are a coffee company focused on quality and authenticity. We are committed to providing the finest coffee products and supporting coffee communities.'}
+              ? 'I whakatūria i te tau 2024, ko drip: tētahi tohu kawhe rangatira e aro ana ki te tuku i ngā wheako kawhe tino pai rawa atu. Ko tā mātou ngākau nui ki te kounga me te pono e whakaohooho ana i a mātou ki te tuku i ngā ranunga kawhe me ngā hua tino pai rawa, me te tautoko i te hapori kawhe o te ao. Ko ia kapu e whakaata ana i tā mātou pono ki te kairangi, kia pai ai te wheako reka me te ranu i ngā wā katoa mō ngā tangata aroha kawhe.'
+              : 'Established in 2024, drip: is a premium coffee brand dedicated to delivering exceptional coffee experiences. Our passion for quality and authenticity inspires us to provide the finest coffee blends and products, while supporting the global coffee community. Every cup reflects our commitment to excellence, ensuring that coffee lovers enjoy a rich, flavorful experience every time.'}
           </p>
         </div>
       </div>
-
-      <Footer isEnglish={isEnglish} onLanguageSwitch={onLanguageSwitch} />
     </div>
   )
 }
