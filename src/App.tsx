@@ -3,7 +3,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import HeroSection from './components/HeroSection/HeroSection'
 import Home from './components/Home/Home'
-import Products from './components/Products/Products' // Import the Products component
+import About from './components/About/About'
+import Products from './components/Products/Products'
 import Footer from './components/Footer/Footer'
 
 function App() {
@@ -26,7 +27,15 @@ function App() {
             </>
           }
         />
-        {/* Add the Products page route */}
+        <Route
+          path="/about"
+          element={
+            <About
+              isEnglish={isEnglish}
+              onLanguageSwitch={handleLanguageSwitch}
+            />
+          }
+        />
         <Route
           path="/products"
           element={
