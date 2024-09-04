@@ -57,7 +57,7 @@ function Footer({ isEnglish, onLanguageSwitch }: FooterProps) {
                   inverted={true}
                 />
                 <span className="footer-language">
-                  {isEnglish ? 'Māori' : 'English'}
+                  {isEnglish ? 'English' : 'Māori'}
                 </span>
               </div>
             </li>

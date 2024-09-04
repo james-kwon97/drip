@@ -36,7 +36,7 @@ function Home({ isEnglish }: HomeProps) {
               {isEnglish ? 'Ā Mātou Hua' : 'Our Products'}
             </h2>
             <div className="product-link-container">
-              <a href="#products" className="product-link">
+              <a href="/products" className="product-link">
                 {isEnglish ? 'Hoko inaianei' : 'Shop now'}
               </a>
               <img src={arrowIcon} alt="arrow icon" className="arrow-icon" />
