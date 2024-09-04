@@ -1,0 +1,36 @@
+.products-container {
+  padding: 20px;
+  background-color: #f8f8f8;
+  text-align: center;
+}
+
+.products-container h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.products-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.product-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  width: 30%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-item h2 {
+  font-size: 24px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.product-item p {
+  font-size: 18px;
+  color: #555;
+}

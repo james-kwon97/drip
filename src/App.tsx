@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
-import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Navbar from './components/Navbar/Navbar'
 import HeroSection from './components/HeroSection/HeroSection'
 import Home from './components/Home/Home'
-import Products from './components/Products/Products'
+import Products from './components/Products/Products' // Import the Products component
 import Footer from './components/Footer/Footer'
 
 function App() {
@@ -27,8 +26,16 @@ function App() {
             </>
           }
         />
-        <Route path="/products" element={<Products />} />{' '}
-        {/* Add Products route */}
+        {/* Add the Products page route */}
+        <Route
+          path="/products"
+          element={
+            <Products
+              isEnglish={isEnglish}
+              onLanguageSwitch={handleLanguageSwitch}
+            />
+          }
+        />
       </Routes>
       <Footer isEnglish={isEnglish} onLanguageSwitch={handleLanguageSwitch} />
     </Router>
