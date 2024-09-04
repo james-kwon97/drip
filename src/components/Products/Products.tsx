@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import './Products.css'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
+import ProductImage from '../../assets/product_image.png'
 
 interface ProductsProps {
   isEnglish: boolean
@@ -21,6 +22,7 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
         </p>
         <hr className="horizontal-line" />
       </div>
+
       <div className="products-categories">
         <div className="left-categories">
           <button className="category-button">
@@ -33,6 +35,7 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
             {isEnglish ? 'Tāpiri' : 'Extras'}
           </button>
         </div>
+
         <div className="right-filters">
           <button className="filter-button">
             {isEnglish ? 'Tātari' : 'Filters'}
@@ -46,17 +49,71 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
       </div>
 
       {/* Main products section */}
-      <div className="products-container">
-        <h1>{isEnglish ? 'Ā Mātou Hua' : 'Our Products'}</h1>
-
-        <div className="products-list">
-          <div className="product-item">
-            <h2>{isEnglish ? 'Ranunga Kawhe' : 'Coffee Blend'}</h2>
-            <p>{isEnglish ? 'Mai i $15.00' : 'From $15.00'}</p>
+      <div className="products-grid">
+        <div className="product-item">
+          <img src={ProductImage} alt="Product 1" className="product-image" />
+          <div className="product-info">
+            <span className="product-name">
+              {isEnglish ? 'Ranunga Kawhe 1' : 'Coffee Blend 1'}
+            </span>
+            <span className="product-price">
+              {isEnglish ? 'Mai $15.00' : 'From $15.00'}
+            </span>
           </div>
-          <div className="product-item">
-            <h2>{isEnglish ? 'Kapu Kawhe' : 'Drip Coffee Cup'}</h2>
-            <p>{isEnglish ? 'Mai i $25.00' : 'From $25.00'}</p>
+        </div>
+        <div className="product-item">
+          <img src={ProductImage} alt="Product 2" className="product-image" />
+          <div className="product-info">
+            <span className="product-name">
+              {isEnglish ? 'Ranunga Kawhe 2' : 'Coffee Blend 2'}
+            </span>
+            <span className="product-price">
+              {isEnglish ? 'Mai $18.00' : 'From $18.00'}
+            </span>
+          </div>
+        </div>
+        <div className="product-item">
+          <img src={ProductImage} alt="Product 3" className="product-image" />
+          <div className="product-info">
+            <span className="product-name">
+              {isEnglish ? 'Ranunga Kawhe 3' : 'Coffee Blend 3'}
+            </span>
+            <span className="product-price">
+              {isEnglish ? 'Mai $20.00' : 'From $20.00'}
+            </span>
+          </div>
+        </div>
+        <div className="product-item">
+          <img src={ProductImage} alt="Product 4" className="product-image" />
+          <div className="product-info">
+            <span className="product-name">
+              {isEnglish ? 'Kapu Kawhe 1' : 'Coffee Cup 1'}
+            </span>
+            <span className="product-price">
+              {isEnglish ? 'Mai $25.00' : 'From $25.00'}
+            </span>
+          </div>
+        </div>
+        <div className="product-item">
+          <img src={ProductImage} alt="Product 5" className="product-image" />
+          <div className="product-info">
+            <span className="product-name">
+              {isEnglish ? 'Kapu Kawhe 2' : 'Coffee Cup 2'}
+            </span>
+            <span className="product-price">
+              {isEnglish ? 'Mai $28.00' : 'From $28.00'}
+            </span>
+          </div>
+        </div>
+        <div className="product-item">
+          <img src={ProductImage} alt="Product 6" className="product-image" />
+          <div className="product-info">
+            <span className="product-name">
+              {isEnglish ? 'Kapu Kawhe 3' : 'Coffee Cup 3'}
+            </span>
+            <span className="product-price">
+              {isEnglish ? 'Mai $30.00' : 'From $30.00'}
+            </span>
           </div>
         </div>
       </div>
