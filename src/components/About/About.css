@@ -1,35 +1,44 @@
 .about-page {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 110px;
 }
 
 .about-image {
-  width: 896px;
+  width: 900px;
   height: auto;
-  margin: 155px auto 0 auto;
+  margin-left: 38px;
+  margin-right: 0;
 }
 
 .about-content {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  margin-left: 44px;
+  margin-top: 150px;
+  width: 400px;
 }
 
 .about-content h1 {
   color: #868686;
   font-size: 16px;
-  margin-top: 66px;
-  margin-bottom: 10px;
+  font-weight: normal;
+  margin-bottom: 90px;
+  margin-top: 0;
 }
 
-.about-content p {
-  color: #000000cc;
+.text-one {
   font-size: 16px;
-  width: 52%;
-  text-align: center;
+  color: #000000cc;
   line-height: 140%;
   margin-top: 0;
-  margin-bottom: 216px;
+  margin-bottom: 24px;
+}
+
+.text-two {
+  font-size: 16px;
+  color: #000000cc;
+  line-height: 140%;
+  margin: 0;
 }
