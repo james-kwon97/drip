@@ -1,3 +1,17 @@
+.products-intro {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 168px auto 0 auto;
+}
+
+.products-intro p {
+  font-size: 16px;
+  line-height: 140%;
+  color: rgba(0, 0, 0, 0.6);
+  max-width: 500px;
+}
+
 .products-container {
   padding: 20px;
   background-color: #f8f8f8;

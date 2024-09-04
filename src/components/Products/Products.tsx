@@ -10,13 +10,20 @@ interface ProductsProps {
 function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
   return (
     <div>
-      {/* Include Navbar */}
       <Navbar isEnglish={isEnglish} onLanguageSwitch={onLanguageSwitch} />
 
-      {/* Main content of the Products page */}
+      <div className="products-intro">
+        <p>
+          {isEnglish
+            ? ' "NTirohia te tino pai o te kawhe me ā mātou ranunga kounga me ngā kapu ātaahua, e whakarei ana i tō wheako kawhe" '
+            : ' "Discover coffee perfection with our premium blends and beautifully designed cups, elevating your coffee experience"'}
+        </p>
+      </div>
+
+      {/* Main products section */}
       <div className="products-container">
         <h1>{isEnglish ? 'Ā Mātou Hua' : 'Our Products'}</h1>
-        {/* Add product listing or content here */}
+
         <div className="products-list">
           <div className="product-item">
             <h2>{isEnglish ? 'Ranunga Kawhe' : 'Coffee Blend'}</h2>
@@ -26,7 +33,6 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
             <h2>{isEnglish ? 'Kapu Kawhe' : 'Drip Coffee Cup'}</h2>
             <p>{isEnglish ? 'Mai i $25.00' : 'From $25.00'}</p>
           </div>
-          {/* Add more product items as needed */}
         </div>
       </div>
     </div>
