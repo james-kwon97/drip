@@ -17,25 +17,24 @@ interface NavbarProps {
 
 function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
   const [color, setColor] = useState(false)
-  const location = useLocation() // Detect current route
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY
-      // Scroll-sensitive behavior only on the home page
       if (location.pathname === '/') {
         setColor(scrollPosition >= 145)
       } else {
-        // Apply scrolled styles on all other pages
         setColor(true)
       }
     }
 
     window.addEventListener('scroll', handleScroll)
 
-    // For non-home pages, set scrolled style immediately
     if (location.pathname !== '/') {
       setColor(true)
+    } else {
+      setColor(false)
     }
 
     return () => {
@@ -43,16 +42,41 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
     }
   }, [location])
 
+  const getButtonStyle = (buttonName: 'about' | 'shop' | 'locations') => {
+    if (location.pathname === '/') {
+      return color ? { color: 'black' } : {}
+    } else if (location.pathname === '/products') {
+      if (buttonName === 'shop') {
+        return { color: 'black' }
+      } else {
+        return { color: '#ADADAD' }
+      }
+    }
+    return { color: 'black' }
+  }
+
   return (
     <nav className={`navbar ${color ? 'navbar-bg' : ''}`}>
       <div className="navbar-left">
-        <a href="about" className="navbar-button">
+        <a
+          href="about"
+          className="navbar-button"
+          style={getButtonStyle('about')}
+        >
           {isEnglish ? 'Mō mātou' : 'About Us'}
         </a>
-        <a href="/products" className="navbar-button">
+        <a
+          href="/products"
+          className="navbar-button"
+          style={getButtonStyle('shop')}
+        >
           {isEnglish ? 'Toa' : 'Shop'}
         </a>
-        <a href="locations" className="navbar-button">
+        <a
+          href="locations"
+          className="navbar-button"
+          style={getButtonStyle('locations')}
+        >
           {isEnglish ? 'Wāhi' : 'Locations'}
         </a>
       </div>
