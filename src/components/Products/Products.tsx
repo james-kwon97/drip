@@ -94,7 +94,7 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
             </span>
           </div>
         </div>
-        <div className="product-item">
+        <div className="product-item bottom-row">
           <img src={ProductImage} alt="Product 5" className="product-image" />
           <div className="product-info">
             <span className="product-name">
@@ -105,7 +105,7 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
             </span>
           </div>
         </div>
-        <div className="product-item">
+        <div className="product-item bottom-row">
           <img src={ProductImage} alt="Product 6" className="product-image" />
           <div className="product-info">
             <span className="product-name">

@@ -79,14 +79,6 @@
   color: #007bff; /* Change icon color on hover */
 }
 
-.right-filters {
-  justify-content: flex-end;
-}
-
-.left-categories {
-  justify-content: flex-start;
-}
-
 /* Products section css */
 
 .products-container {
@@ -117,7 +109,8 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 18px;
+  margin-bottom: 76px;
 }
 
 .product-name,
@@ -127,8 +120,28 @@
   color: rgba(0, 0, 0, 0.8);
 }
 
-/* The last two products will align to the left in the second row */
-.product-item:nth-child(5),
-.product-item:nth-child(6) {
-  grid-column: span 2; /* Span 2 columns for the 2 products on the second row */
+/* Styling for bottom row items */
+.product-item.bottom-row {
+  margin-top: 0;
+  grid-column: span 1;
+  justify-self: start;
+}
+
+/* Media query for responsive layout */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Adjust to 2 columns for smaller screens */
+  }
+
+  .product-item.bottom-row {
+    grid-column: span 2; /* Keep the items spanning full width */
+  }
+
+  .product-item.bottom-row:nth-child(5),
+  .product-item.bottom-row:nth-child(6) {
+    justify-self: center; /* Center the items on smaller screens */
+  }
 }
