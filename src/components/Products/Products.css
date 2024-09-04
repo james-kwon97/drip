@@ -1,6 +1,8 @@
 .products-intro {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   margin: 168px auto 0 auto;
 }
@@ -10,6 +12,75 @@
   line-height: 140%;
   color: rgba(0, 0, 0, 0.6);
   max-width: 500px;
+  margin: 0 auto;
+}
+
+.horizontal-line {
+  width: calc(100% - 76px);
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  margin: 118px auto 0 auto;
+}
+
+.products-categories {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 38px 0;
+}
+
+.left-categories,
+.right-filters {
+  display: flex;
+  gap: 20px;
+}
+
+.right-filters {
+  display: flex;
+  gap: 58px;
+  justify-content: flex-end;
+}
+
+.category-button,
+.filter-button,
+.sort-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: black;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.category-button:hover,
+.filter-button:hover,
+.sort-button:hover {
+  color: #007bff; /* Change text color on hover */
+}
+
+.chevron-icon {
+  width: 16px;
+  height: 16px;
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.filter-button:hover .chevron-icon,
+.sort-button:hover .chevron-icon {
+  color: #007bff; /* Change icon color on hover */
+}
+
+.right-filters {
+  justify-content: flex-end;
+}
+
+.left-categories {
+  justify-content: flex-start;
 }
 
 .products-container {
