@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import {
   MagnifyingGlassIcon,
   ShoppingBagIcon,
@@ -16,19 +17,31 @@ interface NavbarProps {
 
 function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
   const [color, setColor] = useState(false)
+  const location = useLocation() // Detect current route
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY
-      setColor(scrollPosition >= 145)
+      // Scroll-sensitive behavior only on the home page
+      if (location.pathname === '/') {
+        setColor(scrollPosition >= 145)
+      } else {
+        // Apply scrolled styles on all other pages
+        setColor(true)
+      }
     }
 
     window.addEventListener('scroll', handleScroll)
 
+    // For non-home pages, set scrolled style immediately
+    if (location.pathname !== '/') {
+      setColor(true)
+    }
+
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [])
+  }, [location])
 
   return (
     <nav className={`navbar ${color ? 'navbar-bg' : ''}`}>
