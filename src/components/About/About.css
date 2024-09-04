@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   margin-left: 44px;
-  margin-top: 150px;
+  margin-top: 170px;
   width: 400px;
 }
 
@@ -24,11 +24,12 @@
   color: #868686;
   font-size: 16px;
   font-weight: normal;
-  margin-bottom: 90px;
+  margin-bottom: 88px;
   margin-top: 0;
 }
 
-.text-one {
+.text-one,
+.text-two {
   font-size: 16px;
   color: #000000cc;
   line-height: 140%;
@@ -36,7 +37,7 @@
   margin-bottom: 24px;
 }
 
-.text-two {
+.text-three {
   font-size: 16px;
   color: #000000cc;
   line-height: 140%;
