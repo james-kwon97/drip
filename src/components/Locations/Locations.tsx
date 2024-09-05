@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from '../Navbar/Navbar'
 import './Locations.css'
-import LocationImage from '../../assets/location_image.png'
+import LocationImageAuckland from '../../assets/location_image.png'
+import LocationImageQueenstown from '../../assets/location_image2.jpg'
 
 interface LocationsProps {
   isEnglish: boolean
@@ -10,13 +11,23 @@ interface LocationsProps {
 
 function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
   const [activeLocation, setActiveLocation] = useState<string>('auckland')
+  const [currentImage, setCurrentImage] = useState<string>(
+    LocationImageAuckland
+  )
 
   const handleLocationClick = (location: string) => {
     setActiveLocation(location)
+
+    // Change the image based on the selected location
+    if (location === 'auckland') {
+      setCurrentImage(LocationImageAuckland)
+    } else if (location === 'queenstown') {
+      setCurrentImage(LocationImageQueenstown)
+    }
   }
 
   useEffect(() => {
-    // Ensures at least one location is always active
+    // Ensure at least one location is always active
     if (!activeLocation) {
       setActiveLocation('auckland') // Default to Auckland if none is selected
     }
@@ -67,8 +78,12 @@ function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
 
         <div className="locations-right-section">
           <img
-            src={LocationImage}
-            alt="Location One"
+            src={currentImage}
+            alt={
+              activeLocation === 'auckland'
+                ? 'Auckland Location'
+                : 'Queenstown Location'
+            }
             className="locations-image"
           />
         </div>
