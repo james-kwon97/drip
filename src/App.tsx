@@ -5,6 +5,7 @@ import HeroSection from './components/HeroSection/HeroSection'
 import Home from './components/Home/Home'
 import About from './components/About/About'
 import Products from './components/Products/Products'
+import Locations from './components/Locations/Locations'
 import Footer from './components/Footer/Footer'
 
 function App() {
@@ -40,6 +41,15 @@ function App() {
           path="/products"
           element={
             <Products
+              isEnglish={isEnglish}
+              onLanguageSwitch={handleLanguageSwitch}
+            />
+          }
+        />
+        <Route
+          path="/locations"
+          element={
+            <Locations
               isEnglish={isEnglish}
               onLanguageSwitch={handleLanguageSwitch}
             />

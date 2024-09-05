@@ -1,0 +1,87 @@
+.locations-page-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 144px;
+}
+
+.locations-left-section {
+  flex-basis: 25%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 38px;
+  font-size: 16px;
+}
+
+.locations-title {
+  color: #868686;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.location-item h2 {
+  font-size: 32px;
+  font-family: 'EB Garamond', serif;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+
+.location-item .locations-address {
+  font-size: 16px;
+  color: #000000cc;
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+.location-item .locations-hour {
+  font-size: 16px;
+  color: #868686;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.locations-divider {
+  border: none;
+  border-top: 1px solid #cccccc;
+  width: 234px;
+  margin: 56px 0;
+}
+
+.locations-right-section {
+  flex-basis: 75%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 38px;
+}
+
+.locations-image {
+  width: 980px;
+  height: auto;
+  margin-top: 24px;
+  margin-bottom: 216px;
+  transition: opacity 0.3s ease;
+}
+
+.locations-image.fade {
+  opacity: 0;
+}
+
+/* Active state for the clicked location */
+.location-item.active h2 {
+  color: #000;
+}
+
+.location-item.active .locations-address {
+  color: #000000cc;
+}
+
+.location-item.active .locations-hour {
+  color: #868686;
+}
+
+/* Default gray for non-active locations */
+.location-item:not(.active) h2,
+.location-item:not(.active) .locations-address,
+.location-item:not(.active) .locations-hour {
+  color: #cccccc;
+}

@@ -159,7 +159,7 @@ function Home({ isEnglish }: HomeProps) {
                 : 'Enjoy our coffee at one of our premium locations. We have the perfect spot for you!'}
             </p>
             <div className="locations-link-container">
-              <a href="#locations" className="locations-link">
+              <a href="/locations" className="locations-link">
                 {isEnglish ? 'Kimihia mātou' : 'Find us'}
                 <img src={arrowIcon} alt="arrow icon" className="arrow-icon" />
               </a>
