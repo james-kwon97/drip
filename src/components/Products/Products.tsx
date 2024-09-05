@@ -14,104 +14,103 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
     <div>
       <Navbar isEnglish={isEnglish} onLanguageSwitch={onLanguageSwitch} />
 
-      <div className="products-intro">
+      <div className="products-page-intro">
         <p>
           {isEnglish
             ? ' "Tirohia te tino pai o te kawhe me ā mātou ranunga kounga me ngā kapu ātaahua, e whakarei ana i tō wheako kawhe" '
             : ' "Discover coffee perfection with our premium blends and beautifully designed cups, elevating your coffee experience"'}
         </p>
-        <hr className="horizontal-line" />
+        <hr className="products-horizontal-line" />
       </div>
 
-      <div className="products-categories">
-        <div className="left-categories">
-          <button className="category-button">
+      <div className="products-page-categories">
+        <div className="products-left-categories">
+          <button className="products-category-button">
             {isEnglish ? 'Katoa' : 'All'}
           </button>
-          <button className="category-button">
+          <button className="products-category-button">
             {isEnglish ? 'Kawhe' : 'Coffee'}
           </button>
-          <button className="category-button">
+          <button className="products-category-button">
             {isEnglish ? 'Tāpiri' : 'Extras'}
           </button>
         </div>
 
-        <div className="right-filters">
-          <button className="filter-button">
+        <div className="products-right-filters">
+          <button className="products-filter-button">
             {isEnglish ? 'Tātari' : 'Filters'}
-            <ChevronDownIcon className="chevron-icon" />
+            <ChevronDownIcon className="products-chevron-icon" />
           </button>
-          <button className="sort-button">
+          <button className="products-sort-button">
             {isEnglish ? 'Kōmaka mā' : 'Sort By'}
-            <ChevronDownIcon className="chevron-icon" />
+            <ChevronDownIcon className="products-chevron-icon" />
           </button>
         </div>
       </div>
 
-      {/* Main products section */}
-      <div className="products-grid">
-        <div className="product-item">
-          <img src={ProductImage} alt="Product 1" className="product-image" />
-          <div className="product-info">
-            <span className="product-name">
+      <div className="products-page-grid">
+        <div className="products-item">
+          <img src={ProductImage} alt="Product 1" className="products-image" />
+          <div className="products-info">
+            <span className="products-name">
               {isEnglish ? 'Ranunga Kawhe 1' : 'Coffee Blend 1'}
             </span>
-            <span className="product-price">
+            <span className="products-price">
               {isEnglish ? 'Mai $15.00' : 'From $15.00'}
             </span>
           </div>
         </div>
-        <div className="product-item">
-          <img src={ProductImage} alt="Product 2" className="product-image" />
-          <div className="product-info">
-            <span className="product-name">
+        <div className="products-item">
+          <img src={ProductImage} alt="Product 2" className="products-image" />
+          <div className="products-info">
+            <span className="products-name">
               {isEnglish ? 'Ranunga Kawhe 2' : 'Coffee Blend 2'}
             </span>
-            <span className="product-price">
+            <span className="products-price">
               {isEnglish ? 'Mai $18.00' : 'From $18.00'}
             </span>
           </div>
         </div>
-        <div className="product-item">
-          <img src={ProductImage} alt="Product 3" className="product-image" />
-          <div className="product-info">
-            <span className="product-name">
+        <div className="products-item">
+          <img src={ProductImage} alt="Product 3" className="products-image" />
+          <div className="products-info">
+            <span className="products-name">
               {isEnglish ? 'Ranunga Kawhe 3' : 'Coffee Blend 3'}
             </span>
-            <span className="product-price">
+            <span className="products-price">
               {isEnglish ? 'Mai $20.00' : 'From $20.00'}
             </span>
           </div>
         </div>
-        <div className="product-item">
-          <img src={ProductImage} alt="Product 4" className="product-image" />
-          <div className="product-info">
-            <span className="product-name">
+        <div className="products-item">
+          <img src={ProductImage} alt="Product 4" className="products-image" />
+          <div className="products-info">
+            <span className="products-name">
               {isEnglish ? 'Kapu Kawhe 1' : 'Coffee Cup 1'}
             </span>
-            <span className="product-price">
+            <span className="products-price">
               {isEnglish ? 'Mai $25.00' : 'From $25.00'}
             </span>
           </div>
         </div>
-        <div className="product-item bottom-row">
-          <img src={ProductImage} alt="Product 5" className="product-image" />
-          <div className="product-info">
-            <span className="product-name">
+        <div className="products-item products-bottom-row">
+          <img src={ProductImage} alt="Product 5" className="products-image" />
+          <div className="products-info">
+            <span className="products-name">
               {isEnglish ? 'Kapu Kawhe 2' : 'Coffee Cup 2'}
             </span>
-            <span className="product-price">
+            <span className="products-price">
               {isEnglish ? 'Mai $28.00' : 'From $28.00'}
             </span>
           </div>
         </div>
-        <div className="product-item bottom-row">
-          <img src={ProductImage} alt="Product 6" className="product-image" />
-          <div className="product-info">
-            <span className="product-name">
+        <div className="products-item products-bottom-row">
+          <img src={ProductImage} alt="Product 6" className="products-image" />
+          <div className="products-info">
+            <span className="products-name">
               {isEnglish ? 'Kapu Kawhe 3' : 'Coffee Cup 3'}
             </span>
-            <span className="product-price">
+            <span className="products-price">
               {isEnglish ? 'Mai $30.00' : 'From $30.00'}
             </span>
           </div>

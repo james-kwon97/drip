@@ -12,10 +12,10 @@ function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
   return (
     <div>
       <Navbar isEnglish={isEnglish} onLanguageSwitch={onLanguageSwitch} />
-      <div className="locations-page">
-        <div className="left-section">
+      <div className="locations-page-container">
+        <div className="locations-left-section">
           <p>{isEnglish ? 'Ngā Wāhi' : 'Locations'}</p>
-          <div className="location-info">
+          <div className="locations-info">
             <h2>{isEnglish ? 'Tāmaki Makaurau' : 'Auckland'}</h2>
             <p>
               {isEnglish
@@ -42,11 +42,11 @@ function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
           </div>
         </div>
 
-        <div className="right-section">
+        <div className="locations-right-section">
           <img
             src={LocationImage}
             alt="Location One"
-            className="location-image"
+            className="locations-image"
           />
         </div>
       </div>
