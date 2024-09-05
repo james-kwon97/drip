@@ -1,0 +1,5 @@
+import React from 'react'
+import Navbar from '../Navbar/Navbar'
+import './Locations.css'
+import LocationImageOne from '../../assets/location.png'
+import LocationImageTwo from '../../assets/location_image2.jpg'
