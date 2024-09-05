@@ -14,13 +14,13 @@ function Footer({ isEnglish, onLanguageSwitch }: FooterProps) {
         <div className="footer-section">
           <ul className="footer-menu">
             <li>
-              <a href="#about-us">{isEnglish ? 'Mō mātou' : 'About Us'}</a>
+              <a href="/about">{isEnglish ? 'Mō mātou' : 'About Us'}</a>
             </li>
             <li>
-              <a href="#shop">{isEnglish ? 'Toa' : 'Shop'}</a>
+              <a href="/products">{isEnglish ? 'Toa' : 'Shop'}</a>
             </li>
             <li>
-              <a href="#locations">{isEnglish ? 'Wāhi' : 'Locations'}</a>
+              <a href="/locations">{isEnglish ? 'Wāhi' : 'Locations'}</a>
             </li>
           </ul>
         </div>
@@ -66,7 +66,7 @@ function Footer({ isEnglish, onLanguageSwitch }: FooterProps) {
         <div className="footer-section">
           <ul className="footer-contact">
             <li>
-              <a href="#contacts" className="contact-title">
+              <a className="contact-title">
                 {isEnglish ? 'WHAKAPĀ' : 'CONTACTS'}
               </a>
             </li>
