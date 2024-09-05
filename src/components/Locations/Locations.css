@@ -1,7 +1,7 @@
 .locations-page-container {
   display: flex;
   justify-content: space-between;
-  margin-top: 110px;
+  margin-top: 144px;
 }
 
 .locations-left-section {
@@ -9,12 +9,13 @@
   display: flex;
   flex-direction: column;
   margin-left: 38px;
-  padding-left: 38px;
   font-size: 16px;
 }
 
-.locations-info {
-  margin-top: 20px;
+.locations-title {
+  color: #868686;
+  margin-top: 0;
+  margin-bottom: 24px;
 }
 
 .locations-info h2 {
@@ -22,13 +23,27 @@
   font-family: 'EB Garamond', serif;
   color: #000;
   font-weight: normal;
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 26px;
 }
 
-.locations-info p {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 16px;
+.locations-address {
+  color: #000000cc;
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+.locations-hour {
+  color: #868686;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.locations-divider {
+  border: none;
+  border-top: 1px solid #cccccc;
+  width: 234px;
+  margin: 56px 0;
 }
 
 .locations-right-section {
@@ -39,6 +54,8 @@
 }
 
 .locations-image {
-  width: 1000px;
+  width: 980px;
   height: auto;
+  margin-top: 24px;
+  margin-bottom: 216px;
 }

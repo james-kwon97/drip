@@ -14,30 +14,27 @@ function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
       <Navbar isEnglish={isEnglish} onLanguageSwitch={onLanguageSwitch} />
       <div className="locations-page-container">
         <div className="locations-left-section">
-          <p>{isEnglish ? 'Ngā Wāhi' : 'Locations'}</p>
+          <p className="locations-title">
+            {isEnglish ? 'Ngā Wāhi' : 'Locations'}
+          </p>
           <div className="locations-info">
-            <h2>{isEnglish ? 'Tāmaki Makaurau' : 'Auckland'}</h2>
-            <p>
-              {isEnglish
-                ? '123 Example Street, Auckland'
-                : '123 Example Street, Auckland'}
+            <h2>Auckland</h2>
+            <p className="locations-address">8A Commerce St, Auckland 1010</p>
+            <p className="locations-hour">
+              {isEnglish ? 'Rāhina-Rāmere 7:00-15:00' : 'Mon-Fri 7:00-15:00'}
             </p>
-            <p>
-              {isEnglish
-                ? 'Ngā haora whakatuwhera: 7:00AM - 5:00PM'
-                : 'Opening hours: 7:00AM - 5:00PM'}
+            <p className="locations-hour">
+              {isEnglish ? 'Rāhoroi-Rātapu 7:00-14:00' : 'Sat-Sun 7:00-14:00'}
             </p>
+            <hr className="locations-divider" />
 
-            <h2>{isEnglish ? 'Tāmaki Makaurau' : 'Queenstown'}</h2>
-            <p>
-              {isEnglish
-                ? '456 Another Road, Auckland'
-                : '456 Another Road, Auckland'}
+            <h2>Queenstown</h2>
+            <p className="locations-address">8D Beach St, Queenstown 9300</p>
+            <p className="locations-hour">
+              {isEnglish ? 'Rāhina-Rāmere 7:00-15:00' : 'Mon-Fri 7:00-15:00'}
             </p>
-            <p>
-              {isEnglish
-                ? 'Ngā haora whakatuwhera: 8:00AM - 4:00PM'
-                : 'Opening hours: 8:00AM - 4:00PM'}
+            <p className="locations-hour">
+              {isEnglish ? 'Rāhoroi-Rātapu 7:00-14:00' : 'Sat-Sun 7:00-14:00'}
             </p>
           </div>
         </div>
