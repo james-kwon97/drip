@@ -55,7 +55,8 @@
 }
 
 .locations-image {
-  width: 980px;
+  width: calc(100% - 76px);
+  max-width: 980px;
   height: auto;
   margin-top: 24px;
   margin-bottom: 216px;
