@@ -14,22 +14,26 @@ function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
   const [currentImage, setCurrentImage] = useState<string>(
     LocationImageAuckland
   )
+  const [isFading, setIsFading] = useState(false)
 
   const handleLocationClick = (location: string) => {
-    setActiveLocation(location)
-
-    // Change the image based on the selected location
-    if (location === 'auckland') {
-      setCurrentImage(LocationImageAuckland)
-    } else if (location === 'queenstown') {
-      setCurrentImage(LocationImageQueenstown)
+    if (location !== activeLocation) {
+      setIsFading(true)
+      setTimeout(() => {
+        setActiveLocation(location)
+        setCurrentImage(
+          location === 'auckland'
+            ? LocationImageAuckland
+            : LocationImageQueenstown
+        )
+        setIsFading(false)
+      }, 200)
     }
   }
 
   useEffect(() => {
-    // Ensure at least one location is always active
     if (!activeLocation) {
-      setActiveLocation('auckland') // Default to Auckland if none is selected
+      setActiveLocation('auckland')
     }
   }, [activeLocation])
 
@@ -84,7 +88,7 @@ function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
                 ? 'Auckland Location'
                 : 'Queenstown Location'
             }
-            className="locations-image"
+            className={`locations-image ${isFading ? 'fade' : ''}`}
           />
         </div>
       </div>

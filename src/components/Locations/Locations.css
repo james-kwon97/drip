@@ -59,6 +59,11 @@
   height: auto;
   margin-top: 24px;
   margin-bottom: 216px;
+  transition: opacity 0.3s ease;
+}
+
+.locations-image.fade {
+  opacity: 0;
 }
 
 /* Active state for the clicked location */
