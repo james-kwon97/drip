@@ -22,7 +22,7 @@ function Home({ isEnglish }: HomeProps) {
               : 'You’ll be greeted by stunning visuals of our freshly brewed beverages, delicious pastries, and cozy atmosphere.'}
           </p>
           <div className="about-link-container">
-            <a href="#about-us" className="about-link">
+            <a href="/about" className="about-link">
               {isEnglish ? 'Mō mātou' : 'About Us'}
             </a>
             <img src={arrowIcon} alt="arrow icon" className="arrow-icon" />
