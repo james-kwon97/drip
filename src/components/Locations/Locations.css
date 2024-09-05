@@ -18,23 +18,26 @@
   margin-bottom: 24px;
 }
 
-.locations-info h2 {
+/* Maintain original h2 styles */
+.location-item h2 {
   font-size: 32px;
   font-family: 'EB Garamond', serif;
-  color: #000;
-  font-weight: normal;
+  font-weight: normal; /* Ensure normal weight */
+  color: #000; /* Original black */
   margin-top: 0;
   margin-bottom: 26px;
 }
 
-.locations-address {
-  color: #000000cc;
+.location-item .locations-address {
+  font-size: 16px;
+  color: #000000cc; /* Original color for address */
   margin-top: 0;
   margin-bottom: 9px;
 }
 
-.locations-hour {
-  color: #868686;
+.location-item .locations-hour {
+  font-size: 16px;
+  color: #868686; /* Original color for hours */
   margin-top: 0;
   margin-bottom: 6px;
 }
@@ -58,4 +61,24 @@
   height: auto;
   margin-top: 24px;
   margin-bottom: 216px;
+}
+
+/* Active state for the clicked location */
+.location-item.active h2 {
+  color: #000; /* Keep the original color */
+}
+
+.location-item.active .locations-address {
+  color: #000000cc; /* Keep original color for address */
+}
+
+.location-item.active .locations-hour {
+  color: #868686; /* Keep original color for hours */
+}
+
+/* Default gray for non-active locations */
+.location-item:not(.active) h2,
+.location-item:not(.active) .locations-address,
+.location-item:not(.active) .locations-hour {
+  color: #cccccc; /* Gray for inactive locations */
 }
