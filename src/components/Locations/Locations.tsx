@@ -9,13 +9,18 @@ interface LocationsProps {
 }
 
 function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
-  const [activeLocation, setActiveLocation] = useState<string | null>(
-    'auckland'
-  ) // Auckland active by default
+  const [activeLocation, setActiveLocation] = useState<string>('auckland')
 
   const handleLocationClick = (location: string) => {
-    setActiveLocation(activeLocation === location ? null : location)
+    setActiveLocation(location)
   }
+
+  useEffect(() => {
+    // Ensures at least one location is always active
+    if (!activeLocation) {
+      setActiveLocation('auckland') // Default to Auckland if none is selected
+    }
+  }, [activeLocation])
 
   return (
     <div>
