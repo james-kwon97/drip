@@ -1,0 +1,45 @@
+.about-page {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 110px;
+}
+
+.about-image {
+  width: 900px;
+  height: auto;
+  margin-left: 38px;
+  margin-right: 0;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 44px;
+  margin-top: 170px;
+  width: 400px;
+}
+
+.about-content h1 {
+  color: #868686;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 88px;
+  margin-top: 0;
+}
+
+.text-one,
+.text-two {
+  font-size: 16px;
+  color: #000000cc;
+  line-height: 140%;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.text-three {
+  font-size: 16px;
+  color: #000000cc;
+  line-height: 140%;
+  margin: 0;
+}

@@ -51,6 +51,12 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
       } else {
         return { color: '#ADADAD' }
       }
+    } else if (location.pathname === '/about') {
+      if (buttonName === 'about') {
+        return { color: 'black' }
+      } else {
+        return { color: '#ADADAD' }
+      }
     }
     return { color: 'black' }
   }
@@ -59,7 +65,7 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
     <nav className={`navbar ${color ? 'navbar-bg' : ''}`}>
       <div className="navbar-left">
         <a
-          href="about"
+          href="/about"
           className="navbar-button"
           style={getButtonStyle('about')}
         >
@@ -73,7 +79,7 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
           {isEnglish ? 'Toa' : 'Shop'}
         </a>
         <a
-          href="locations"
+          href="/locations"
           className="navbar-button"
           style={getButtonStyle('locations')}
         >
@@ -81,11 +87,13 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
         </a>
       </div>
       <div className="navbar-middle">
-        <img
-          src={color ? scrolledLogoImage : logoImage}
-          alt="Drip Logo"
-          className="logo-image"
-        />
+        <a href="/">
+          <img
+            src={color ? scrolledLogoImage : logoImage}
+            alt="Drip Logo"
+            className="logo-image"
+          />
+        </a>
       </div>
       <div className="navbar-right">
         <div className="icons-container">
