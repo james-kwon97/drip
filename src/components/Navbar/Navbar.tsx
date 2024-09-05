@@ -57,6 +57,12 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
       } else {
         return { color: '#ADADAD' }
       }
+    } else if (location.pathname === '/locations') {
+      if (buttonName === 'locations') {
+        return { color: 'black' }
+      } else {
+        return { color: '#ADADAD' }
+      }
     }
     return { color: 'black' }
   }
