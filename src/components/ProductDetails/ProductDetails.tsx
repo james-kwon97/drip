@@ -22,11 +22,7 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
       <Navbar isEnglish={isEnglish} onLanguageSwitch={onLanguageSwitch} />
       <div className="product-details">
         <div className="product-image">
-          <img
-            src={product.imageUrl}
-            alt={product.name}
-            className="products-image"
-          />
+          <img src={product.imageUrl} alt={product.name} />
         </div>
         <div className="product-detail-info">
           <h1 className="products-name">{product.name}</h1>
