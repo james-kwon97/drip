@@ -32,6 +32,7 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
           <p className="product-description">
             {isEnglish ? product.description : product.descriptionEn}
           </p>
+          <hr className="description-divider" />
           <p className="product-attribute">
             {isEnglish ? product.attribute1 : product.attribute1En}:{' '}
             {isEnglish ? product.attribute1Info : product.attribute1InfoEn}
@@ -43,19 +44,19 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
           <div className="product-buttons">
             {isEnglish ? (
               <>
-                <button className="products-category-button">
+                <button className="products-category-buttons">
                   Tāpiri ki te Kete
                 </button>
-                <button className="products-category-button">
+                <button className="products-category-buttons">
                   Hoko Ināianei - {product.price}
                 </button>
               </>
             ) : (
               <>
-                <button className="products-category-button">
+                <button className="products-category-buttons">
                   Add to cart
                 </button>
-                <button className="products-category-button">
+                <button className="products-category-buttons">
                   Buy now - {product.price}
                 </button>
               </>
