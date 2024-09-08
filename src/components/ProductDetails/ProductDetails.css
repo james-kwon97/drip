@@ -1,0 +1,127 @@
+.products-details {
+  display: flex;
+  justify-content: flex-start;
+  gap: 50px;
+  margin: 152px 0 216px 38px;
+}
+
+.product-detail-image {
+  flex: 0 1 900px;
+  max-width: 900px;
+}
+
+.product-detail-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-detail-info {
+  flex: 0 1 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 370px;
+  margin-top: -50px;
+  margin-right: 38px;
+}
+
+.products-names {
+  font-size: 32px;
+  color: black;
+  font-weight: normal;
+  font-family: 'EB garamond', serif;
+  margin-bottom: 8px;
+}
+
+.product-info {
+  font-size: 12px;
+  color: #00000080;
+  margin-top: 0;
+}
+
+.product-description {
+  max-width: 370px;
+  font-size: 14px;
+  color: #000000cc;
+  line-height: 140%;
+  margin-top: 30px;
+  margin-bottom: 0;
+}
+
+.description-divider {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 30px 0;
+}
+
+.product-attribute1 {
+  font-size: 16px;
+  color: black;
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
+.product-attribute1-info {
+  font-size: 14px;
+  color: #000000cc;
+  margin: 0;
+}
+
+.product-attribute2 {
+  font-size: 16px;
+  color: black;
+  margin-top: 26px;
+  margin-bottom: 9px;
+}
+
+.product-attribute2-info {
+  font-size: 14px;
+  color: #000000cc;
+  margin-top: 0;
+  margin-bottom: 70px;
+}
+
+.product-buttons {
+  display: flex;
+  flex-direction: column;
+  max-width: 370px;
+  gap: 10px;
+}
+
+.products-category-buttons {
+  padding: 14px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: opacity 0.3s ease;
+}
+
+.products-category-buttons:nth-of-type(1) {
+  background-color: white;
+  color: black;
+}
+
+.products-category-buttons:nth-of-type(2) {
+  background-color: black;
+  color: white;
+}
+
+.products-category-buttons:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 1024px) {
+  .product-details {
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 100px 0;
+  }
+
+  .product-detail-info {
+    margin-top: 30px;
+    margin-right: 0;
+  }
+}

@@ -86,3 +86,10 @@
 .location-item:not(.active) .locations-hour {
   color: #cccccc;
 }
+
+/* Add hover effect for inactive items */
+.location-item:not(.active) h2:hover,
+.location-item:not(.active) .locations-address:hover,
+.location-item:not(.active) .locations-hour:hover {
+  cursor: pointer;
+}
