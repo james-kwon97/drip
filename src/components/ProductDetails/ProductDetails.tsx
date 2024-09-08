@@ -33,12 +33,16 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
             {isEnglish ? product.description : product.descriptionEn}
           </p>
           <hr className="description-divider" />
-          <p className="product-attribute">
-            {isEnglish ? product.attribute1 : product.attribute1En}:{' '}
+          <p className="product-attribute1"></p>
+          {isEnglish ? product.attribute1 : product.attribute1En}
+          <p className="product-attribute1-info">
             {isEnglish ? product.attribute1Info : product.attribute1InfoEn}
           </p>
-          <p className="product-attribute">
-            {isEnglish ? product.attribute2 : product.attribute2En}:{' '}
+          <p className="product-attribute2">
+            {isEnglish ? product.attribute2 : product.attribute2En}
+          </p>
+
+          <p className="product-attribute2-info">
             {isEnglish ? product.attribute2Info : product.attribute2InfoEn}
           </p>
           <div className="product-buttons">
