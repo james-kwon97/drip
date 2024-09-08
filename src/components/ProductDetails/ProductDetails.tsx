@@ -33,8 +33,9 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
             {isEnglish ? product.description : product.descriptionEn}
           </p>
           <hr className="description-divider" />
-          <p className="product-attribute1"></p>
-          {isEnglish ? product.attribute1 : product.attribute1En}
+          <p className="product-attribute1">
+            {isEnglish ? product.attribute1 : product.attribute1En}
+          </p>
           <p className="product-attribute1-info">
             {isEnglish ? product.attribute1Info : product.attribute1InfoEn}
           </p>
