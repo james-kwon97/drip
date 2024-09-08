@@ -20,15 +20,13 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
   return (
     <div>
       <Navbar isEnglish={isEnglish} onLanguageSwitch={onLanguageSwitch} />
-      <div className="product-details">
-        <div className="product-image">
+      <div className="products-details">
+        <div className="product-detail-image">
           <img src={product.imageUrl} alt={product.name} />
         </div>
         <div className="product-detail-info">
-          <h1 className="products-name">{product.name}</h1>
-          <p className="product-info">
-            {isEnglish ? product.info : product.infoEn}
-          </p>
+          <h1 className="products-names">{product.name}</h1>
+          <p className="product-info">{product.info}</p>
           <p className="product-description">
             {isEnglish ? product.description : product.descriptionEn}
           </p>

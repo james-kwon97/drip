@@ -4,7 +4,6 @@ export interface Product {
   id: string
   name: string
   info: string
-  infoEn: string
   description: string
   descriptionEn: string
   attribute1: string
@@ -23,8 +22,7 @@ export const productData: Product[] = [
   {
     id: 'original',
     name: 'drip: original',
-    info: '500g / Pūranga pūkohu katoa',
-    infoEn: '500g / Whole beans',
+    info: '500g / Whole beans',
     description:
       'He kawhe tūturu, māmā, taurite hoki me tōna reka, tōna rongo kikokiko. Ko te kōwhiringa tino pai mō te hunga e pai ana ki te wheako kawhe tūturu.',
     descriptionEn:
@@ -44,7 +42,6 @@ export const productData: Product[] = [
     id: 'hazelnut',
     name: 'drip: hazelnut',
     info: '500g / Whole beans',
-    infoEn: '500g / Whole beans',
     description:
       'He kawhe nāna i te āhua mīharo me te reka iti, he pai mō te tīmea me te kirīmi, e pai ana ki te riri reka.',
     descriptionEn:
@@ -64,7 +61,6 @@ export const productData: Product[] = [
     id: 'chocolate',
     name: 'drip: chocolate',
     info: '500g / Whole beans',
-    infoEn: '500g / Whole beans',
     description:
       'He tino reka i te āhua kākahu mīharo me te tōngā mō te pākia, hei hōmāri hoki mō ngā hunga pai ki te whāngai kākahu.',
     descriptionEn:
@@ -84,7 +80,6 @@ export const productData: Product[] = [
     id: 'original-decaf',
     name: 'drip: original decaf',
     info: '500g / Whole beans',
-    infoEn: '500g / Whole beans',
     description:
       'Te kite i te reka kikokiko me ngā tākawainga māmā o tā mātou pai mō te tangata e hiahia ana i te kawhe tūturu, i te rā, i te pō.',
     descriptionEn:
@@ -104,7 +99,6 @@ export const productData: Product[] = [
     id: 'mug-cup',
     name: 'drip: mug',
     info: '350ml',
-    infoEn: '350ml',
     description: 'He karaihe rākau tino pai mō tō kawhe pai.',
     descriptionEn: 'Durable and stylish ceramic mug for your favorite brew.',
     attribute1: 'Rauemi',
@@ -120,9 +114,8 @@ export const productData: Product[] = [
   },
   {
     id: 'disposable-cups',
-    name: 'drip: disposable cups',
+    name: 'drip: cup',
     info: 'Pack of 50',
-    infoEn: 'Pack of 50',
     description: 'He karaihe tuwhera hei mō ngā kawhe i te haere.',
     descriptionEn: 'Convenient disposable cups for coffee on the go.',
     attribute1: 'Rauemi',
