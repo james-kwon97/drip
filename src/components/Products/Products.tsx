@@ -50,42 +50,79 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
 
       <div className="products-page-grid">
         <div className="products-item">
-          <img src={ProductImage} alt="Product 1" className="products-image" />
+          <a href="/products/original">
+            <img
+              src={ProductImage}
+              alt="Product 1"
+              className="products-image"
+            />
+          </a>
+
           <div className="products-info">
             <span className="products-name">drip: original</span>
             <span className="products-price">$34.99</span>
           </div>
         </div>
         <div className="products-item">
-          <img src={ProductImage} alt="Product 2" className="products-image" />
+          <a href="/products/hazelnut">
+            <img
+              src={ProductImage}
+              alt="Product 2"
+              className="products-image"
+            />
+          </a>
           <div className="products-info">
             <span className="products-name">drip: hazelnut</span>
             <span className="products-price">$34.99</span>
           </div>
         </div>
         <div className="products-item">
-          <img src={ProductImage} alt="Product 3" className="products-image" />
+          <a href="/products/chocolate">
+            <img
+              src={ProductImage}
+              alt="Product 3"
+              className="products-image"
+            />
+          </a>
           <div className="products-info">
             <span className="products-name">drip: chocolate</span>
             <span className="products-price">$34.99</span>
           </div>
         </div>
         <div className="products-item">
-          <img src={ProductImage} alt="Product 4" className="products-image" />
+          <a href="/products/original-decaf">
+            <img
+              src={ProductImage}
+              alt="Product 4"
+              className="products-image"
+            />
+          </a>
           <div className="products-info">
             <span className="products-name">drip: original decaf</span>
             <span className="products-price">$34.99 </span>
           </div>
         </div>
         <div className="products-item products-bottom-row">
-          <img src={ProductImage} alt="Product 5" className="products-image" />
+          <a href="/products/mug-cup">
+            <img
+              src={ProductImage}
+              alt="Product 5"
+              className="products-image"
+            />
+          </a>
           <div className="products-info">
             <span className="products-name">drip: mug</span>
             <span className="products-price">$24.99</span>
           </div>
         </div>
         <div className="products-item products-bottom-row">
-          <img src={ProductImage} alt="Product 6" className="products-image" />
+          <a href="/products/disposable-cup">
+            <img
+              src={ProductImage}
+              alt="Product 6"
+              className="products-image"
+            />
+          </a>
           <div className="products-info">
             <span className="products-name">drip: cup</span>
             <span className="products-price">$29.99</span>
