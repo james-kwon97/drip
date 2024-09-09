@@ -51,12 +51,8 @@ function Home({ isEnglish }: HomeProps) {
                 className="product-image"
               />
               <div className="product-details">
-                <span className="product-name">
-                  {isEnglish ? 'Drip ranunga' : 'Drip Blend'}
-                </span>
-                <span className="product-price">
-                  {isEnglish ? 'Mai $10.00' : 'From $10.00'}
-                </span>
+                <span className="product-name">drip: original</span>
+                <span className="product-price">$34.99</span>
               </div>
             </div>
             <div className="product">
@@ -66,12 +62,8 @@ function Home({ isEnglish }: HomeProps) {
                 className="product-image"
               />
               <div className="product-details">
-                <span className="product-name">
-                  {isEnglish ? 'Drip ranunga' : 'Drip Blend'}
-                </span>
-                <span className="product-price">
-                  {isEnglish ? 'Mai $15.00' : 'From $15.00'}
-                </span>
+                <span className="product-name">drip: hazelnut</span>
+                <span className="product-price">$34.99</span>
               </div>
             </div>
             <div className="product">
@@ -81,12 +73,8 @@ function Home({ isEnglish }: HomeProps) {
                 className="product-image"
               />
               <div className="product-details">
-                <span className="product-name">
-                  {isEnglish ? 'Drip ranunga' : 'Drip Blend'}
-                </span>
-                <span className="product-price">
-                  {isEnglish ? 'Mai $20.00' : 'From $20.00'}
-                </span>
+                <span className="product-name">drip: mug</span>
+                <span className="product-price">$24.99</span>
               </div>
             </div>
           </div>

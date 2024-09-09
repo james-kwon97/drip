@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import {
   MagnifyingGlassIcon,
-  ShoppingBagIcon,
+  ShoppingCartIcon,
   UserIcon,
 } from '@heroicons/react/24/outline'
 import './Navbar.css'
@@ -107,7 +107,7 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
             <MagnifyingGlassIcon className="icon" />
           </a>
           <a href="#shopping" className="navbar-icon">
-            <ShoppingBagIcon className="icon" />
+            <ShoppingCartIcon className="icon" />
           </a>
           <a href="#user" className="navbar-icon">
             <UserIcon className="icon" />
