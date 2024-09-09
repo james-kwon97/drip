@@ -52,67 +52,43 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
         <div className="products-item">
           <img src={ProductImage} alt="Product 1" className="products-image" />
           <div className="products-info">
-            <span className="products-name">
-              {isEnglish ? 'Ranunga Kawhe 1' : 'Coffee Blend 1'}
-            </span>
-            <span className="products-price">
-              {isEnglish ? 'Mai $15.00' : 'From $15.00'}
-            </span>
+            <span className="products-name">drip: original</span>
+            <span className="products-price">$34.99</span>
           </div>
         </div>
         <div className="products-item">
           <img src={ProductImage} alt="Product 2" className="products-image" />
           <div className="products-info">
-            <span className="products-name">
-              {isEnglish ? 'Ranunga Kawhe 2' : 'Coffee Blend 2'}
-            </span>
-            <span className="products-price">
-              {isEnglish ? 'Mai $18.00' : 'From $18.00'}
-            </span>
+            <span className="products-name">drip: hazelnut</span>
+            <span className="products-price">$34.99</span>
           </div>
         </div>
         <div className="products-item">
           <img src={ProductImage} alt="Product 3" className="products-image" />
           <div className="products-info">
-            <span className="products-name">
-              {isEnglish ? 'Ranunga Kawhe 3' : 'Coffee Blend 3'}
-            </span>
-            <span className="products-price">
-              {isEnglish ? 'Mai $20.00' : 'From $20.00'}
-            </span>
+            <span className="products-name">drip: chocolate</span>
+            <span className="products-price">$34.99</span>
           </div>
         </div>
         <div className="products-item">
           <img src={ProductImage} alt="Product 4" className="products-image" />
           <div className="products-info">
-            <span className="products-name">
-              {isEnglish ? 'Kapu Kawhe 1' : 'Coffee Cup 1'}
-            </span>
-            <span className="products-price">
-              {isEnglish ? 'Mai $25.00' : 'From $25.00'}
-            </span>
+            <span className="products-name">drip: original decaf</span>
+            <span className="products-price">$34.99 </span>
           </div>
         </div>
         <div className="products-item products-bottom-row">
           <img src={ProductImage} alt="Product 5" className="products-image" />
           <div className="products-info">
-            <span className="products-name">
-              {isEnglish ? 'Kapu Kawhe 2' : 'Coffee Cup 2'}
-            </span>
-            <span className="products-price">
-              {isEnglish ? 'Mai $28.00' : 'From $28.00'}
-            </span>
+            <span className="products-name">drip: mug</span>
+            <span className="products-price">$24.99</span>
           </div>
         </div>
         <div className="products-item products-bottom-row">
           <img src={ProductImage} alt="Product 6" className="products-image" />
           <div className="products-info">
-            <span className="products-name">
-              {isEnglish ? 'Kapu Kawhe 3' : 'Coffee Cup 3'}
-            </span>
-            <span className="products-price">
-              {isEnglish ? 'Mai $30.00' : 'From $30.00'}
-            </span>
+            <span className="products-name">drip: cup</span>
+            <span className="products-price">$29.99</span>
           </div>
         </div>
       </div>
