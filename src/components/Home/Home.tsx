@@ -45,33 +45,40 @@ function Home({ isEnglish }: HomeProps) {
 
           <div className="products">
             <div className="product">
-              <img
-                src={productImage}
-                alt="Product 1"
-                className="product-image"
-              />
+              <a href="/products/original">
+                <img
+                  src={productImage}
+                  alt="Product 1"
+                  className="product-image"
+                />
+              </a>
+
               <div className="product-details">
                 <span className="product-name">drip: original</span>
                 <span className="product-price">$34.99</span>
               </div>
             </div>
             <div className="product">
-              <img
-                src={productImage}
-                alt="Product 2"
-                className="product-image"
-              />
+              <a href="/products/hazelnut">
+                <img
+                  src={productImage}
+                  alt="Product 2"
+                  className="product-image"
+                />
+              </a>
               <div className="product-details">
                 <span className="product-name">drip: hazelnut</span>
                 <span className="product-price">$34.99</span>
               </div>
             </div>
             <div className="product">
-              <img
-                src={productImage}
-                alt="Product 3"
-                className="product-image"
-              />
+              <a href="/products/mug-cup">
+                <img
+                  src={productImage}
+                  alt="Product 3"
+                  className="product-image"
+                />
+              </a>
               <div className="product-details">
                 <span className="product-name">drip: mug</span>
                 <span className="product-price">$24.99</span>
