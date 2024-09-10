@@ -16,7 +16,7 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
 
   const handleAddToCart = () => {
     setIsAdded(true)
-    setTimeout(() => setIsAdded(false), 2000) // Reset after 2 seconds
+    setTimeout(() => setIsAdded(false), 1500)
   }
 
   if (!product) {
