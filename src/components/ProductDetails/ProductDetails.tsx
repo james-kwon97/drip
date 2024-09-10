@@ -20,8 +20,7 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
     setIsAdded(true)
     setTimeout(() => {
       setIsAdded(false)
-      navigate('/cart')
-    }, 2000)
+    }, 1500)
   }
 
   const handleBuyNow = () => {

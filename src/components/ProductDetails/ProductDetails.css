@@ -93,7 +93,7 @@
 .quantity-and-add-container {
   display: flex;
   gap: 8px;
-  align-items: stretch; /* Ensure children stretch to fill the container */
+  align-items: stretch;
 }
 
 .quantity-container {
@@ -102,8 +102,8 @@
   justify-content: space-between;
   border: 1px solid black;
   width: 102px;
-  height: 48px; /* Adjust to 48px to account for 1px border top and bottom */
-  box-sizing: border-box; /* Include border in the height calculation */
+  height: 48px;
+  box-sizing: border-box;
 }
 
 .quantity-btn {
@@ -121,16 +121,16 @@
 }
 
 .quantity-btn:first-child {
-  padding-bottom: 2px; /* Adjust the minus sign slightly */
+  padding-bottom: 2px;
 }
 
 .quantity-display {
   flex-grow: 1;
   text-align: center;
-  line-height: 46px; /* Adjust line height to match new container height */
+  line-height: 46px;
   font-size: 14px;
   padding: 0 16px;
-  width: 38px; /* Ensures consistent width */
+  width: 38px;
   box-sizing: border-box;
 }
 
@@ -139,8 +139,7 @@
   cursor: pointer;
   border: 1px solid black;
   transition: background-color 0.3s, color 0.3s, opacity 0.3s ease;
-  height: 48px; /* Match the height of the quantity container */
-  display: flex;
+  height: 48px;
   align-items: center;
   justify-content: center;
   padding: 0 20px;
