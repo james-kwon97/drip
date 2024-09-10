@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Navbar from '../Navbar/Navbar'
 import './ProductDetails.css'
@@ -12,6 +12,12 @@ interface ProductsProps {
 function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
   const { id } = useParams<{ id: string }>()
   const product = productData.find((p) => p.id === id)
+  const [isAdded, setIsAdded] = useState(false)
+
+  const handleAddToCart = () => {
+    setIsAdded(true)
+    setTimeout(() => setIsAdded(false), 2000) // Reset after 2 seconds
+  }
 
   if (!product) {
     return <h2>{isEnglish ? 'Kāore i kitea te hua' : 'Product not found'}</h2>
@@ -40,30 +46,29 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
           <p className="product-attribute2">
             {isEnglish ? product.attribute2 : product.attribute2En}
           </p>
-
           <p className="product-attribute2-info">
             {isEnglish ? product.attribute2Info : product.attribute2InfoEn}
           </p>
           <div className="product-buttons">
-            {isEnglish ? (
-              <>
-                <button className="products-category-buttons">
-                  Tāpiri ki te Kete
-                </button>
-                <button className="products-category-buttons">
-                  Hoko Ināianei - {product.price}
-                </button>
-              </>
-            ) : (
-              <>
-                <button className="products-category-buttons">
-                  Add to cart
-                </button>
-                <button className="products-category-buttons">
-                  Buy now - {product.price}
-                </button>
-              </>
-            )}
+            <button
+              className={`products-category-buttons ${
+                isAdded ? 'added-to-cart' : ''
+              }`}
+              onClick={handleAddToCart}
+            >
+              {isEnglish
+                ? isAdded
+                  ? 'Kua Tāpiritia'
+                  : 'Tāpiri ki te Kete'
+                : isAdded
+                ? 'Added to Cart'
+                : 'Add to Cart'}
+            </button>
+            <button className="products-category-buttons">
+              {isEnglish
+                ? `Hoko Ināianei - ${product.price}`
+                : `Buy now - ${product.price}`}
+            </button>
           </div>
         </div>
       </div>
