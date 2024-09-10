@@ -109,7 +109,6 @@
 .quantity-btn {
   background: none;
   border: none;
-  font-size: 20px;
   padding: 0;
   cursor: pointer;
   width: 32px;
@@ -117,11 +116,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1;
 }
 
-.quantity-btn:first-child {
-  padding-bottom: 2px;
+.quantity-icon {
+  width: 14px;
+  height: 14px;
 }
 
 .quantity-display {
@@ -140,6 +139,7 @@
   border: 1px solid black;
   transition: background-color 0.3s, color 0.3s, opacity 0.3s ease;
   height: 48px;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 0 20px;

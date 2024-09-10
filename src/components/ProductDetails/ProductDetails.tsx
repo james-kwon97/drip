@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import Navbar from '../Navbar/Navbar'
 import './ProductDetails.css'
 import { productData } from './productData'
+import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
 
 interface ProductsProps {
   isEnglish: boolean
@@ -69,11 +70,11 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
             <div className="quantity-and-add-container">
               <div className="quantity-container">
                 <button className="quantity-btn" onClick={decrementQuantity}>
-                  -
+                  <MinusIcon className="quantity-icon" />
                 </button>
                 <span className="quantity-display">{quantity}</span>
                 <button className="quantity-btn" onClick={incrementQuantity}>
-                  +
+                  <PlusIcon className="quantity-icon" />
                 </button>
               </div>
               <button
