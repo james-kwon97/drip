@@ -106,7 +106,7 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
           <a href="#search" className="navbar-icon">
             <MagnifyingGlassIcon className="icon" />
           </a>
-          <a href="#shopping" className="navbar-icon">
+          <a href="/cart" className="navbar-icon">
             <ShoppingCartIcon className="icon" />
           </a>
           <a href="#user" className="navbar-icon">

@@ -9,6 +9,7 @@ import Products from './components/Products/Products'
 import ProductDetails from './components/ProductDetails/ProductDetails'
 import Locations from './components/Locations/Locations'
 import Footer from './components/Footer/Footer'
+import CartPage from './components/Cart/CartPage'
 
 function App() {
   const [isEnglish, setIsEnglish] = useState(false)
@@ -67,6 +68,8 @@ function App() {
               />
             }
           />
+
+          <Route path="/cart" element={<CartPage isEnglish={isEnglish} />} />
         </Routes>
         <Footer isEnglish={isEnglish} onLanguageSwitch={handleLanguageSwitch} />
       </Router>
