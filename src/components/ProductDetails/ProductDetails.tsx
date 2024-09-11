@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import Navbar from '../Navbar/Navbar'
 import './ProductDetails.css'
 import { productData } from './productData'
+import { useCart } from '../Cart/CartContext'
 
 interface ProductsProps {
   isEnglish: boolean
@@ -15,15 +16,42 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
   const product = productData.find((p) => p.id === id)
   const [isAdded, setIsAdded] = useState(false)
   const [quantity, setQuantity] = useState(1)
+  const { dispatch } = useCart()
 
   const handleAddToCart = () => {
-    setIsAdded(true)
-    setTimeout(() => {
-      setIsAdded(false)
-    }, 1500)
+    if (product) {
+      dispatch({
+        type: 'ADD_TO_CART',
+        item: {
+          id: parseInt(product.id), // Convert string id to number
+          name: product.name,
+          info: product.info,
+          price: parseFloat(product.price.replace('$', '')),
+          quantity: quantity,
+          imageUrl: product.imageUrl,
+        },
+      })
+      setIsAdded(true)
+      setTimeout(() => {
+        setIsAdded(false)
+      }, 1500)
+    }
   }
 
   const handleBuyNow = () => {
+    if (product) {
+      dispatch({
+        type: 'ADD_TO_CART',
+        item: {
+          id: parseInt(product.id), // Convert string id to number
+          name: product.name,
+          info: product.info,
+          price: parseFloat(product.price.replace('$', '')),
+          quantity: quantity,
+          imageUrl: product.imageUrl,
+        },
+      })
+    }
     navigate('/checkout')
   }
 
