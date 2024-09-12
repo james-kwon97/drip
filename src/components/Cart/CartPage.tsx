@@ -28,7 +28,7 @@ export default function CartPage({ isEnglish }: CartPageProps) {
     <div className="cart-page">
       <h1>{isEnglish ? 'Your Cart' : 'Tō Kete'}</h1>
       {cart.length === 0 ? (
-        <p>{isEnglish ? 'Your cart is empty' : 'Kāore he mea i tō kete'}</p>
+        <p>{isEnglish ? 'Kāore he mea i tō kete' : 'Your cart is empty'}</p>
       ) : (
         <>
           <div className="cart-items">

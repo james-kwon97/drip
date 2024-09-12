@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import { PlusIcon, MinusIcon } from '@heroicons/react/24/outline'
 import Navbar from '../Navbar/Navbar'
 import './ProductDetails.css'
 import { productData } from './productData'
@@ -18,52 +19,60 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
   const [quantity, setQuantity] = useState(1)
   const { dispatch } = useCart()
 
+  useEffect(() => {
+    console.log('ProductDetails component mounted')
+    return () => {
+      console.log('ProductDetails component unmounted')
+    }
+  }, [])
+
   const handleAddToCart = () => {
+    console.log('Add to Cart button clicked')
     if (product) {
-      dispatch({
-        type: 'ADD_TO_CART',
-        item: {
-          id: parseInt(product.id), // Convert string id to number
-          name: product.name,
-          info: product.info,
-          price: parseFloat(product.price.replace('$', '')),
-          quantity: quantity,
-          imageUrl: product.imageUrl,
-        },
-      })
-      setIsAdded(true)
-      setTimeout(() => {
-        setIsAdded(false)
-      }, 1500)
+      console.log('Adding to cart:', product)
+      try {
+        dispatch({
+          type: 'ADD_TO_CART',
+          item: {
+            id: parseInt(product.id),
+            name: product.name,
+            info: product.info,
+            price: parseFloat(product.price.replace('$', '')),
+            quantity: quantity,
+            imageUrl: product.imageUrl,
+          },
+        })
+        console.log('Dispatched ADD_TO_CART action')
+        setIsAdded(true)
+        setTimeout(() => {
+          setIsAdded(false)
+        }, 1500)
+      } catch (error) {
+        console.error('Error dispatching ADD_TO_CART action:', error)
+      }
+    } else {
+      console.error('Product not found')
     }
   }
 
   const handleBuyNow = () => {
-    if (product) {
-      dispatch({
-        type: 'ADD_TO_CART',
-        item: {
-          id: parseInt(product.id), // Convert string id to number
-          name: product.name,
-          info: product.info,
-          price: parseFloat(product.price.replace('$', '')),
-          quantity: quantity,
-          imageUrl: product.imageUrl,
-        },
-      })
-    }
-    navigate('/checkout')
+    console.log('Buy Now button clicked')
+    handleAddToCart()
+    navigate('/cart')
   }
 
   const incrementQuantity = () => {
+    console.log('Incrementing quantity')
     setQuantity((prev) => prev + 1)
   }
 
   const decrementQuantity = () => {
+    console.log('Decrementing quantity')
     setQuantity((prev) => (prev > 1 ? prev - 1 : 1))
   }
 
   if (!product) {
+    console.log('Product not found')
     return <h2>{isEnglish ? 'Kāore i kitea te hua' : 'Product not found'}</h2>
   }
 
@@ -97,11 +106,11 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
             <div className="quantity-and-add-container">
               <div className="quantity-container">
                 <button className="quantity-btn" onClick={decrementQuantity}>
-                  -
+                  <MinusIcon className="quantity-icon" />
                 </button>
                 <span className="quantity-display">{quantity}</span>
                 <button className="quantity-btn" onClick={incrementQuantity}>
-                  +
+                  <PlusIcon className="quantity-icon" />
                 </button>
               </div>
               <button
