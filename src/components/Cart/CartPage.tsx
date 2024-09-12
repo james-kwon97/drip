@@ -1,5 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useCart } from '../Cart/CartContext'
+import { XMarkIcon } from '@heroicons/react/24/outline'
+import './CartPage.css'
 
 interface CartPageProps {
   isEnglish: boolean
@@ -7,10 +9,6 @@ interface CartPageProps {
 
 export default function CartPage({ isEnglish }: CartPageProps) {
   const { cart, dispatch } = useCart()
-
-  useEffect(() => {
-    console.log('CartPage rendered. Current cart state:', cart)
-  }, [cart])
 
   const handleRemoveItem = (id: number) => {
     dispatch({ type: 'REMOVE_FROM_CART', id })
@@ -24,27 +22,45 @@ export default function CartPage({ isEnglish }: CartPageProps) {
     }
   }
 
-  if (cart.length === 0) {
-    console.log('Cart is empty in CartPage')
-    return <p>{isEnglish ? 'Your cart is empty' : 'Kāore he mea i tō kete'}</p>
+  const calculateTotal = () => {
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0)
   }
 
-  console.log('Rendering cart items:', cart)
+  if (cart.length === 0) {
+    return (
+      <div className="cart-page empty-cart">
+        <h1>{isEnglish ? 'Your Cart' : 'Tō Kete'}</h1>
+        <p>{isEnglish ? 'Your cart is empty' : 'Kāore he mea i tō kete'}</p>
+        <button className="continue-shopping">
+          {isEnglish ? 'Continue Shopping' : 'Haere Tonu ki te Hokohoko'}
+        </button>
+      </div>
+    )
+  }
 
   return (
     <div className="cart-page">
       <h1>{isEnglish ? 'Your Cart' : 'Tō Kete'}</h1>
-      {cart.map((item) => (
-        <div key={item.id} className="cart-item">
-          <img
-            src={item.imageUrl}
-            alt={item.name}
-            className="cart-item-image"
-          />
-          <div className="cart-item-details">
-            <h2>{item.name}</h2>
-            <p>{item.info}</p>
-            <p>${item.price.toFixed(2)}</p>
+      <div className="cart-headers">
+        <span>Product</span>
+        <span>Quantity</span>
+        <span>Price</span>
+        <span></span> {/* Empty span for the remove button column */}
+      </div>
+      <div className="cart-items">
+        {cart.map((item) => (
+          <div key={item.id} className="cart-item">
+            <div className="product-info">
+              <img
+                src={item.imageUrl}
+                alt={item.name}
+                className="cart-item-image"
+              />
+              <div className="product-details">
+                <h2>{item.name}</h2>
+                <p>{item.info}</p>
+              </div>
+            </div>
             <div className="quantity-controls">
               <button
                 onClick={() => handleUpdateQuantity(item.id, item.quantity - 1)}
@@ -58,12 +74,26 @@ export default function CartPage({ isEnglish }: CartPageProps) {
                 +
               </button>
             </div>
-            <button onClick={() => handleRemoveItem(item.id)}>
-              {isEnglish ? 'Remove' : 'Remove'}
+            <p className="item-price">
+              ${(item.price * item.quantity).toFixed(2)}
+            </p>
+            <button
+              className="remove-button"
+              onClick={() => handleRemoveItem(item.id)}
+            >
+              <XMarkIcon className="h-6 w-6" />
             </button>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
+      <div className="cart-summary">
+        <h2>
+          {isEnglish ? 'Total' : 'Tapeke'}: ${calculateTotal().toFixed(2)}
+        </h2>
+        <button className="checkout-button">
+          {isEnglish ? 'Proceed to Checkout' : 'Haere ki te Utu'}
+        </button>
+      </div>
     </div>
   )
 }
