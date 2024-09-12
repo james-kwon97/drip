@@ -33,6 +33,11 @@ export const cartReducer = (
   state: CartItem[],
   action: CartAction
 ): CartItem[] => {
+  console.log('cartReducer called with action:', action)
+  console.log('Current state:', state)
+
+  let newState: CartItem[]
+
   switch (action.type) {
     case 'ADD_TO_CART': {
       const existingItemIndex = state.findIndex(
@@ -40,27 +45,32 @@ export const cartReducer = (
       )
       if (existingItemIndex !== -1) {
         // Item exists, update its quantity
-        const updatedCart = [...state]
-        updatedCart[existingItemIndex] = {
-          ...updatedCart[existingItemIndex],
-          quantity: updatedCart[existingItemIndex].quantity + 1,
+        newState = [...state]
+        newState[existingItemIndex] = {
+          ...newState[existingItemIndex],
+          quantity: newState[existingItemIndex].quantity + 1,
         }
-        return updatedCart
       } else {
         // Item doesn't exist, add it to the cart
-        return [...state, { ...action.item, quantity: 1 }]
+        newState = [...state, { ...action.item, quantity: 1 }]
       }
+      break
     }
 
     case 'REMOVE_FROM_CART':
-      return state.filter((item) => item.id !== action.id)
+      newState = state.filter((item) => item.id !== action.id)
+      break
 
     case 'UPDATE_QUANTITY':
-      return state.map((item) =>
+      newState = state.map((item) =>
         item.id === action.id ? { ...item, quantity: action.quantity } : item
       )
+      break
 
     default:
-      return state
+      newState = state
   }
+
+  console.log('New state after action:', newState)
+  return newState
 }

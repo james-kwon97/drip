@@ -1,12 +1,16 @@
-import React, { useReducer } from 'react'
+import React, { useReducer, useEffect } from 'react'
 import { CartContext, cartReducer } from './CartContext'
 
-type CartProviderProps = {
-  children: React.ReactNode
-}
+export function CartProvider({ children }: { children: React.ReactNode }) {
+  const [cart, dispatch] = useReducer(cartReducer, [], () => {
+    const localData = localStorage.getItem('cart')
+    return localData ? JSON.parse(localData) : []
+  })
 
-export function CartProvider({ children }: CartProviderProps) {
-  const [cart, dispatch] = useReducer(cartReducer, [])
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+    console.log('Cart state updated and saved to localStorage:', cart)
+  }, [cart])
 
   return (
     <CartContext.Provider value={{ cart, dispatch }}>
