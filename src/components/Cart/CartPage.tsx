@@ -29,10 +29,10 @@ export default function CartPage({ isEnglish }: CartPageProps) {
   if (cart.length === 0) {
     return (
       <div className="cart-page empty-cart">
-        <h1>{isEnglish ? 'Your Cart' : 'Tō Kete'}</h1>
-        <p>{isEnglish ? 'Your cart is empty' : 'Kāore he mea i tō kete'}</p>
+        <h1>{isEnglish ? 'Tō Kete' : 'Your Cart'}</h1>
+        <p>{isEnglish ? 'Kāore he mea i tō kete' : 'Your cart is empty'}</p>
         <button className="continue-shopping">
-          {isEnglish ? 'Continue Shopping' : 'Haere Tonu ki te Hokohoko'}
+          {isEnglish ? 'Haere Tonu ki te Hokohoko' : 'Continue Shopping'}
         </button>
       </div>
     )
@@ -40,12 +40,12 @@ export default function CartPage({ isEnglish }: CartPageProps) {
 
   return (
     <div className="cart-page">
-      <h1>{isEnglish ? 'Your Cart' : 'Tō Kete'}</h1>
+      <h1>{isEnglish ? 'Tō Kete' : 'Your Cart'}</h1>
       <div className="cart-headers">
         <span>Product</span>
         <span>Quantity</span>
         <span>Price</span>
-        <span></span> {/* Empty span for the remove button column */}
+        <span></span>
       </div>
       <div className="cart-items">
         {cart.map((item) => (
@@ -81,17 +81,17 @@ export default function CartPage({ isEnglish }: CartPageProps) {
               className="remove-button"
               onClick={() => handleRemoveItem(item.id)}
             >
-              <XMarkIcon className="h-6 w-6" />
+              <XMarkIcon className="remove-icon" />
             </button>
           </div>
         ))}
       </div>
       <div className="cart-summary">
         <h2>
-          {isEnglish ? 'Total' : 'Tapeke'}: ${calculateTotal().toFixed(2)}
+          {isEnglish ? 'Tapeke' : 'Total'}: ${calculateTotal().toFixed(2)}
         </h2>
         <button className="checkout-button">
-          {isEnglish ? 'Proceed to Checkout' : 'Haere ki te Utu'}
+          {isEnglish ? 'Haere ki te Utu' : 'Proceed to checkout'}
         </button>
       </div>
     </div>
