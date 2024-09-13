@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useCart } from '../Cart/CartContext'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import './CartPage.css'
@@ -10,11 +10,17 @@ interface CartPageProps {
 export default function CartPage({ isEnglish }: CartPageProps) {
   const { cart, dispatch } = useCart()
 
+  useEffect(() => {
+    console.log('Cart updated:', cart)
+  }, [cart])
+
   const handleRemoveItem = (id: number) => {
+    console.log('Removing item:', id)
     dispatch({ type: 'REMOVE_FROM_CART', id })
   }
 
   const handleUpdateQuantity = (id: number, newQuantity: number) => {
+    console.log('Updating quantity for item:', id, 'New quantity:', newQuantity)
     if (newQuantity > 0) {
       dispatch({ type: 'UPDATE_QUANTITY', id, quantity: newQuantity })
     } else {
