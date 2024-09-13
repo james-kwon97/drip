@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useCart } from '../Cart/CartContext'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import './CartPage.css'
@@ -9,10 +9,6 @@ interface CartPageProps {
 
 export default function CartPage({ isEnglish }: CartPageProps) {
   const { cart, dispatch } = useCart()
-
-  useEffect(() => {
-    console.log('Cart updated:', cart)
-  }, [cart])
 
   const handleRemoveItem = (id: number) => {
     console.log('Removing item:', id)

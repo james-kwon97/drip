@@ -45,11 +45,11 @@ export const cartReducer = (
       )
       if (existingItemIndex !== -1) {
         // Item exists, update its quantity
-        newState = [...state]
-        newState[existingItemIndex] = {
-          ...newState[existingItemIndex],
-          quantity: newState[existingItemIndex].quantity + 1,
-        }
+        newState = state.map((item, index) =>
+          index === existingItemIndex
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        )
       } else {
         // Item doesn't exist, add it to the cart
         newState = [...state, { ...action.item, quantity: 1 }]
@@ -66,9 +66,6 @@ export const cartReducer = (
         item.id === action.id ? { ...item, quantity: action.quantity } : item
       )
       break
-
-    default:
-      newState = state
   }
 
   console.log('New state after action:', newState)
