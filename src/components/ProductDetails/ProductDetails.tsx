@@ -34,7 +34,7 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
         dispatch({
           type: 'ADD_TO_CART',
           item: {
-            id: parseInt(product.id), // Ensure this is a valid number
+            id: product.id,
             name: product.name,
             info: product.info,
             price: parseFloat(product.price.replace('$', '')),

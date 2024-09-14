@@ -1,7 +1,7 @@
 import { createContext, useContext, Dispatch } from 'react'
 
 export type CartItem = {
-  id: number
+  id: string
   name: string
   info: string
   price: number
@@ -11,8 +11,8 @@ export type CartItem = {
 
 export type CartAction =
   | { type: 'ADD_TO_CART'; item: CartItem }
-  | { type: 'REMOVE_FROM_CART'; id: number }
-  | { type: 'UPDATE_QUANTITY'; id: number; quantity: number }
+  | { type: 'REMOVE_FROM_CART'; id: string }
+  | { type: 'UPDATE_QUANTITY'; id: string; quantity: number }
 
 type CartContextType = {
   cart: CartItem[]

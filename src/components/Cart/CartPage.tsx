@@ -10,11 +10,11 @@ interface CartPageProps {
 export default function CartPage({ isEnglish }: CartPageProps) {
   const { cart, dispatch } = useCart()
 
-  const handleRemoveItem = (id: number) => {
+  const handleRemoveItem = (id: string) => {
     dispatch({ type: 'REMOVE_FROM_CART', id })
   }
 
-  const handleUpdateQuantity = (id: number, newQuantity: number) => {
+  const handleUpdateQuantity = (id: string, newQuantity: number) => {
     if (newQuantity >= 1) {
       dispatch({ type: 'UPDATE_QUANTITY', id, quantity: newQuantity })
     }
