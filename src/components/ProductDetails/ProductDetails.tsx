@@ -28,24 +28,30 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
 
   const handleAddToCart = () => {
     console.log('Add to Cart button clicked')
-    if (product) {
-      dispatch({
-        type: 'ADD_TO_CART',
-        item: {
-          id: parseInt(product.id),
-          name: product.name,
-          info: product.info,
-          price: parseFloat(product.price.replace('$', '')),
-          quantity: quantity, // Use the selected quantity
-          imageUrl: product.imageUrl,
-        },
-      })
-      setIsAdded(true)
-      setTimeout(() => {
-        setIsAdded(false)
-      }, 1500)
+
+    if (product && product.id) {
+      try {
+        dispatch({
+          type: 'ADD_TO_CART',
+          item: {
+            id: parseInt(product.id), // Ensure this is a valid number
+            name: product.name,
+            info: product.info,
+            price: parseFloat(product.price.replace('$', '')),
+            quantity: quantity,
+            imageUrl: product.imageUrl,
+          },
+        })
+        console.log('Dispatched ADD_TO_CART action')
+        setIsAdded(true)
+        setTimeout(() => {
+          setIsAdded(false)
+        }, 1500)
+      } catch (error) {
+        console.error('Error dispatching ADD_TO_CART action:', error)
+      }
     } else {
-      console.error('Product not found')
+      console.error('Product or Product ID not found')
     }
   }
 

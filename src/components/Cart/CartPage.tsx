@@ -1,6 +1,6 @@
 import React from 'react'
 import { useCart } from '../Cart/CartContext'
-import { XMarkIcon } from '@heroicons/react/24/outline'
+import { XMarkIcon, PlusIcon, MinusIcon } from '@heroicons/react/24/outline'
 import './CartPage.css'
 
 interface CartPageProps {
@@ -11,16 +11,12 @@ export default function CartPage({ isEnglish }: CartPageProps) {
   const { cart, dispatch } = useCart()
 
   const handleRemoveItem = (id: number) => {
-    console.log('Removing item:', id)
     dispatch({ type: 'REMOVE_FROM_CART', id })
   }
 
   const handleUpdateQuantity = (id: number, newQuantity: number) => {
-    console.log('Updating quantity for item:', id, 'New quantity:', newQuantity)
-    if (newQuantity > 0) {
+    if (newQuantity >= 1) {
       dispatch({ type: 'UPDATE_QUANTITY', id, quantity: newQuantity })
-    } else {
-      handleRemoveItem(id)
     }
   }
 
@@ -33,9 +29,6 @@ export default function CartPage({ isEnglish }: CartPageProps) {
       <div className="cart-page empty-cart">
         <h1>{isEnglish ? 'Tō Kete' : 'Your Cart'}</h1>
         <p>{isEnglish ? 'Kāore he mea i tō kete' : 'Your cart is empty'}</p>
-        <button className="continue-shopping">
-          {isEnglish ? 'Haere Tonu ki te Hokohoko' : 'Continue Shopping'}
-        </button>
       </div>
     )
   }
@@ -65,15 +58,19 @@ export default function CartPage({ isEnglish }: CartPageProps) {
             </div>
             <div className="quantity-controls">
               <button
+                className="quantity-btn"
                 onClick={() => handleUpdateQuantity(item.id, item.quantity - 1)}
+                aria-label="Decrease quantity"
               >
-                -
+                <MinusIcon className="quantity-icon" />
               </button>
               <span>{item.quantity}</span>
               <button
+                className="quantity-btn"
                 onClick={() => handleUpdateQuantity(item.id, item.quantity + 1)}
+                aria-label="Increase quantity"
               >
-                +
+                <PlusIcon className="quantity-icon" />
               </button>
             </div>
             <p className="item-price">
@@ -82,6 +79,7 @@ export default function CartPage({ isEnglish }: CartPageProps) {
             <button
               className="remove-button"
               onClick={() => handleRemoveItem(item.id)}
+              aria-label="Remove item"
             >
               <XMarkIcon className="remove-icon" />
             </button>
