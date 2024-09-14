@@ -87,11 +87,9 @@ export default function CartPage({ isEnglish }: CartPageProps) {
         ))}
       </div>
       <div className="cart-summary">
-        <h2>
-          {isEnglish ? 'Tapeke' : 'Total'}: ${calculateTotal().toFixed(2)}
-        </h2>
         <button className="checkout-button">
-          {isEnglish ? 'Haere ki te Utu' : 'Proceed to checkout'}
+          {isEnglish ? 'Pae Utu  ─' : 'Checkout  ─'} $
+          {calculateTotal().toFixed(2)}
         </button>
       </div>
     </div>
