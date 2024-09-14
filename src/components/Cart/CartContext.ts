@@ -40,14 +40,14 @@ export const cartReducer = (
       )
 
       if (existingItemIndex !== -1) {
-        // Item already exists in the cart, update its quantity by adding the new quantity
+        // Item already exists in the cart, update its quantity
         return state.map((item, index) =>
           index === existingItemIndex
             ? { ...item, quantity: item.quantity + action.item.quantity }
             : item
         )
       } else {
-        // Item doesn't exist in the cart, add it with the specified quantity
+        // Item doesn't exist in the cart, add it as a new entry
         return [...state, action.item]
       }
     }
