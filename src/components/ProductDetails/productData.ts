@@ -118,7 +118,7 @@ export const productData: Product[] = [
   },
   {
     id: 'disposable-cups',
-    name: 'drip: cup',
+    name: 'drip: disposable cups',
     info: 'Pack of 50',
     description: 'He karaihe tuwhera hei mō ngā kawhe i te haere.',
     descriptionEn: 'Convenient disposable cups for coffee on the go.',
