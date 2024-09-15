@@ -2,7 +2,9 @@ import React from 'react'
 import './Home.css'
 import arrowIcon from '../../assets/arrow_icon.png'
 import aboutImage from '../../assets/about_image.png'
-import productImage from '../../assets/product_image.png'
+import originalImage from '../../assets/original_product.png'
+import hazelnutImage from '../../assets/hazelnut_product.png'
+import mugCupImage from '../../assets/mug_cup_product.png'
 import processImage from '../../assets/process_image.png'
 import locationImage from '../../assets/location_image.png'
 
@@ -47,7 +49,7 @@ function Home({ isEnglish }: HomeProps) {
             <div className="product">
               <a href="/products/original">
                 <img
-                  src={productImage}
+                  src={originalImage}
                   alt="Product 1"
                   className="product-image"
                 />
@@ -61,7 +63,7 @@ function Home({ isEnglish }: HomeProps) {
             <div className="product">
               <a href="/products/hazelnut">
                 <img
-                  src={productImage}
+                  src={hazelnutImage}
                   alt="Product 2"
                   className="product-image"
                 />
@@ -74,7 +76,7 @@ function Home({ isEnglish }: HomeProps) {
             <div className="product">
               <a href="/products/mug-cup">
                 <img
-                  src={productImage}
+                  src={mugCupImage}
                   alt="Product 3"
                   className="product-image"
                 />
