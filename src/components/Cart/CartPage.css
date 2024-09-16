@@ -104,7 +104,7 @@
 }
 
 .item-price {
-  font-weight: bold;
+  font-size: 16px;
 }
 
 .remove-button {
@@ -112,8 +112,8 @@
   border: none;
   cursor: pointer;
   padding: 0;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
 }
 
 .cart-summary {
@@ -130,7 +130,8 @@
   height: auto;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 80px;
+  margin-top: 90px;
+  margin-bottom: 100px;
 }
 
 .empty-cart {
