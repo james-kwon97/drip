@@ -25,7 +25,6 @@
 .cart-items {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .cart-item {
@@ -39,23 +38,36 @@
 
 .product-info {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .cart-item-image {
   width: 211px;
   height: 205px;
   object-fit: cover;
-  margin-right: 20px;
+  margin-right: 116px;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .product-details h2 {
-  font-size: 18px;
-  margin-bottom: 5px;
+  font-size: 24px;
+  margin-bottom: 8px;
+  font-family: 'EB garamond', serif;
+  font-weight: 400;
+  margin-top: 49px;
+  margin-bottom: 11px;
 }
 
 .product-details p {
-  color: #666;
+  color: #00000080;
+  font-size: 12px;
+  margin-top: 0;
+  margin-bottom: 81px;
 }
 
 .quantity-controls {
@@ -101,7 +113,7 @@
   height: auto;
   cursor: pointer;
   font-size: 16px;
-  margin-top: 10px;
+  margin-top: 80px;
 }
 
 .empty-cart {
