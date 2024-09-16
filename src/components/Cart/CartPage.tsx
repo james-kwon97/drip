@@ -1,5 +1,6 @@
 import React from 'react'
 import { useCart } from '../Cart/CartContext'
+import { useNavigate } from 'react-router-dom'
 import { XMarkIcon, PlusIcon, MinusIcon } from '@heroicons/react/24/outline'
 import './CartPage.css'
 
@@ -8,6 +9,7 @@ interface CartPageProps {
 }
 
 export default function CartPage({ isEnglish }: CartPageProps) {
+  const navigate = useNavigate()
   const { cart, dispatch } = useCart()
 
   const handleRemoveItem = (id: string) => {
@@ -22,6 +24,10 @@ export default function CartPage({ isEnglish }: CartPageProps) {
 
   const calculateTotal = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0)
+  }
+
+  const handleCheckout = () => {
+    navigate('/checkout')
   }
 
   if (cart.length === 0) {
@@ -87,7 +93,7 @@ export default function CartPage({ isEnglish }: CartPageProps) {
         ))}
       </div>
       <div className="cart-summary">
-        <button className="checkout-button">
+        <button className="checkout-button" onClick={handleCheckout}>
           {isEnglish ? 'Pae Utu  ─' : 'Checkout  ─'} $
           {calculateTotal().toFixed(2)}
         </button>
