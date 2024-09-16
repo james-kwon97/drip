@@ -56,21 +56,21 @@ export default function CartPage({ isEnglish }: CartPageProps) {
                 <p>{item.info}</p>
               </div>
             </div>
-            <div className="quantity-controls">
+            <div className="cart-quantity-wrapper">
               <button
-                className="quantity-btn"
+                className="cart-quantity-adjust"
                 onClick={() => handleUpdateQuantity(item.id, item.quantity - 1)}
                 aria-label="Decrease quantity"
               >
-                <MinusIcon className="quantity-icon" />
+                <MinusIcon className="cart-quantity-icon" />
               </button>
-              <span>{item.quantity}</span>
+              <span className="cart-quantity-value">{item.quantity}</span>
               <button
-                className="quantity-btn"
+                className="cart-quantity-adjust"
                 onClick={() => handleUpdateQuantity(item.id, item.quantity + 1)}
                 aria-label="Increase quantity"
               >
-                <PlusIcon className="quantity-icon" />
+                <PlusIcon className="cart-quantity-icon" />
               </button>
             </div>
             <p className="item-price">
