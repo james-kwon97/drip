@@ -11,11 +11,15 @@
   font-size: 16px;
   color: #868686;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 50px;
   gap: 20px;
   padding-bottom: 18px;
-  margin-top: 60px;
+  margin-top: 164px;
   border-bottom: 1px solid #ccc;
+}
+
+.cart-header {
+  color: black;
 }
 
 .cart-items {

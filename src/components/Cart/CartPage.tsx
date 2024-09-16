@@ -35,8 +35,8 @@ export default function CartPage({ isEnglish }: CartPageProps) {
 
   return (
     <div className="cart-page">
-      <h1>{isEnglish ? 'Tō Kete' : 'Your Cart'}</h1>
       <div className="cart-headers">
+        <span className="cart-header">Your cart</span>
         <span>Product</span>
         <span>Quantity</span>
         <span>Price</span>
