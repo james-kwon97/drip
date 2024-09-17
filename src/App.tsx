@@ -9,6 +9,7 @@ import Products from './components/Products/Products'
 import ProductDetails from './components/ProductDetails/ProductDetails'
 import Locations from './components/Locations/Locations'
 import CartPage from './components/Cart/CartPage'
+import Checkout from './components/Checkout/Checkout'
 import Footer from './components/Footer/Footer'
 
 function App() {
@@ -69,6 +70,10 @@ function App() {
             }
           />
           <Route path="/cart" element={<CartPage isEnglish={isEnglish} />} />
+          <Route
+            path="/checkout"
+            element={<Checkout isEnglish={isEnglish} />}
+          />
         </Routes>
         <Footer isEnglish={isEnglish} onLanguageSwitch={handleLanguageSwitch} />
       </Router>

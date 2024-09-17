@@ -1,0 +1,50 @@
+.checkout-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.checkout-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkout-form {
+  width: 60%;
+}
+
+.order-summary {
+  width: 35%;
+}
+
+.checkout-tabs button {
+  background: none;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.checkout-tabs button.active {
+  border-bottom: 2px solid black;
+}
+
+.billing-form,
+.payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.continue-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  cursor: pointer;
+  margin-top: 20px;
+}
