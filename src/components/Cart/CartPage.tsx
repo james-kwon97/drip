@@ -42,7 +42,6 @@ export default function CartPage({ isEnglish }: CartPageProps) {
   if (cart.length === 0) {
     return (
       <div className="cart-page empty-cart">
-        <h1>{isEnglish ? 'Tō Kete' : 'Your Cart'}</h1>
         <p>{isEnglish ? 'Kāore he mea i tō kete' : 'Your cart is empty'}</p>
         <button className="view-products-btn" onClick={handleViewProducts}>
           {isEnglish ? 'Tirohia nga hua' : 'View products'}

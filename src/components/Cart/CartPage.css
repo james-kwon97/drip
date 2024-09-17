@@ -159,13 +159,31 @@
   margin-bottom: 100px;
 }
 
+/* Cart page when cart is empty */
+
 .empty-cart {
   text-align: center;
   padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 345px);
 }
 
 .empty-cart p {
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 20px;
+  font-size: 16px;
+  color: black;
+  margin-bottom: 28px;
+}
+
+.view-products-btn {
+  width: 210px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
