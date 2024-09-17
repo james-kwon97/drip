@@ -1,5 +1,9 @@
-import originalProduct from '../../assets/original_product.png'
-
+import originalProduct1 from '../../assets/original_product1.png'
+import hazelnutProduct1 from '../../assets/hazelnut_product1.png'
+import chocolateProduct1 from '../../assets/chocolate_product1.png'
+import originalDecafProduct1 from '../../assets/original_decaf_product1.png'
+import mugCupProduct1 from '../../assets/mug_cup_product1.png'
+import disposableCupsProduct1 from '../../assets/disposable_cups_product1.png'
 export interface Product {
   id: string
   name: string
@@ -35,7 +39,7 @@ export const productData: Product[] = [
     attribute2En: 'Origin',
     attribute2Info: 'Koromōpia',
     attribute2InfoEn: 'Colombia',
-    imageUrl: originalProduct,
+    imageUrl: originalProduct1,
     price: '$34.99',
   },
   {
@@ -54,7 +58,7 @@ export const productData: Product[] = [
     attribute2En: 'Origin',
     attribute2Info: 'Parāwai / Kōta',
     attribute2InfoEn: 'Brazil / Costa Rica',
-    imageUrl: '../../assets/hazelnut_product.png',
+    imageUrl: hazelnutProduct1,
     price: '$34.99',
   },
   {
@@ -73,7 +77,7 @@ export const productData: Product[] = [
     attribute2En: 'Origin',
     attribute2Info: 'Guatemala / Ekuador',
     attribute2InfoEn: 'Guatemala / Ecuador',
-    imageUrl: '../../assets/chocolate_product.png',
+    imageUrl: chocolateProduct1,
     price: '$34.99',
   },
   {
@@ -92,7 +96,7 @@ export const productData: Product[] = [
     attribute2En: 'Origin',
     attribute2Info: 'Koromōpia',
     attribute2InfoEn: 'Colombia',
-    imageUrl: '../../assets/original_decaf_product.png',
+    imageUrl: originalDecafProduct1,
     price: '$34.99',
   },
   {
@@ -109,12 +113,12 @@ export const productData: Product[] = [
     attribute2En: 'Color',
     attribute2Info: 'drip: white',
     attribute2InfoEn: 'drip: white',
-    imageUrl: '../../assets/mug_cup_product.png',
+    imageUrl: mugCupProduct1,
     price: '$24.99',
   },
   {
     id: 'disposable-cups',
-    name: 'drip: cup',
+    name: 'drip: disposable cups',
     info: 'Pack of 50',
     description: 'He karaihe tuwhera hei mō ngā kawhe i te haere.',
     descriptionEn: 'Convenient disposable cups for coffee on the go.',
@@ -126,7 +130,7 @@ export const productData: Product[] = [
     attribute2En: 'Color',
     attribute2Info: 'drip: white',
     attribute2InfoEn: 'drip: white',
-    imageUrl: '../../assets/disposable_cups_product.png',
+    imageUrl: disposableCupsProduct1,
     price: '$29.99',
   },
 ]

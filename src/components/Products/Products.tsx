@@ -2,7 +2,12 @@ import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import './Products.css'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
-import ProductImage from '../../assets/product_image.png'
+import originalProduct from '../../assets/original_product.png'
+import hazelnutProduct from '../../assets/hazelnut_product.png'
+import chocolateProduct from '../../assets/chocolate_product.png'
+import originalDecafProduct from '../../assets/original_decaf_product.png'
+import mugCupProduct from '../../assets/mug_cup_product.png'
+import disposableCupProduct from '../../assets/disposable_cups_product.png'
 
 interface ProductsProps {
   isEnglish: boolean
@@ -52,7 +57,7 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
         <div className="products-item">
           <a href="/products/original">
             <img
-              src={ProductImage}
+              src={originalProduct}
               alt="Product 1"
               className="products-image"
             />
@@ -66,7 +71,7 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
         <div className="products-item">
           <a href="/products/hazelnut">
             <img
-              src={ProductImage}
+              src={hazelnutProduct}
               alt="Product 2"
               className="products-image"
             />
@@ -79,7 +84,7 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
         <div className="products-item">
           <a href="/products/chocolate">
             <img
-              src={ProductImage}
+              src={chocolateProduct}
               alt="Product 3"
               className="products-image"
             />
@@ -92,7 +97,7 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
         <div className="products-item">
           <a href="/products/original-decaf">
             <img
-              src={ProductImage}
+              src={originalDecafProduct}
               alt="Product 4"
               className="products-image"
             />
@@ -105,7 +110,7 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
         <div className="products-item products-bottom-row">
           <a href="/products/mug-cup">
             <img
-              src={ProductImage}
+              src={mugCupProduct}
               alt="Product 5"
               className="products-image"
             />
@@ -116,15 +121,15 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
           </div>
         </div>
         <div className="products-item products-bottom-row">
-          <a href="/products/disposable-cup">
+          <a href="/products/disposable-cups">
             <img
-              src={ProductImage}
+              src={disposableCupProduct}
               alt="Product 6"
               className="products-image"
             />
           </a>
           <div className="products-info">
-            <span className="products-name">drip: cup</span>
+            <span className="products-name">drip: disposable cups</span>
             <span className="products-price">$29.99</span>
           </div>
         </div>

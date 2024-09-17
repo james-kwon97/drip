@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
+import { PlusIcon, MinusIcon } from '@heroicons/react/24/outline'
 import Navbar from '../Navbar/Navbar'
 import './ProductDetails.css'
 import { productData } from './productData'
-import { MinusIcon, PlusIcon } from '@heroicons/react/24/outline'
+import { useCart } from '../Cart/CartContext'
 
 interface ProductsProps {
   isEnglish: boolean
@@ -16,27 +17,62 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
   const product = productData.find((p) => p.id === id)
   const [isAdded, setIsAdded] = useState(false)
   const [quantity, setQuantity] = useState(1)
+  const { dispatch } = useCart()
+
+  useEffect(() => {
+    console.log('ProductDetails component mounted')
+    return () => {
+      console.log('ProductDetails component unmounted')
+    }
+  }, [])
 
   const handleAddToCart = () => {
-    setIsAdded(true)
-    setTimeout(() => {
-      setIsAdded(false)
-    }, 1500)
+    console.log('Add to Cart button clicked')
+
+    if (product && product.id) {
+      try {
+        dispatch({
+          type: 'ADD_TO_CART',
+          item: {
+            id: product.id,
+            name: product.name,
+            info: product.info,
+            price: parseFloat(product.price.replace('$', '')),
+            quantity: quantity,
+            imageUrl: product.imageUrl,
+          },
+        })
+        console.log('Dispatched ADD_TO_CART action')
+        setIsAdded(true)
+        setTimeout(() => {
+          setIsAdded(false)
+        }, 1500)
+      } catch (error) {
+        console.error('Error dispatching ADD_TO_CART action:', error)
+      }
+    } else {
+      console.error('Product or Product ID not found')
+    }
   }
 
   const handleBuyNow = () => {
-    navigate('/checkout')
+    console.log('Buy Now button clicked')
+    handleAddToCart()
+    navigate('/cart')
   }
 
   const incrementQuantity = () => {
+    console.log('Incrementing quantity')
     setQuantity((prev) => prev + 1)
   }
 
   const decrementQuantity = () => {
+    console.log('Decrementing quantity')
     setQuantity((prev) => (prev > 1 ? prev - 1 : 1))
   }
 
   if (!product) {
+    console.log('Product not found')
     return <h2>{isEnglish ? 'Kāore i kitea te hua' : 'Product not found'}</h2>
   }
 
