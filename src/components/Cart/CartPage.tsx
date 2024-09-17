@@ -100,7 +100,7 @@ export default function CartPage({ isEnglish }: CartPageProps) {
       <div className="cart-summary">
         <div className="cart-totals">
           <span>Subtotal ${calculateSubtotal().toFixed(2)}</span>
-          <span>+ Shipping ${shippingCost.toFixed(2)}</span>
+          <span>Shipping $10</span>
         </div>
         <button className="checkout-button" onClick={handleCheckout}>
           {isEnglish ? 'Pae Utu' : 'Checkout'} — ${calculateTotal().toFixed(2)}
