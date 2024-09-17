@@ -1,7 +1,12 @@
 .checkout-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 100%;
+  margin: 0 38px;
+  padding-top: 164px;
+}
+
+.checkout-page h1 {
+  font-size: 16px;
+  font-weight: normal;
 }
 
 .checkout-content {
@@ -13,14 +18,16 @@
   width: 60%;
 }
 
-.order-summary {
-  width: 35%;
+.checkout-tabs {
+  display: flex;
+  margin-bottom: 20px;
 }
 
 .checkout-tabs button {
   background: none;
   border: none;
-  padding: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -32,12 +39,65 @@
 .payment-form {
   display: flex;
   flex-direction: column;
+  gap: 20px;
 }
 
-input {
-  margin-bottom: 10px;
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-row input {
+  flex: 1;
   padding: 10px;
   border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.order-summary {
+  width: 35%;
+}
+
+.order-items {
+  margin-bottom: 20px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.order-item-image {
+  width: 96px;
+  height: 94px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.order-item-details {
+  flex-grow: 1;
+}
+
+.order-item-details h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.order-item-details p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.order-item-price {
+  font-weight: bold;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-top: 20px;
 }
 
 .continue-button {
@@ -45,6 +105,8 @@ input {
   color: white;
   border: none;
   padding: 15px 30px;
+  font-size: 16px;
   cursor: pointer;
   margin-top: 20px;
+  width: 100%;
 }

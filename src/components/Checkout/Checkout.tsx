@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useCart } from '../Cart/CartContext'
 import './Checkout.css'
 
 interface CheckoutProps {
@@ -6,6 +7,7 @@ interface CheckoutProps {
 }
 
 function Checkout({ isEnglish }: CheckoutProps) {
+  const { cart } = useCart()
   const [step, setStep] = useState('billing')
 
   const handleContinue = () => {
@@ -38,41 +40,51 @@ function Checkout({ isEnglish }: CheckoutProps) {
           </div>
           {step === 'billing' && (
             <form className="billing-form">
-              <input
-                type="text"
-                placeholder={isEnglish ? 'INGOA TUATAHI' : 'FIRST NAME'}
-              />
-              <input
-                type="text"
-                placeholder={isEnglish ? 'INGOA WHAKAMUTUNGA' : 'LAST NAME'}
-              />
-              <input
-                type="text"
-                placeholder={isEnglish ? 'WĀHITAU' : 'ADDRESS'}
-              />
-              <input
-                type="text"
-                placeholder={isEnglish ? 'WĀHITAU 2' : 'ADDRESS 2'}
-              />
-              <input type="text" placeholder={isEnglish ? 'ROHE' : 'SUBURB'} />
-              <input type="text" placeholder={isEnglish ? 'TĀONE' : 'CITY'} />
-              <input type="text" placeholder={isEnglish ? 'TĀIKA' : 'STATE'} />
-              <input
-                type="text"
-                placeholder={isEnglish ? 'WAEHERE POUTĀPETA' : 'POSTAL CODE'}
-              />
-              <input
-                type="text"
-                placeholder={isEnglish ? 'WHENUA' : 'COUNTRY'}
-              />
-              <div className="phone-input">
-                <select>
-                  <option>{isEnglish ? 'TĀPIRI' : 'PREFIX'}</option>
-                  {/* Add more prefix options */}
-                </select>
+              <div className="form-row">
+                <input
+                  type="text"
+                  placeholder={isEnglish ? 'INGOA TUATAHI' : 'FIRST NAME'}
+                />
+                <input
+                  type="text"
+                  placeholder={isEnglish ? 'INGOA WHAKAMUTUNGA' : 'LAST NAME'}
+                />
+              </div>
+              <div className="form-row">
+                <input
+                  type="email"
+                  placeholder={isEnglish ? 'ĪMĒRA' : 'EMAIL ADDRESS'}
+                />
                 <input
                   type="tel"
                   placeholder={isEnglish ? 'TAU WAEA' : 'PHONE NUMBER'}
+                />
+              </div>
+              <div className="form-row">
+                <input
+                  type="text"
+                  placeholder={isEnglish ? 'WĀHITAU' : 'ADDRESS'}
+                />
+                <input
+                  type="text"
+                  placeholder={isEnglish ? 'WĀHITAU 2' : 'ADDRESS 2'}
+                />
+              </div>
+              <div className="form-row">
+                <input
+                  type="text"
+                  placeholder={isEnglish ? 'ROHE' : 'SUBURB'}
+                />
+                <input type="text" placeholder={isEnglish ? 'TĀONE' : 'CITY'} />
+              </div>
+              <div className="form-row">
+                <input
+                  type="text"
+                  placeholder={isEnglish ? 'WAEHERE POUTĀPETA' : 'POSTAL CODE'}
+                />
+                <input
+                  type="text"
+                  placeholder={isEnglish ? 'WHENUA' : 'COUNTRY'}
                 />
               </div>
             </form>
@@ -100,12 +112,38 @@ function Checkout({ isEnglish }: CheckoutProps) {
         </div>
         <div className="order-summary">
           <h2>
-            {isEnglish ? 'Whakarāpopototanga ota' : 'Your order summary'} (3)
+            {isEnglish ? 'Whakarāpopototanga ota' : 'Your order summary'} (
+            {cart.length})
           </h2>
-          <div className="order-items">{/* Add order items here */}</div>
+          <div className="order-items">
+            {cart.map((item) => (
+              <div key={item.id} className="order-item">
+                <img
+                  src={item.imageUrl}
+                  alt={item.name}
+                  className="order-item-image"
+                />
+                <div className="order-item-details">
+                  <h3>{item.name}</h3>
+                  <p>{item.info}</p>
+                  <p>
+                    {isEnglish ? 'Rahinga' : 'Quantity'}: {item.quantity}
+                  </p>
+                  <p className="order-item-price">
+                    ${(item.price * item.quantity).toFixed(2)}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
           <div className="order-total">
             <span>{isEnglish ? 'Tapeke' : 'Total'}</span>
-            <span>$49.97</span>
+            <span>
+              $
+              {cart
+                .reduce((total, item) => total + item.price * item.quantity, 0)
+                .toFixed(2)}
+            </span>
           </div>
         </div>
       </div>
@@ -117,7 +155,10 @@ function Checkout({ isEnglish }: CheckoutProps) {
           : isEnglish
           ? 'Whakatau ota'
           : 'Place order'}{' '}
-        — $57.97
+        — $
+        {cart
+          .reduce((total, item) => total + item.price * item.quantity, 0)
+          .toFixed(2)}
       </button>
     </div>
   )
