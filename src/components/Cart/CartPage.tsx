@@ -11,6 +11,7 @@ interface CartPageProps {
 export default function CartPage({ isEnglish }: CartPageProps) {
   const navigate = useNavigate()
   const { cart, dispatch } = useCart()
+  const shippingCost = 10
 
   const handleRemoveItem = (id: string) => {
     dispatch({ type: 'REMOVE_FROM_CART', id })
@@ -22,8 +23,12 @@ export default function CartPage({ isEnglish }: CartPageProps) {
     }
   }
 
-  const calculateTotal = () => {
+  const calculateSubtotal = () => {
     return cart.reduce((total, item) => total + item.price * item.quantity, 0)
+  }
+
+  const calculateTotal = () => {
+    return calculateSubtotal() + shippingCost
   }
 
   const handleCheckout = () => {
@@ -93,9 +98,12 @@ export default function CartPage({ isEnglish }: CartPageProps) {
         ))}
       </div>
       <div className="cart-summary">
+        <div className="cart-totals">
+          <span>Subtotal ${calculateSubtotal().toFixed(2)}</span>
+          <span>+ Shipping ${shippingCost.toFixed(2)}</span>
+        </div>
         <button className="checkout-button" onClick={handleCheckout}>
-          {isEnglish ? 'Pae Utu  ─' : 'Checkout  ─'} $
-          {calculateTotal().toFixed(2)}
+          {isEnglish ? 'Pae Utu' : 'Checkout'} — ${calculateTotal().toFixed(2)}
         </button>
       </div>
     </div>
