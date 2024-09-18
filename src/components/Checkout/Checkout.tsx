@@ -42,78 +42,88 @@ function Checkout({ isEnglish }: CheckoutProps) {
           {step === 'billing' && (
             <form className="billing-form">
               <div className="form-row">
-                <input
-                  type="text"
-                  placeholder={isEnglish ? 'INGOA TUATAHI' : 'FIRST NAME'}
-                />
-                <input
-                  type="text"
-                  placeholder={isEnglish ? 'INGOA WHAKAMUTUNGA' : 'LAST NAME'}
-                />
+                <div className="form-field">
+                  <label>{isEnglish ? 'INGOA TUATAHI' : 'FIRST NAME'}</label>
+                  <input type="text" />
+                </div>
+                <div className="form-field">
+                  <label>
+                    {isEnglish ? 'INGOA WHAKAMUTUNGA' : 'LAST NAME'}
+                  </label>
+                  <input type="text" />
+                </div>
               </div>
               <div className="form-row">
-                <input
-                  type="email"
-                  placeholder={isEnglish ? 'ĪMĒRA' : 'EMAIL'}
-                />
-                <input
-                  type="tel"
-                  placeholder={isEnglish ? 'TAU WAEA' : 'PHONE NUMBER'}
-                />
+                <div className="form-field">
+                  <label>{isEnglish ? 'ĪMĒRA' : 'EMAIL'}</label>
+                  <input type="email" />
+                </div>
+                <div className="form-field">
+                  <label>{isEnglish ? 'TAU WAEA' : 'PHONE NUMBER'}</label>
+                  <input type="tel" />
+                </div>
               </div>
               <div className="form-row">
-                <input
-                  type="text"
-                  placeholder={isEnglish ? 'WĀHITAU' : 'ADDRESS'}
-                />
-                <input
-                  type="text"
-                  placeholder={isEnglish ? 'WĀHITAU 2' : 'ADDRESS 2'}
-                />
+                <div className="form-field">
+                  <label>{isEnglish ? 'WĀHITAU' : 'ADDRESS'}</label>
+                  <input type="text" />
+                </div>
+                <div className="form-field">
+                  <label>{isEnglish ? 'WĀHITAU 2' : 'ADDRESS 2'}</label>
+                  <input type="text" />
+                </div>
               </div>
               <div className="form-row">
-                <input
-                  type="text"
-                  placeholder={isEnglish ? 'ROHE' : 'SUBURB'}
-                />
-                <input type="text" placeholder={isEnglish ? 'TĀONE' : 'CITY'} />
+                <div className="form-field">
+                  <label>{isEnglish ? 'ROHE' : 'SUBURB'}</label>
+                  <input type="text" />
+                </div>
+                <div className="form-field">
+                  <label>{isEnglish ? 'TĀONE' : 'CITY'}</label>
+                  <input type="text" />
+                </div>
               </div>
               <div className="form-row">
-                <input
-                  type="text"
-                  placeholder={isEnglish ? 'WAEHERE POUTĀPETA' : 'POSTAL CODE'}
-                />
-                <input
-                  type="text"
-                  placeholder={isEnglish ? 'WHENUA' : 'COUNTRY'}
-                />
+                <div className="form-field">
+                  <label>
+                    {isEnglish ? 'WAEHERE POUTĀPETA' : 'POSTAL CODE'}
+                  </label>
+                  <input type="text" />
+                </div>
+                <div className="form-field">
+                  <label>{isEnglish ? 'WHENUA' : 'COUNTRY'}</label>
+                  <input type="text" />
+                </div>
               </div>
             </form>
           )}
           {step === 'payment' && (
             <form className="payment-form">
               <div className="form-row">
-                <input
-                  type="text"
-                  placeholder={isEnglish ? 'TAU KĀRI' : 'CARD NUMBER'}
-                />
-                <input
-                  type="text"
-                  placeholder={isEnglish ? 'MARAMA' : 'MONTH'}
-                />
-                <input type="text" placeholder={isEnglish ? 'TAU' : 'YEAR'} />
+                <div className="form-field card-number">
+                  <label>{isEnglish ? 'TAU KĀRI' : 'CARD NUMBER'}</label>
+                  <input type="text" />
+                </div>
+                <div className="form-field month">
+                  <label>{isEnglish ? 'MARAMA' : 'MONTH'}</label>
+                  <input type="text" />
+                </div>
+                <div className="form-field year">
+                  <label>{isEnglish ? 'TAU' : 'YEAR'}</label>
+                  <input type="text" />
+                </div>
               </div>
               <div className="form-row">
-                <input
-                  type="text"
-                  placeholder={isEnglish ? 'KAIPUPURI KĀRI' : 'CARD HOLDER'}
-                />
-                <input
-                  type="text"
-                  placeholder={
-                    isEnglish ? 'WAEHERE HAUMARU CVC' : 'CVC SECURITY CODE'
-                  }
-                />
+                <div className="form-field card-holder">
+                  <label>{isEnglish ? 'KAIPUPURI KĀRI' : 'CARD HOLDER'}</label>
+                  <input type="text" />
+                </div>
+                <div className="form-field cvc">
+                  <label>
+                    {isEnglish ? 'WAEHERE HAUMARU CVC' : 'CVC SECURITY CODE'}
+                  </label>
+                  <input type="text" />
+                </div>
               </div>
             </form>
           )}
