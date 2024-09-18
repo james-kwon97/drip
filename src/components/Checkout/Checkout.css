@@ -108,25 +108,22 @@
   width: 326px;
 }
 
+.order-summary {
+  /* Add styles for order summary if needed */
+}
+
 .order-item-image {
   width: 96px;
   height: 94px;
 }
 
-.payment-form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
+/* Payment form specific styles */
 .payment-form .form-row {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 18px;
+  justify-content: flex-start;
 }
 
-.payment-form .form-row input {
+.payment-form .form-row input[placeholder='CARD NUMBER'],
+.payment-form .form-row input[placeholder='CARD HOLDER'] {
   width: 326px;
 }
 
@@ -135,10 +132,15 @@
   width: 157px;
 }
 
-.payment-form .form-row:last-child {
-  justify-content: flex-start;
+.payment-form .form-row input[placeholder='MONTH'] {
+  margin-left: 20px;
 }
 
-.payment-form .form-row:last-child input {
-  margin-right: 12px;
+.payment-form .form-row input[placeholder='YEAR'] {
+  margin-left: 12px;
+}
+
+.payment-form .form-row input[placeholder='CVC SECURITY CODE'] {
+  width: 326px;
+  margin-left: 20px;
 }
