@@ -92,22 +92,29 @@ function Checkout({ isEnglish }: CheckoutProps) {
           )}
           {step === 'payment' && (
             <form className="payment-form">
-              <input
-                type="text"
-                placeholder={isEnglish ? 'TAU KĀRI' : 'CARD NUMBER'}
-              />
-              <input type="text" placeholder={isEnglish ? 'MARAMA' : 'MONTH'} />
-              <input type="text" placeholder={isEnglish ? 'TAU' : 'YEAR'} />
-              <input
-                type="text"
-                placeholder={isEnglish ? 'KAIPUPURI KĀRI' : 'CARD HOLDER'}
-              />
-              <input
-                type="text"
-                placeholder={
-                  isEnglish ? 'WAEHERE HAUMARU CVC' : 'CVC SECURITY CODE'
-                }
-              />
+              <div className="form-row">
+                <input
+                  type="text"
+                  placeholder={isEnglish ? 'TAU KĀRI' : 'CARD NUMBER'}
+                />
+                <input
+                  type="text"
+                  placeholder={isEnglish ? 'MARAMA' : 'MONTH'}
+                />
+                <input type="text" placeholder={isEnglish ? 'TAU' : 'YEAR'} />
+              </div>
+              <div className="form-row">
+                <input
+                  type="text"
+                  placeholder={isEnglish ? 'KAIPUPURI KĀRI' : 'CARD HOLDER'}
+                />
+                <input
+                  type="text"
+                  placeholder={
+                    isEnglish ? 'WAEHERE HAUMARU CVC' : 'CVC SECURITY CODE'
+                  }
+                />
+              </div>
             </form>
           )}
         </div>

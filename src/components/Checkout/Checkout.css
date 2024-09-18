@@ -57,7 +57,8 @@
   margin-bottom: 18px;
 }
 
-.form-row input {
+.form-row input,
+.payment-form input {
   width: 326px;
   height: 47px;
   padding: 0 0 10px;
@@ -67,7 +68,8 @@
   color: #000;
 }
 
-.form-row input::placeholder {
+.form-row input::placeholder,
+.payment-form input::placeholder {
   color: #999;
   font-size: 12px;
   position: absolute;
@@ -109,4 +111,34 @@
 .order-item-image {
   width: 96px;
   height: 94px;
+}
+
+.payment-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.payment-form .form-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.payment-form .form-row input {
+  width: 326px;
+}
+
+.payment-form .form-row input[placeholder='MONTH'],
+.payment-form .form-row input[placeholder='YEAR'] {
+  width: 157px;
+}
+
+.payment-form .form-row:last-child {
+  justify-content: flex-start;
+}
+
+.payment-form .form-row:last-child input {
+  margin-right: 12px;
 }
