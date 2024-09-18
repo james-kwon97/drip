@@ -1,5 +1,5 @@
 .checkout-page {
-  max-width: 100%;
+  max-width: 1400px;
   margin: 0 38px;
   padding-top: 164px;
 }
@@ -7,6 +7,15 @@
 .checkout-page h1 {
   font-size: 16px;
   font-weight: normal;
+  margin-bottom: 0;
+}
+
+.checkout-line {
+  width: 672px;
+  height: 0;
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  margin: 18px 0;
 }
 
 .checkout-content {
@@ -15,98 +24,89 @@
 }
 
 .checkout-form {
-  width: 60%;
+  width: 672px;
 }
 
 .checkout-tabs {
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .checkout-tabs button {
   background: none;
   border: none;
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 0 22px 10px 0;
+  font-size: 14px;
   cursor: pointer;
+  color: #000;
 }
 
-.checkout-tabs button.active {
-  border-bottom: 2px solid black;
+.checkout-tabs button:not(.active) {
+  color: #cacaca;
 }
 
 .billing-form,
 .payment-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .form-row {
   display: flex;
-  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 18px;
 }
 
 .form-row input {
-  flex: 1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  font-size: 16px;
+  width: 326px;
+  height: 47px;
+  padding: 0 0 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+  color: #000;
 }
 
-.order-summary {
-  width: 35%;
+.form-row input::placeholder {
+  color: #999;
+  font-size: 12px;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  text-transform: uppercase;
 }
 
-.order-items {
-  margin-bottom: 20px;
-}
-
-.order-item {
+.phone-input {
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  width: 326px;
 }
 
-.order-item-image {
-  width: 96px;
-  height: 94px;
-  object-fit: cover;
-  margin-right: 20px;
+.phone-input select {
+  width: 80px;
+  margin-right: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  color: #000;
+  background: transparent;
 }
 
-.order-item-details {
+.phone-input input {
   flex-grow: 1;
-}
-
-.order-item-details h3 {
-  margin: 0;
-  font-size: 16px;
-}
-
-.order-item-details p {
-  margin: 5px 0;
-  font-size: 14px;
-}
-
-.order-item-price {
-  font-weight: bold;
-}
-
-.order-total {
-  display: flex;
-  justify-content: space-between;
-  font-weight: bold;
-  margin-top: 20px;
 }
 
 .continue-button {
   background-color: black;
   color: white;
   border: none;
-  padding: 15px 30px;
+  padding: 14px 20px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 20px;
-  width: 100%;
+  margin-top: 40px;
+  width: 326px;
+}
+
+.order-item-image {
+  width: 96px;
+  height: 94px;
 }

@@ -22,6 +22,7 @@ function Checkout({ isEnglish }: CheckoutProps) {
   return (
     <div className="checkout-page">
       <h1>{isEnglish ? 'Whakaotinga' : 'Checkout'}</h1>
+      <hr className="checkout-line" />
       <div className="checkout-content">
         <div className="checkout-form">
           <div className="checkout-tabs">
@@ -53,7 +54,7 @@ function Checkout({ isEnglish }: CheckoutProps) {
               <div className="form-row">
                 <input
                   type="email"
-                  placeholder={isEnglish ? 'ĪMĒRA' : 'EMAIL ADDRESS'}
+                  placeholder={isEnglish ? 'ĪMĒRA' : 'EMAIL'}
                 />
                 <input
                   type="tel"
