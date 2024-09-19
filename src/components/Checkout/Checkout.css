@@ -67,6 +67,7 @@
   top: 5px;
   left: 0;
   font-size: 12px;
+  font-weight: 300;
   color: #999;
   text-transform: uppercase;
 }
@@ -112,7 +113,7 @@
   padding: 14px 20px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 40px;
+  margin-top: -122px;
   width: 326px;
 }
 
