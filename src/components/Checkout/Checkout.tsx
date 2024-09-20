@@ -133,10 +133,21 @@ function Checkout({ isEnglish }: CheckoutProps) {
           )}
         </div>
         <div className="order-summary">
-          <h2>
-            {isEnglish ? 'Whakarāpopototanga ota' : 'Your order summary'} (
-            {cart.length})
-          </h2>
+          <div className="order-summary-header">
+            <h2>
+              {isEnglish ? 'Whakarāpopototanga ota' : 'Your order summary'} (
+              {cart.length})
+            </h2>
+            <span className="order-total">
+              Total $
+              {(
+                cart.reduce(
+                  (total, item) => total + item.price * item.quantity,
+                  0
+                ) + 10
+              ).toFixed(2)}
+            </span>
+          </div>
           <div className="order-items">
             {cart.map((item) => (
               <div key={item.id} className="order-item">
@@ -146,26 +157,34 @@ function Checkout({ isEnglish }: CheckoutProps) {
                   className="order-item-image"
                 />
                 <div className="order-item-details">
-                  <h3>{item.name}</h3>
-                  <p>{item.info}</p>
-                  <p>
-                    {isEnglish ? 'Rahinga' : 'Quantity'}: {item.quantity}
-                  </p>
-                  <p className="order-item-price">
+                  <div className="order-item-info">
+                    <h3>{item.name}</h3>
+                    <p>{item.info}</p>
+                  </div>
+                  <span className="order-item-quantity">
+                    QTY {item.quantity}
+                  </span>
+                  <span className="order-item-price">
                     ${(item.price * item.quantity).toFixed(2)}
-                  </p>
+                  </span>
                 </div>
               </div>
             ))}
           </div>
-          <div className="order-total">
-            <span>{isEnglish ? 'Tapeke' : 'Total'}</span>
-            <span>
-              $
-              {cart
-                .reduce((total, item) => total + item.price * item.quantity, 0)
-                .toFixed(2)}
-            </span>
+          <div className="order-summary-footer">
+            <div className="order-subtotal-shipping">
+              <span>
+                {isEnglish ? 'Tapeke iti' : 'Subtotal'} $
+                {cart
+                  .reduce(
+                    (total, item) => total + item.price * item.quantity,
+                    0
+                  )
+                  .toFixed(2)}
+              </span>
+              <span>+</span>
+              <span>{isEnglish ? 'Tuku' : 'Shipping'} $10.00</span>
+            </div>
           </div>
         </div>
       </div>

@@ -117,15 +117,6 @@
   width: 326px;
 }
 
-.order-summary {
-  /* Add styles for order summary if needed */
-}
-
-.order-item-image {
-  width: 96px;
-  height: 94px;
-}
-
 /* Payment form specific styles */
 .payment-form .form-row {
   display: flex;
@@ -187,4 +178,105 @@
 
 .payment-form .form-field.cvc {
   margin-left: 20px;
+}
+
+/* Order summary section css */
+
+.order-summary {
+  width: 557px;
+  margin-top: -58px;
+  margin-left: 20px;
+}
+
+.order-summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.order-summary h2,
+.order-total {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.order-items {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 25px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.order-item-image {
+  width: 96px;
+  height: 94px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.order-item-details {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-item-info {
+  flex-grow: 1;
+  width: 108px;
+}
+
+.order-item-info h3 {
+  font-size: 14px;
+  color: #000000cc;
+  font-weight: normal;
+  margin: 0 0 7px 0;
+}
+
+.order-item-info p {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+
+.order-item-quantity {
+  font-size: 12px;
+  color: #000000cc;
+  margin-right: 20px;
+}
+
+.order-item-price {
+  font-size: 12px;
+  color: #000000cc;
+  min-width: 60px;
+  text-align: right;
+  margin-left: 100px;
+}
+
+.order-summary-footer {
+  border-top: 1px solid #f0f0f0;
+  padding-top: 18px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 14px;
+  color: black;
+}
+
+.order-subtotal-shipping {
+  display: flex;
+  align-items: center;
+}
+
+.order-subtotal-shipping span:first-child {
+  margin-right: 14px;
+}
+
+.order-subtotal-shipping span:last-child {
+  margin-left: 14px;
 }
