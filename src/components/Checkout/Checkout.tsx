@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useCart } from '../Cart/CartContext'
+import { useNavigate } from 'react-router-dom'
 import './Checkout.css'
 
 interface CheckoutProps {
@@ -9,6 +10,7 @@ interface CheckoutProps {
 function Checkout({ isEnglish }: CheckoutProps) {
   const { cart } = useCart()
   const [step, setStep] = useState('billing')
+  const navigate = useNavigate()
 
   const handleContinue = () => {
     if (step === 'billing') {
@@ -16,6 +18,8 @@ function Checkout({ isEnglish }: CheckoutProps) {
     } else {
       // Handle form submission
       console.log('Submitting order')
+      // Navigate to order-confirmation page
+      navigate('/order-confirmation')
     }
   }
 
