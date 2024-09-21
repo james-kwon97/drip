@@ -93,6 +93,7 @@ function Checkout({ isEnglish }: CheckoutProps) {
                     {isEnglish ? 'WAEHERE POUTĀPETA' : 'POSTAL CODE'}
                   </label>
                   <input type="text" />
+                  <hr className="postal-code-hr" />
                 </div>
                 <div className="form-field">
                   <label>{isEnglish ? 'WHENUA' : 'COUNTRY'}</label>
@@ -121,6 +122,7 @@ function Checkout({ isEnglish }: CheckoutProps) {
                 <div className="form-field card-holder">
                   <label>{isEnglish ? 'KAIPUPURI KĀRI' : 'CARD HOLDER'}</label>
                   <input type="text" />
+                  <hr className="card-holder-hr" />
                 </div>
                 <div className="form-field cvc">
                   <label>

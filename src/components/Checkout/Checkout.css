@@ -74,7 +74,7 @@
 
 .form-field input {
   width: 100%;
-  height: 47px;
+  height: 38px;
   padding: 20px 0 0;
   border: none;
   border-bottom: 1px solid #ccc;
@@ -113,7 +113,7 @@
   padding: 14px 20px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: -122px;
+  margin-top: 65px;
   width: 326px;
 }
 
@@ -139,7 +139,6 @@
 
 .payment-form .form-field input {
   width: 100%;
-  height: 47px;
   padding: 20px 0 0;
   border: none;
   border-bottom: 1px solid #ccc;
