@@ -30,7 +30,7 @@ function Footer({ isEnglish, onLanguageSwitch }: FooterProps) {
               <a href="#account">{isEnglish ? 'Pūkete' : 'Account'}</a>
             </li>
             <li>
-              <a href="#cart">{isEnglish ? 'Kāri' : 'Cart'}</a>
+              <a href="/cart">{isEnglish ? 'Kāri' : 'Cart'}</a>
             </li>
             <li>
               <a href="#shipping">{isEnglish ? 'Tukunga' : 'Shipping'}</a>
