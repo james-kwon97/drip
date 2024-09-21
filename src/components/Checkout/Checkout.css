@@ -113,8 +113,12 @@
   padding: 14px 20px;
   font-size: 16px;
   cursor: pointer;
-  margin-top: 65px;
   width: 326px;
+}
+
+.card-holder-hr,
+.postal-code-hr {
+  margin-bottom: 65px;
 }
 
 /* Payment form specific styles */
