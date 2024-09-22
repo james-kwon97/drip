@@ -17,15 +17,14 @@ const Order = () => {
 
   return (
     <div className="order-content">
-      <h1>Purchase complete</h1>
       <div className="order-details">
-        <h2>Your order has been placed!</h2>
+        <h2>Thank you for your order!</h2>
         <p>
-          Congratulations, your order has been placed. Your order number is:
+          Your order number is{'  '}
+          <span className="order-number">{orderNumber}</span>
           <br />
-          <strong>{orderNumber}</strong>
+          Order confirmation have been sent to your email.
         </p>
-        <p>The details have been sent to your email.</p>
         <Link to="/" className="home-button">
           Home
         </Link>

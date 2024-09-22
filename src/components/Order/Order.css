@@ -1,0 +1,44 @@
+.order-content {
+  text-align: center;
+}
+
+.order-details {
+  padding-top: 230px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 0;
+}
+
+p {
+  color: #999999;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+.order-number {
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.home-button {
+  display: inline-block;
+  width: 210px;
+  background-color: black;
+  font-size: 16px;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  margin-top: 62px;
+  margin-bottom: 200px;
+}
+
+.home-button:hover {
+  opacity: 0.9;
+}
