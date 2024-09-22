@@ -75,7 +75,10 @@ function App() {
             path="/checkout"
             element={<Checkout isEnglish={isEnglish} />}
           />
-          <Route path="/order-confirmation" element={<Order />} />
+          <Route
+            path="/order-confirmation"
+            element={<Order isEnglish={isEnglish} />}
+          />
         </Routes>
         <Footer isEnglish={isEnglish} onLanguageSwitch={handleLanguageSwitch} />
       </Router>
