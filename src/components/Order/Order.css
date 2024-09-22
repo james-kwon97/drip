@@ -1,9 +1,30 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .order-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   text-align: center;
+  padding: 230px 20px 0;
+  box-sizing: border-box;
 }
 
 .order-details {
-  padding-top: 230px;
+  max-width: 600px;
+  width: 100%;
 }
 
 h2 {
@@ -36,9 +57,12 @@ p {
   padding: 14px 20px;
   text-decoration: none;
   margin-top: 62px;
-  margin-bottom: 200px;
 }
 
 .home-button:hover {
   opacity: 0.9;
+}
+
+footer {
+  margin-top: auto;
 }
