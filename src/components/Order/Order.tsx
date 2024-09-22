@@ -2,7 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Order.css'
 
-const Order = () => {
+interface OrderProps {
+  isEnglish: boolean
+}
+
+const Order = ({ isEnglish }: OrderProps) => {
   const generateOrderNumber = (): string => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
     const length = 8
@@ -18,15 +22,19 @@ const Order = () => {
   return (
     <div className="order-content">
       <div className="order-details">
-        <h2>Thank you for your order!</h2>
+        <h2>
+          {isEnglish ? 'Ngā mihi mō tō ota!' : 'Thank you for your order!'}
+        </h2>
         <p>
-          Your order number is{'  '}
+          {isEnglish ? 'Ko tō nama ota' : 'Your order number is'}{' '}
           <span className="order-number">{orderNumber}</span>
           <br />
-          Order confirmation have been sent to your email.
+          {isEnglish
+            ? 'Kua tukuna atu te whakapumautanga ota ki tō īmēra.'
+            : 'Order confirmation has been sent to your email.'}
         </p>
         <Link to="/" className="home-button">
-          Home
+          {isEnglish ? 'Kāinga' : 'Home'}
         </Link>
       </div>
     </div>
