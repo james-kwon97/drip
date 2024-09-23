@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './Order.css'
 
@@ -7,6 +7,8 @@ interface OrderProps {
 }
 
 const Order = ({ isEnglish }: OrderProps) => {
+  const [orderNumber, setOrderNumber] = useState<string>('')
+
   const generateOrderNumber = (): string => {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
     const length = 8
@@ -17,7 +19,20 @@ const Order = ({ isEnglish }: OrderProps) => {
     return result
   }
 
-  const orderNumber = generateOrderNumber()
+  useEffect(() => {
+    const storedOrderNumber = localStorage.getItem('orderNumber')
+    if (storedOrderNumber) {
+      setOrderNumber(storedOrderNumber)
+    } else {
+      const newOrderNumber = generateOrderNumber()
+      setOrderNumber(newOrderNumber)
+      localStorage.setItem('orderNumber', newOrderNumber)
+    }
+
+    return () => {
+      localStorage.removeItem('orderNumber')
+    }
+  }, [])
 
   return (
     <div className="order-content">
