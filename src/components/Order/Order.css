@@ -1,4 +1,4 @@
-/* Order confirmation page css */
+/* Order confirmation css */
 
 .order-content {
   flex: 1;
@@ -10,126 +10,113 @@
   padding: 230px 20px 0;
   box-sizing: border-box;
   width: 100%;
+}
 
+.order-details {
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+p {
+  color: #999999;
+  font-size: 14px;
+  font-weight: 400;
+  margin-top: 25px;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.order-number {
+  color: black;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.home-button {
+  display: inline-block;
+  width: 210px;
+  background-color: black;
+  font-size: 16px;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  margin-top: 62px;
+  margin-bottom: 131px;
+}
+
+.home-button:hover {
+  opacity: 0.9;
+}
+
+/* Media queries for responsive design: */
+
+@media screen and (max-width: 1024px) {
+  .order-content {
+    padding-top: 180px;
+  }
   .order-details {
-    max-width: 600px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 90%;
   }
+}
 
+@media screen and (max-width: 768px) {
+  .order-content {
+    padding-top: 120px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .order-details {
+    width: 90%;
+  }
   h2 {
-    font-size: 20px;
-    font-weight: 400;
-    color: black;
-    margin-bottom: 0;
-    width: 100%;
-    text-align: center;
+    font-size: 18px;
   }
-
   p {
-    color: #999999;
-    font-size: 14px;
-    font-weight: 400;
-    margin-top: 25px;
-    margin-bottom: 0;
-    width: 100%;
-    text-align: center;
+    font-size: 13px;
+    margin-top: 20px;
   }
-
   .order-number {
-    color: black;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 13px;
   }
-
   .home-button {
-    display: inline-block;
-    width: 210px;
-    background-color: black;
+    width: 180px;
+    font-size: 14px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .order-details {
+    width: 95%;
+  }
+  h2 {
     font-size: 16px;
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    margin-top: 62px;
-    margin-bottom: 131px;
   }
-
-  .home-button:hover {
-    opacity: 0.9;
+  p {
+    font-size: 12px;
+    margin-top: 15px;
   }
-
-  /* Media Queries */
-
-  /* For tablets and smaller desktops */
-  @media screen and (max-width: 1024px) {
-    .order-content {
-      padding-top: 180px;
-    }
-
-    .order-details {
-      max-width: 90%;
-    }
+  .order-number {
+    font-size: 12px;
   }
-
-  /* For mobile devices */
-  @media screen and (max-width: 768px) {
-    .order-content {
-      padding-top: 120px;
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .order-details {
-      width: 90%;
-    }
-
-    h2 {
-      font-size: 18px;
-    }
-
-    p {
-      font-size: 13px;
-      margin-top: 20px;
-    }
-
-    .order-number {
-      font-size: 13px;
-    }
-
-    .home-button {
-      width: 180px;
-      font-size: 14px;
-      margin-top: 40px;
-      margin-bottom: 80px;
-    }
-  }
-
-  /* For very small mobile devices */
-  @media screen and (max-width: 480px) {
-    .order-details {
-      width: 95%;
-    }
-
-    h2 {
-      font-size: 16px;
-    }
-
-    p {
-      font-size: 12px;
-      margin-top: 15px;
-    }
-
-    .order-number {
-      font-size: 12px;
-    }
-
-    .home-button {
-      width: 160px;
-      font-size: 13px;
-      margin-top: 30px;
-      margin-bottom: 60px;
-    }
+  .home-button {
+    width: 160px;
+    font-size: 13px;
+    margin-top: 30px;
+    margin-bottom: 60px;
   }
 }
