@@ -9,29 +9,21 @@ interface OrderProps {
 const Order = ({ isEnglish }: OrderProps) => {
   const [orderNumber, setOrderNumber] = useState<string>('')
 
-  const generateOrderNumber = (): string => {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-    const length = 8
-    let result = ''
-    for (let i = 0; i < length; i++) {
-      result += characters.charAt(Math.floor(Math.random() * characters.length))
-    }
-    return result
-  }
-
   useEffect(() => {
     const storedOrderNumber = localStorage.getItem('orderNumber')
     if (storedOrderNumber) {
       setOrderNumber(storedOrderNumber)
     } else {
-      const newOrderNumber = generateOrderNumber()
+      const newOrderNumber = Array.from(
+        { length: 8 },
+        () =>
+          'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'[Math.floor(Math.random() * 36)]
+      ).join('')
       setOrderNumber(newOrderNumber)
       localStorage.setItem('orderNumber', newOrderNumber)
     }
 
-    return () => {
-      localStorage.removeItem('orderNumber')
-    }
+    return () => localStorage.removeItem('orderNumber')
   }, [])
 
   return (
