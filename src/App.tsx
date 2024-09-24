@@ -10,6 +10,7 @@ import ProductDetails from './components/ProductDetails/ProductDetails'
 import Locations from './components/Locations/Locations'
 import CartPage from './components/Cart/CartPage'
 import Checkout from './components/Checkout/Checkout'
+import Order from './components/Order/Order'
 import Footer from './components/Footer/Footer'
 
 function App() {
@@ -73,6 +74,10 @@ function App() {
           <Route
             path="/checkout"
             element={<Checkout isEnglish={isEnglish} />}
+          />
+          <Route
+            path="/order-confirmation"
+            element={<Order isEnglish={isEnglish} />}
           />
         </Routes>
         <Footer isEnglish={isEnglish} onLanguageSwitch={handleLanguageSwitch} />
