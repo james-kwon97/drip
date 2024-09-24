@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-h2 {
+.order-details h2 {
   font-size: 20px;
   font-weight: 400;
   color: black;
@@ -29,7 +29,7 @@ h2 {
   text-align: center;
 }
 
-p {
+.order-details p {
   color: #999999;
   font-size: 14px;
   font-weight: 400;
@@ -81,10 +81,10 @@ p {
   .order-details {
     width: 90%;
   }
-  h2 {
+  .order-details h2 {
     font-size: 18px;
   }
-  p {
+  .order-details p {
     font-size: 13px;
     margin-top: 20px;
   }
@@ -103,10 +103,10 @@ p {
   .order-details {
     width: 95%;
   }
-  h2 {
+  .order-details h2 {
     font-size: 16px;
   }
-  p {
+  .order-details p {
     font-size: 12px;
     margin-top: 15px;
   }
