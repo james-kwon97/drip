@@ -125,9 +125,10 @@
 @media screen and (max-width: 1024px) {
   .navbar {
     height: 120px;
+    padding: 0 16px;
   }
   .navbar-middle img {
-    width: 100px;
+    width: 135px;
   }
   .navbar-left,
   .navbar-right {
@@ -141,31 +142,32 @@
 
 @media screen and (max-width: 768px) {
   .navbar {
-    height: 100px;
-  }
-  .navbar-middle img {
-    width: 84px;
-  }
-  .navbar-left,
-  .navbar-right {
-    transform: scale(0.75);
-  }
-  .icon {
-    width: 18px;
-    height: 18px;
+    height: 110px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .navbar {
-    height: 80px;
-  }
   .navbar-middle img {
-    width: 67px;
+    width: 100px;
   }
   .navbar-left,
   .navbar-right {
-    transform: scale(0.6);
+    width: 100%;
+    align-items: center;
+  }
+  .navbar-left {
+    order: 2;
+  }
+  .navbar-right {
+    order: 1;
+  }
+  .icons-container {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .language-switch {
+    margin-top: 5px;
   }
   .icon {
     width: 16px;
@@ -176,10 +178,6 @@
 /* Ensure content doesn't overflow on very small screens */
 @media screen and (max-width: 320px) {
   .navbar-middle img {
-    width: 56px;
-  }
-  .navbar-left,
-  .navbar-right {
-    transform: scale(0.5);
+    width: 84px;
   }
 }
