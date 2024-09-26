@@ -5,6 +5,7 @@ import {
   ShoppingCartIcon,
   UserIcon,
   Bars3Icon,
+  XMarkIcon,
 } from '@heroicons/react/24/outline'
 import './Navbar.css'
 import logoImage from '../../assets/drip_logo.png'
@@ -19,6 +20,7 @@ interface NavbarProps {
 function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
   const [color, setColor] = useState(false)
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 480)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const location = useLocation()
 
   useEffect(() => {
@@ -75,94 +77,130 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
     return { color: 'black' }
   }
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
-    <nav
-      className={`navbar ${color ? 'navbar-bg' : ''} ${
-        isMobile ? 'mobile' : ''
-      }`}
-    >
-      <div className="navbar-left">
-        {isMobile ? (
-          <>
-            <a href="#menu" className="navbar-icon">
-              <Bars3Icon className="icon" />
-            </a>
+    <>
+      <nav
+        className={`navbar ${color ? 'navbar-bg' : ''} ${
+          isMobile ? 'mobile' : ''
+        } ${isMenuOpen ? 'menu-open' : ''}`}
+      >
+        <div className="navbar-left">
+          {isMobile && (
+            <button onClick={toggleMenu} className="menu-toggle">
+              {isMenuOpen ? (
+                <XMarkIcon className="icon icons" />
+              ) : (
+                <Bars3Icon className="icon" />
+              )}
+            </button>
+          )}
+          {isMobile && !isMenuOpen && (
             <a href="#search" className="navbar-icon">
               <MagnifyingGlassIcon className="icon" />
             </a>
-          </>
-        ) : (
-          <>
-            <a
-              href="/about"
-              className="navbar-button"
-              style={getButtonStyle('about')}
-            >
-              {isEnglish ? 'Mō mātou' : 'About Us'}
-            </a>
-            <a
-              href="/products"
-              className="navbar-button"
-              style={getButtonStyle('shop')}
-            >
-              {isEnglish ? 'Toa' : 'Shop'}
-            </a>
-            <a
-              href="/locations"
-              className="navbar-button"
-              style={getButtonStyle('locations')}
-            >
-              {isEnglish ? 'Wāhi' : 'Locations'}
-            </a>
-          </>
-        )}
-      </div>
-      <div className="navbar-middle">
-        <a href="/">
-          <img
-            src={color ? scrolledLogoImage : logoImage}
-            alt="Drip Logo"
-            className="logo-image"
-          />
-        </a>
-      </div>
-      <div className="navbar-right">
-        {isMobile ? (
-          <div className="icons-container">
-            <a href="/cart" className="navbar-icon">
-              <ShoppingCartIcon className="icon" />
-            </a>
-            <a href="#user" className="navbar-icon">
-              <UserIcon className="icon" />
-            </a>
-          </div>
-        ) : (
-          <>
-            <div className="icons-container">
-              <a href="#search" className="navbar-icon">
-                <MagnifyingGlassIcon className="icon" />
+          )}
+          {!isMobile && (
+            <>
+              <a
+                href="/about"
+                className="navbar-button"
+                style={getButtonStyle('about')}
+              >
+                {isEnglish ? 'Mō mātou' : 'About Us'}
               </a>
-              <a href="/cart" className="navbar-icon">
-                <ShoppingCartIcon className="icon" />
+              <a
+                href="/products"
+                className="navbar-button"
+                style={getButtonStyle('shop')}
+              >
+                {isEnglish ? 'Toa' : 'Shop'}
               </a>
-              <a href="#user" className="navbar-icon">
-                <UserIcon className="icon" />
+              <a
+                href="/locations"
+                className="navbar-button"
+                style={getButtonStyle('locations')}
+              >
+                {isEnglish ? 'Wāhi' : 'Locations'}
               </a>
-            </div>
-            <div className="language-switch">
+            </>
+          )}
+        </div>
+        <div className="navbar-middle">
+          <a href="/">
+            <img
+              src={color ? scrolledLogoImage : logoImage}
+              alt="Drip Logo"
+              className="logo-image"
+            />
+          </a>
+        </div>
+        <div className="navbar-right">
+          {isMobile ? (
+            !isMenuOpen && (
+              <div className="icons-container">
+                <a href="/cart" className="navbar-icon">
+                  <ShoppingCartIcon className="icon" />
+                </a>
+                <a href="#user" className="navbar-icon">
+                  <UserIcon className="icon" />
+                </a>
+              </div>
+            )
+          ) : (
+            <>
+              <div className="icons-container">
+                <a href="#search" className="navbar-icon">
+                  <MagnifyingGlassIcon className="icon" />
+                </a>
+                <a href="/cart" className="navbar-icon">
+                  <ShoppingCartIcon className="icon" />
+                </a>
+                <a href="#user" className="navbar-icon">
+                  <UserIcon className="icon" />
+                </a>
+              </div>
+              <div className="language-switch">
+                <Switch
+                  checked={isEnglish}
+                  onChange={onLanguageSwitch}
+                  inverted={color}
+                />
+                <span className="navbar-language">
+                  {isEnglish ? 'English' : 'Māori'}
+                </span>
+              </div>
+            </>
+          )}
+        </div>
+      </nav>
+      {isMobile && isMenuOpen && (
+        <div className="menu-dropdown">
+          <div className="menu-items">
+            <a href="/about" className="menu-item">
+              ABOUT US
+            </a>
+            <a href="/products" className="menu-item">
+              SHOP
+            </a>
+            <a href="/locations" className="menu-item">
+              LOCATIONS
+            </a>
+            <div className="menu-language-switch">
               <Switch
                 checked={isEnglish}
                 onChange={onLanguageSwitch}
-                inverted={color}
+                inverted={false}
               />
-              <span className="navbar-language">
-                {isEnglish ? 'English' : 'Māori'}
-              </span>
+              <span className="menu-language">MĀORI</span>
             </div>
-          </>
-        )}
-      </div>
-    </nav>
+          </div>
+        </div>
+      )}
+    </>
   )
 }
 
