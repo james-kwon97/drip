@@ -177,8 +177,8 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
           )}
         </div>
       </nav>
-      {isMobile && isMenuOpen && (
-        <div className="menu-dropdown">
+      {isMobile && (
+        <div className={`menu-dropdown ${isMenuOpen ? 'open' : ''}`}>
           <div className="menu-items">
             <a href="/about" className="menu-item">
               {isEnglish ? 'MŌ MĀTOU' : 'ABOUT US'}

@@ -1,3 +1,4 @@
+/* General Navbar Styles */
 .navbar {
   position: fixed;
   top: 0;
@@ -14,6 +15,7 @@
   padding: 0 38px;
 }
 
+/* Navbar Sections */
 .navbar-left {
   display: flex;
   flex-direction: column;
@@ -31,6 +33,14 @@
   align-items: center;
 }
 
+.navbar-right {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo Styles */
 .navbar-middle img {
   margin-top: 10px;
   transition: width 0.3s ease-in-out;
@@ -41,13 +51,7 @@
   object-fit: contain;
 }
 
-.navbar-right {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* Icon Styles */
 .icons-container {
   margin-bottom: 7px;
 }
@@ -67,6 +71,7 @@
   color: #adadad;
 }
 
+/* Button and Language Switch Styles */
 .navbar-button {
   text-transform: uppercase;
   margin: 5px 0;
@@ -95,21 +100,14 @@
   text-overflow: clip;
 }
 
-/* Css for navbar when scrolled down */
-
+/* Scrolled Navbar Styles */
 .navbar-bg {
   background: white;
   height: 100px;
 }
 
-.navbar-bg .navbar-button {
-  color: black;
-}
-
-.navbar-bg .icon {
-  color: black;
-}
-
+.navbar-bg .navbar-button,
+.navbar-bg .icon,
 .navbar-bg .navbar-language {
   color: black;
 }
@@ -120,8 +118,7 @@
   height: auto;
 }
 
-/* Media Queries */
-
+/* Responsive Styles */
 @media screen and (max-width: 1024px) {
   .navbar {
     height: 120px;
@@ -133,10 +130,6 @@
   .navbar-left,
   .navbar-right {
     transform: scale(0.9);
-  }
-  .icon {
-    width: 22px;
-    height: 22px;
   }
 }
 
@@ -152,7 +145,6 @@
     padding: 55px 12px 0 12px;
     align-items: center;
   }
-
   .navbar-left,
   .navbar-right {
     width: auto;
@@ -160,108 +152,72 @@
     align-items: center;
     transform: none;
   }
-
   .navbar-left {
     order: 1;
   }
-
   .navbar-middle {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     order: 2;
   }
-
+  .navbar-right {
+    order: 3;
+  }
   .navbar-middle img {
     width: 100px;
     margin-top: 0;
   }
-
-  .navbar-right {
-    order: 3;
-  }
-
-  .icons-container {
-    margin-bottom: 0;
-    width: auto;
-    justify-content: flex-end;
-  }
-
-  .navbar-icon {
-    margin: 0 8px;
-  }
-
   .icon {
     width: 20px;
     height: 20px;
-    color: white;
   }
-
+  .navbar-bg {
+    height: 130px;
+  }
   .menu-toggle {
     background: none;
     border: none;
     padding: 0;
     cursor: pointer;
   }
-
   .menu-toggle .icon {
-    width: 20px;
-    height: 20px;
     color: white;
   }
-
-  .navbar-bg .icon {
-    color: black;
-  }
-
   .navbar-bg .menu-toggle .icon {
     color: black;
   }
-
-  .navbar-bg {
-    height: 130px;
-  }
-
-  .navbar-bg .navbar-middle img {
-    margin-top: 0;
-    width: 100px;
-  }
 }
 
-/* Ensure content doesn't overflow on very small screens */
 @media screen and (max-width: 320px) {
   .navbar {
     padding: 0 12px;
   }
-
   .navbar-middle img {
     width: 84px;
   }
-
   .navbar-icon {
     margin: 0 6px;
   }
 }
 
 /* Menu Dropdown Styles */
-
 .menu-dropdown {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 0;
   background-color: white;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 130px;
+  overflow: hidden;
+  transition: height 0.4s ease-in-out, padding-top 0.4s ease-in-out;
 }
 
-.icons {
-  color: black !important;
+.menu-dropdown.open {
+  height: 100%;
+  padding-top: 130px;
 }
 
 .menu-items {
@@ -269,6 +225,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  transition-delay: 0.1s;
+}
+
+.menu-dropdown.open .menu-items {
+  opacity: 1;
 }
 
 .menu-item {
@@ -290,6 +253,7 @@
   margin-left: 10px;
 }
 
+/* Hide elements when menu is open */
 .navbar.menu-open .navbar-middle,
 .navbar.menu-open .navbar-right,
 .navbar.menu-open .navbar-left a:not(.menu-toggle) {
