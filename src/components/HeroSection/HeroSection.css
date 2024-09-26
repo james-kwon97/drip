@@ -53,3 +53,10 @@
     transform: translateY(-4px);
   }
 }
+
+/* Media query for screens 480px and below */
+@media screen and (max-width: 480px) {
+  .hero-content:before {
+    background: url('../../assets/mobile_hero_image.png') no-repeat center/cover;
+  }
+}

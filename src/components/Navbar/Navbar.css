@@ -71,6 +71,11 @@
   color: #adadad;
 }
 
+/* Ensure X mark is black when dropdown is open */
+.icons {
+  color: black !important;
+}
+
 /* Button and Language Switch Styles */
 .navbar-button {
   text-transform: uppercase;
