@@ -181,21 +181,23 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
         <div className="menu-dropdown">
           <div className="menu-items">
             <a href="/about" className="menu-item">
-              ABOUT US
+              {isEnglish ? 'MŌ MĀTOU' : 'ABOUT US'}
             </a>
             <a href="/products" className="menu-item">
-              SHOP
+              {isEnglish ? 'TOA' : 'SHOP'}
             </a>
             <a href="/locations" className="menu-item">
-              LOCATIONS
+              {isEnglish ? 'WĀHI' : 'LOCATIONS'}
             </a>
             <div className="menu-language-switch">
               <Switch
                 checked={isEnglish}
                 onChange={onLanguageSwitch}
-                inverted={false}
+                inverted={true}
               />
-              <span className="menu-language">MĀORI</span>
+              <span className="menu-language">
+                {isEnglish ? 'ENGLISH' : 'MĀORI'}
+              </span>
             </div>
           </div>
         </div>

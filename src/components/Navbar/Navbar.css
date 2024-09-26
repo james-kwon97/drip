@@ -148,7 +148,7 @@
 
 @media screen and (max-width: 480px) {
   .navbar {
-    height: 80px;
+    height: 120px;
     padding: 55px 12px 0 12px;
     align-items: center;
   }
@@ -194,7 +194,7 @@
   .icon {
     width: 20px;
     height: 20px;
-    color: white !important;
+    color: white;
   }
 
   .menu-toggle {
@@ -207,7 +207,24 @@
   .menu-toggle .icon {
     width: 20px;
     height: 20px;
+    color: white;
+  }
+
+  .navbar-bg .icon {
     color: black;
+  }
+
+  .navbar-bg .menu-toggle .icon {
+    color: black;
+  }
+
+  .navbar-bg {
+    height: 130px;
+  }
+
+  .navbar-bg .navbar-middle img {
+    margin-top: 0;
+    width: 100px;
   }
 }
 
@@ -238,8 +255,9 @@
   z-index: 1000;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  padding-top: 130px;
 }
 
 .icons {
@@ -270,7 +288,6 @@
 .menu-language {
   font-size: 16px;
   margin-left: 10px;
-  text-transform: uppercase;
 }
 
 .navbar.menu-open .navbar-middle,
@@ -279,7 +296,6 @@
   display: none;
 }
 
-/* When the menu is open, put the navbar behind the dropdown */
 .menu-dropdown + .navbar {
   z-index: 999;
 }
