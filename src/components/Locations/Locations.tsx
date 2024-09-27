@@ -11,31 +11,20 @@ interface LocationsProps {
 
 function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
   const [activeLocation, setActiveLocation] = useState<string>('auckland')
-  const [currentImage, setCurrentImage] = useState<string>(
-    LocationImageAuckland
-  )
-  const [isFading, setIsFading] = useState(false)
-
-  const handleLocationClick = (location: string) => {
-    if (location !== activeLocation) {
-      setIsFading(true)
-      setTimeout(() => {
-        setActiveLocation(location)
-        setCurrentImage(
-          location === 'auckland'
-            ? LocationImageAuckland
-            : LocationImageQueenstown
-        )
-        setIsFading(false)
-      }, 200)
-    }
-  }
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480)
 
   useEffect(() => {
-    if (!activeLocation) {
-      setActiveLocation('auckland')
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 480)
     }
-  }, [activeLocation])
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
+  const handleLocationClick = (location: string) => {
+    setActiveLocation(location)
+  }
 
   return (
     <div>
@@ -60,6 +49,13 @@ function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
             <p className="locations-hour">
               {isEnglish ? 'Rāhoroi-Rātapu 7:00-14:00' : 'Sat-Sun 7:00-14:00'}
             </p>
+            {isMobile && (
+              <img
+                src={LocationImageAuckland}
+                alt="Auckland Location"
+                className="locations-image"
+              />
+            )}
             <hr className="locations-divider" />
           </div>
 
@@ -77,20 +73,28 @@ function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
             <p className="locations-hour">
               {isEnglish ? 'Rāhoroi-Rātapu 7:00-14:00' : 'Sat-Sun 7:00-14:00'}
             </p>
+            {isMobile && (
+              <img
+                src={LocationImageQueenstown}
+                alt="Queenstown Location"
+                className="locations-image"
+              />
+            )}
           </div>
         </div>
-
-        <div className="locations-right-section">
-          <img
-            src={currentImage}
-            alt={
-              activeLocation === 'auckland'
-                ? 'Auckland Location'
-                : 'Queenstown Location'
-            }
-            className={`locations-image ${isFading ? 'fade' : ''}`}
-          />
-        </div>
+        {!isMobile && (
+          <div className="locations-right-section">
+            <img
+              src={
+                activeLocation === 'auckland'
+                  ? LocationImageAuckland
+                  : LocationImageQueenstown
+              }
+              alt={`${activeLocation} Location`}
+              className="locations-image"
+            />
+          </div>
+        )}
       </div>
     </div>
   )

@@ -17,13 +17,13 @@
 
 .locations-title {
   color: #868686;
+  font-size: 16px;
   margin-top: 0;
   margin-bottom: 24px;
-  font-size: clamp(12px, 1.2vw, 16px);
 }
 
 .location-item h2 {
-  font-size: clamp(20px, 2.5vw, 32px);
+  font-size: 32px;
   font-family: 'EB Garamond', serif;
   font-weight: normal;
   margin-top: 0;
@@ -31,14 +31,14 @@
 }
 
 .location-item .locations-address {
-  font-size: clamp(12px, 1.2vw, 16px);
+  font-size: 16px;
   color: #000000cc;
   margin-top: 0;
   margin-bottom: 9px;
 }
 
 .location-item .locations-hour {
-  font-size: clamp(12px, 1.2vw, 16px);
+  font-size: 16px;
   color: #868686;
   margin-top: 0;
   margin-bottom: 6px;
@@ -59,16 +59,12 @@
 }
 
 .locations-image {
-  width: calc(100% - 76px);
+  width: 100%;
   max-width: 980px;
   height: auto;
+  object-fit: contain;
   margin-top: 24px;
   margin-bottom: 216px;
-  transition: opacity 0.3s ease;
-}
-
-.locations-image.fade {
-  opacity: 0;
 }
 
 /* Active state for the clicked location */
@@ -92,20 +88,12 @@
 }
 
 /* Add hover effect for inactive items */
-.location-item:not(.active) h2:hover,
-.location-item:not(.active) .locations-address:hover,
-.location-item:not(.active) .locations-hour:hover {
+.location-item:not(.active):hover {
   cursor: pointer;
 }
 
 /* Media Queries */
-@media screen and (max-width: 1024px) {
-  .locations-page-container {
-    padding: 0 16px;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .locations-left-section {
     flex-basis: 30%;
   }
@@ -113,10 +101,114 @@
   .locations-right-section {
     flex-basis: 70%;
   }
+}
+
+@media screen and (max-width: 1024px) {
+  .locations-page-container {
+    padding: 0 16px;
+  }
+
+  .location-item h2 {
+    font-size: clamp(24px, 3vw, 32px);
+  }
+
+  .location-item .locations-address,
+  .location-item .locations-hour,
+  .locations-title {
+    font-size: clamp(14px, 1.5vw, 16px);
+  }
 
   .locations-divider {
-    margin: 40px 0;
+    max-width: 200px;
   }
 }
 
-/* Styles for screens 768px and below will be added later */
+@media screen and (max-width: 768px) {
+  .locations-page-container {
+    margin-top: 140px;
+  }
+
+  .locations-left-section {
+    flex-basis: 35%;
+  }
+
+  .locations-right-section {
+    flex-basis: 65%;
+  }
+
+  .locations-divider {
+    margin: 40px 0;
+    max-width: 180px;
+  }
+
+  .locations-image {
+    margin-bottom: 100px;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+  .locations-page-container {
+    flex-direction: column;
+    margin-top: 140px;
+  }
+
+  .locations-left-section,
+  .locations-right-section {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .locations-title {
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 26px;
+  }
+
+  .location-item {
+    margin-bottom: 40px;
+  }
+
+  .location-item h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #000; /* Ensure all location titles are black */
+  }
+
+  .location-item .locations-address {
+    font-size: 14px;
+    color: #000000cc; /* Ensure all addresses are visible */
+  }
+
+  .location-item .locations-hour {
+    font-size: 14px;
+    color: #868686; /* Ensure all hours are visible */
+  }
+
+  .locations-divider {
+    width: 100%;
+    max-width: none;
+    margin: 30px 0;
+  }
+
+  .locations-image {
+    width: 100%;
+    margin: 30px 0 40px;
+  }
+
+  .locations-right-section {
+    display: none;
+  }
+
+  /* Override inactive styles for mobile */
+  .location-item:not(.active) h2,
+  .location-item:not(.active) .locations-address,
+  .location-item:not(.active) .locations-hour {
+    color: inherit; /* This will use the colors defined above */
+  }
+
+  /* Remove hover effect for mobile */
+  .location-item:not(.active):hover {
+    cursor: default;
+  }
+}
