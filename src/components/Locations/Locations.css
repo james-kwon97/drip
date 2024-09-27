@@ -150,7 +150,7 @@
 @media screen and (max-width: 480px) {
   .locations-page-container {
     flex-direction: column;
-    margin-top: 140px;
+    margin-top: 120px;
   }
 
   .locations-left-section,
@@ -202,9 +202,12 @@
 
   /* Override inactive styles for mobile */
   .location-item:not(.active) h2,
-  .location-item:not(.active) .locations-address,
-  .location-item:not(.active) .locations-hour {
+  .location-item:not(.active) .locations-address {
     color: inherit; /* This will use the colors defined above */
+  }
+
+  .location-item:not(.active) .locations-hour {
+    color: #868686;
   }
 
   /* Remove hover effect for mobile */
