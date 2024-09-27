@@ -2,13 +2,16 @@
   display: flex;
   justify-content: space-between;
   margin-top: 144px;
+  padding: 0 38px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .locations-left-section {
   flex-basis: 25%;
   display: flex;
   flex-direction: column;
-  margin-left: 38px;
   font-size: 16px;
 }
 
@@ -16,10 +19,11 @@
   color: #868686;
   margin-top: 0;
   margin-bottom: 24px;
+  font-size: clamp(12px, 1.2vw, 16px);
 }
 
 .location-item h2 {
-  font-size: 32px;
+  font-size: clamp(20px, 2.5vw, 32px);
   font-family: 'EB Garamond', serif;
   font-weight: normal;
   margin-top: 0;
@@ -27,14 +31,14 @@
 }
 
 .location-item .locations-address {
-  font-size: 16px;
+  font-size: clamp(12px, 1.2vw, 16px);
   color: #000000cc;
   margin-top: 0;
   margin-bottom: 9px;
 }
 
 .location-item .locations-hour {
-  font-size: 16px;
+  font-size: clamp(12px, 1.2vw, 16px);
   color: #868686;
   margin-top: 0;
   margin-bottom: 6px;
@@ -43,7 +47,8 @@
 .locations-divider {
   border: none;
   border-top: 1px solid #cccccc;
-  width: 234px;
+  width: 100%;
+  max-width: 234px;
   margin: 56px 0;
 }
 
@@ -51,7 +56,6 @@
   flex-basis: 75%;
   display: flex;
   justify-content: flex-end;
-  margin-right: 38px;
 }
 
 .locations-image {
@@ -93,3 +97,26 @@
 .location-item:not(.active) .locations-hour:hover {
   cursor: pointer;
 }
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  .locations-page-container {
+    padding: 0 16px;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .locations-left-section {
+    flex-basis: 30%;
+  }
+
+  .locations-right-section {
+    flex-basis: 70%;
+  }
+
+  .locations-divider {
+    margin: 40px 0;
+  }
+}
+
+/* Styles for screens 768px and below will be added later */
