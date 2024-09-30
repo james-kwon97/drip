@@ -40,12 +40,12 @@
   flex-wrap: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .products-page-categories::-webkit-scrollbar {
-  display: none; /* WebKit */
+  display: none;
 }
 
 .products-left-categories,
@@ -142,85 +142,33 @@
 }
 
 @media (max-width: 768px) {
-  .products-horizontal-line {
-    margin-top: 80px;
-  }
-
-  .products-page-intro p {
-    max-width: 440px;
-    font-size: 14px;
-  }
-
-  .products-page-categories {
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
-  }
-
-  .products-right-filters {
-    width: auto;
-    justify-content: flex-end;
-    gap: 30px;
-  }
-
-  .products-category-button,
-  .products-filter-button,
-  .products-sort-button {
-    font-size: 12px;
-  }
-
-  .products-chevron-icon {
-    width: 14px;
-    height: 14px;
-  }
-
-  .products-page-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-  }
-
   .products-info {
+    margin-top: 4px;
     margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
   }
 
   .products-name,
   .products-price {
-    font-size: 14px;
+    font-size: 13px;
+  }
+
+  .products-name {
+    flex: 1 1 calc(100% - 80px);
+    margin-right: 10px;
+  }
+
+  .products-price {
+    white-space: nowrap;
+    flex: 0 0 auto;
+    align-self: flex-start;
   }
 }
 
 @media (max-width: 480px) {
-  .products-page-intro {
-    margin-top: 190px;
-  }
-
-  .products-page-intro p {
-    max-width: 380px;
-  }
-
-  .products-page-categories {
-    gap: 10px;
-  }
-
-  .products-right-filters {
-    gap: 10px;
-  }
-
-  .products-category-button,
-  .products-filter-button,
-  .products-sort-button {
-    font-size: 11px;
-  }
-
-  .products-chevron-icon {
-    width: 12px;
-    height: 12px;
-  }
-
-  .products-page-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .products-info {
     margin-bottom: 30px;
   }
@@ -228,5 +176,9 @@
   .products-name,
   .products-price {
     font-size: 12px;
+  }
+
+  .products-name {
+    flex: 1 1 calc(100% - 60px);
   }
 }
