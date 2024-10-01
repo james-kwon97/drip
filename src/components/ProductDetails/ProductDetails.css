@@ -231,7 +231,31 @@
   }
 
   .product-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .quantity-and-add-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1;
+  }
+
+  .quantity-container {
+    flex: 0 0 auto;
+  }
+
+  .products-category-buttons.add-to-cart {
+    flex: 1.5;
+  }
+
+  .products-category-buttons.buy-now {
+    flex: 0.7;
   }
 }
 
