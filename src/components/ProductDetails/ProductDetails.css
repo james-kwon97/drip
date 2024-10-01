@@ -179,7 +179,7 @@
 
 @media (max-width: 1024px) {
   .products-details {
-    margin: 100px 16px 216px 16px;
+    margin: 150px 16px 216px 16px;
     gap: 30px;
   }
 
@@ -192,12 +192,22 @@
     flex: 0 1 35%;
     max-width: 35%;
   }
+
+  .products-names,
+  .product-attribute1,
+  .product-attribute2 {
+    margin-bottom: 4px;
+  }
+
+  .product-attribute2-info {
+    margin-bottom: 60px;
+  }
 }
 
 @media (max-width: 768px) {
   .products-details {
     flex-direction: column;
-    margin: 80px 16px;
+    margin: 150px 16px;
   }
 
   .product-detail-image {
@@ -213,6 +223,7 @@
 
   .products-names {
     font-size: 28px;
+    margin-top: -20px;
   }
 
   .product-description {
@@ -251,21 +262,22 @@
   }
 
   .products-category-buttons.add-to-cart {
-    flex: 1.5;
+    flex: 1.6;
   }
 
   .products-category-buttons.buy-now {
-    flex: 0.7;
+    flex: 0.6;
   }
 }
 
 @media (max-width: 480px) {
   .products-details {
-    margin: 60px 16px;
+    margin: 170px 16px;
   }
 
   .products-names {
     font-size: 24px;
+    margin-top: -30px;
   }
 
   .product-info {
@@ -288,5 +300,24 @@
 
   .products-category-buttons {
     font-size: 14px;
+  }
+
+  /* New styles for mobile button layout */
+  .product-buttons {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .quantity-and-add-container {
+    width: 100%;
+  }
+
+  .products-category-buttons.add-to-cart {
+    flex: 1;
+  }
+
+  .products-category-buttons.buy-now {
+    width: 100%;
+    flex: none;
   }
 }
