@@ -11,8 +11,7 @@
   font-size: 16px;
   color: #868686;
   display: grid;
-  grid-template-columns: repeat(4, 1fr) 50px;
-  gap: 20px;
+  grid-template-columns: repeat(4, 1fr) 24px;
   padding-bottom: 18px;
   margin-top: 164px;
   border-bottom: 1px solid #ccc;
@@ -29,7 +28,7 @@
 
 .cart-item {
   display: grid;
-  grid-template-columns: repeat(4, 1fr) 50px;
+  grid-template-columns: repeat(4, 1fr) 24px;
   gap: 20px;
   align-items: center;
   padding: 30px 0;
@@ -58,7 +57,7 @@
   font-size: 24px;
   font-family: 'EB garamond', serif;
   font-weight: 400;
-  margin: -20px 0 11px 0;
+  margin: -22px 0 11px 0;
 }
 
 .product-details p {
@@ -127,7 +126,7 @@
   align-items: center;
   font-size: 14px;
   color: #868686;
-  transform: translateY(-4px);
+  transform: translateY(-5px);
 }
 
 .cart-totals span {
@@ -187,6 +186,10 @@
 
 /* Media queries */
 @media screen and (max-width: 1200px) {
+  .cart-item {
+    padding: 28px 0;
+  }
+
   .cart-item-image {
     width: 180px;
     height: 180px;
@@ -204,6 +207,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .cart-item {
+    padding: 26px 0;
+  }
+
   .cart-page {
     margin: 0 16px;
   }
@@ -218,10 +225,6 @@
     margin-bottom: 0;
   }
 
-  .cart-quantity-wrapper {
-    width: 80px;
-  }
-
   .item-price {
     font-size: 14px;
   }
@@ -230,36 +233,69 @@
     width: 28px;
     height: 28px;
   }
+
+  .cart-totals {
+    transform: translateY(-10px);
+  }
+
+  .checkout-button {
+    margin-top: 80px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .cart-headers,
   .cart-item {
-    grid-template-columns: 1fr 1fr 50px;
+    padding: 26px 0;
   }
 
-  .cart-headers span:nth-child(3),
-  .cart-quantity-wrapper {
-    display: none;
+  .cart-headers {
+    font-size: 14px;
+    margin-top: 164px;
   }
 
   .cart-item-image {
-    width: 120px;
-    height: 120px;
+    width: 105px;
+    height: 105px;
   }
 
   .product-details h2 {
     font-size: 18px;
   }
 
-  .cart-summary {
-    flex-direction: column;
-    align-items: flex-end;
+  .product-details p {
+    font-size: 11px;
+  }
+
+  .cart-quantity-wrapper {
+    display: flex;
+    width: 102px;
+    height: 40px;
+    padding: 10px 8px;
+  }
+
+  .item-price {
+    font-size: 13px;
+  }
+
+  .remove-button {
+    width: 22px;
+    height: 22px;
+  }
+
+  .cart-totals {
+    font-size: 13px;
   }
 
   .checkout-button {
     width: 100%;
-    max-width: 326px;
+    max-width: 280px;
+    font-size: 14px;
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+
+  .cart-totals span:nth-child(2) {
+    margin-right: 30px;
   }
 }
 
