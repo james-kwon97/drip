@@ -58,7 +58,7 @@
   font-size: 24px;
   font-family: 'EB garamond', serif;
   font-weight: 400;
-  margin: 0 0 11px 0;
+  margin: -20px 0 11px 0;
 }
 
 .product-details p {
@@ -191,6 +191,16 @@
     width: 180px;
     height: 180px;
   }
+
+  .product-details h2 {
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+
+  .remove-button {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -201,6 +211,24 @@
   .cart-item-image {
     width: 150px;
     height: 150px;
+  }
+
+  .product-details h2 {
+    font-size: 19px;
+    margin-bottom: 0;
+  }
+
+  .cart-quantity-wrapper {
+    width: 80px;
+  }
+
+  .item-price {
+    font-size: 14px;
+  }
+
+  .remove-button {
+    width: 28px;
+    height: 28px;
   }
 }
 
