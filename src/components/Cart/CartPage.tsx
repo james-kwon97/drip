@@ -53,11 +53,11 @@ export default function CartPage({ isEnglish }: CartPageProps) {
   return (
     <div className="cart-page">
       <div className="cart-headers">
-        <span className="cart-header">Your cart</span>
-        <span>Product</span>
-        <span>Quantity</span>
-        <span>Price</span>
-        <span></span>
+        <span className="cart-header cart-header-main">Your cart</span>
+        <span className="cart-header cart-header-product">Product</span>
+        <span className="cart-header cart-header-quantity">Quantity</span>
+        <span className="cart-header cart-header-price">Price</span>
+        <span className="cart-header cart-header-remove"></span>
       </div>
       <div className="cart-items">
         {cart.map((item) => (
