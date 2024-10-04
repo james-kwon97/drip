@@ -4,6 +4,13 @@ import chocolateProduct1 from '../../assets/chocolate_product1.png'
 import originalDecafProduct1 from '../../assets/original_decaf_product1.png'
 import mugCupProduct1 from '../../assets/mug_cup_product1.png'
 import disposableCupsProduct1 from '../../assets/disposable_cups_product1.png'
+
+import originalProduct from '../../assets/original_product.png'
+import hazelnutProduct from '../../assets/hazelnut_product.png'
+import chocolateProduct from '../../assets/chocolate_product.png'
+import originalDecafProduct from '../../assets/original_decaf_product.png'
+import mugCupProduct from '../../assets/mug_cup_product1.png'
+import disposableCupsProduct from '../../assets/disposable_cups_product.png'
 export interface Product {
   id: string
   name: string
@@ -19,6 +26,7 @@ export interface Product {
   attribute2Info: string
   attribute2InfoEn: string
   imageUrl: string
+  cartImageUrl: string
   price: string
 }
 
@@ -40,6 +48,7 @@ export const productData: Product[] = [
     attribute2Info: 'Koromōpia',
     attribute2InfoEn: 'Colombia',
     imageUrl: originalProduct1,
+    cartImageUrl: originalProduct,
     price: '$34.99',
   },
   {
@@ -59,6 +68,7 @@ export const productData: Product[] = [
     attribute2Info: 'Parāwai / Kōta',
     attribute2InfoEn: 'Brazil / Costa Rica',
     imageUrl: hazelnutProduct1,
+    cartImageUrl: hazelnutProduct,
     price: '$34.99',
   },
   {
@@ -78,6 +88,7 @@ export const productData: Product[] = [
     attribute2Info: 'Guatemala / Ekuador',
     attribute2InfoEn: 'Guatemala / Ecuador',
     imageUrl: chocolateProduct1,
+    cartImageUrl: chocolateProduct,
     price: '$34.99',
   },
   {
@@ -97,6 +108,7 @@ export const productData: Product[] = [
     attribute2Info: 'Koromōpia',
     attribute2InfoEn: 'Colombia',
     imageUrl: originalDecafProduct1,
+    cartImageUrl: originalDecafProduct,
     price: '$34.99',
   },
   {
@@ -114,6 +126,7 @@ export const productData: Product[] = [
     attribute2Info: 'drip: white',
     attribute2InfoEn: 'drip: white',
     imageUrl: mugCupProduct1,
+    cartImageUrl: mugCupProduct,
     price: '$24.99',
   },
   {
@@ -131,6 +144,7 @@ export const productData: Product[] = [
     attribute2Info: 'drip: white',
     attribute2InfoEn: 'drip: white',
     imageUrl: disposableCupsProduct1,
+    cartImageUrl: disposableCupsProduct,
     price: '$29.99',
   },
 ]
