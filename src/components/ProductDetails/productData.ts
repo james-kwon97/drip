@@ -9,7 +9,7 @@ import originalProduct from '../../assets/original_product.png'
 import hazelnutProduct from '../../assets/hazelnut_product.png'
 import chocolateProduct from '../../assets/chocolate_product.png'
 import originalDecafProduct from '../../assets/original_decaf_product.png'
-import mugCupProduct from '../../assets/mug_cup_product1.png'
+import mugCupProduct from '../../assets/mug_cup_product.png'
 import disposableCupsProduct from '../../assets/disposable_cups_product.png'
 export interface Product {
   id: string

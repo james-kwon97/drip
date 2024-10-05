@@ -63,8 +63,9 @@ export default function CartPage({ isEnglish }: CartPageProps) {
         {cart.map((item) => (
           <div key={item.id} className="cart-item">
             <div className="cart-item-image">
-              <img src={item.imageUrl} alt={item.name} />
+              <img src={item.cartImageUrl} alt={item.name} />
             </div>
+
             <div className="product-details">
               <h2>{item.name}</h2>
               <p>{item.info}</p>
