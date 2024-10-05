@@ -199,9 +199,10 @@ function Checkout({ isEnglish }: CheckoutProps) {
           ? 'Whakatau ota'
           : 'Place order'}{' '}
         — $
-        {cart
-          .reduce((total, item) => total + item.price * item.quantity, 0)
-          .toFixed(2)}
+        {(
+          cart.reduce((total, item) => total + item.price * item.quantity, 0) +
+          10
+        ).toFixed(2)}
       </button>
     </div>
   )
