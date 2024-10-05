@@ -154,7 +154,7 @@ function Checkout({ isEnglish }: CheckoutProps) {
             {cart.map((item) => (
               <div key={item.id} className="order-item">
                 <img
-                  src={item.imageUrl}
+                  src={item.cartImageUrl}
                   alt={item.name}
                   className="order-item-image"
                 />

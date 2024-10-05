@@ -11,7 +11,7 @@
 .about-image-wrapper {
   width: 65%;
   height: auto;
-  position: relative; /* Added for potential absolute positioning of content */
+  position: relative;
 }
 
 .about-page-image {
