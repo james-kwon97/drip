@@ -10,7 +10,7 @@
 }
 
 .checkout-line {
-  width: 100%;
+  width: 52%;
   max-width: 672px;
   height: 0;
   border: none;
@@ -128,7 +128,6 @@
 .payment-form .form-row {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 18px;
 }
 
 .payment-form .form-field {
@@ -327,6 +326,10 @@
     width: 50%;
   }
 
+  .checkout-line {
+    width: 50%;
+  }
+
   .order-summary {
     width: 45%;
   }
@@ -371,9 +374,15 @@
     margin-left: 4%;
   }
 
+  .card-holder-hr,
+  .postal-code-hr {
+    margin-bottom: 0;
+  }
+
   .continue-button {
-    width: 100%;
+    width: 50%;
     max-width: none;
+    margin-top: 50px;
   }
 }
 
@@ -433,5 +442,65 @@
   .order-item-quantity,
   .order-item-price {
     font-size: 11px;
+  }
+
+  .continue-button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .checkout-page {
+    padding-top: 160px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .checkout-content {
+    flex-direction: column;
+  }
+
+  .checkout-form {
+    width: 100%;
+    max-width: none;
+  }
+
+  .checkout-line {
+    width: 100%;
+  }
+
+  .order-summary {
+    display: none;
+  }
+
+  .form-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form-field {
+    width: calc(50% - 14px);
+  }
+
+  .continue-button {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .form-field input {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .checkout-page {
+    padding-top: 170px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .continue-button {
+    width: 100%;
+    margin-top: 60px;
   }
 }
