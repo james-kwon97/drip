@@ -1,5 +1,4 @@
 .checkout-page {
-  max-width: 1400px;
   margin: 0 auto;
   padding: 164px 38px 0;
 }
@@ -76,7 +75,7 @@
 
 .form-field input {
   width: 100%;
-  height: 38px;
+  height: 54px;
   padding: 20px 0 0;
   border: none;
   border-bottom: 1px solid #ccc;
@@ -290,10 +289,6 @@
 
 /* Media Queries */
 @media screen and (max-width: 1400px) {
-  .checkout-page {
-    padding: 164px 20px 0;
-  }
-
   .checkout-form {
     width: 55%;
   }
@@ -319,11 +314,15 @@
   }
 
   .order-item-price {
-    margin-left: 45px;
+    margin-left: 35px;
   }
 }
 
 @media screen and (max-width: 1024px) {
+  .checkout-page {
+    padding: 164px 16px 0;
+  }
+
   .checkout-form {
     width: 50%;
   }
@@ -380,6 +379,59 @@
 
 @media screen and (max-width: 900px) {
   .order-item-price {
-    margin-left: 5px;
+    margin-left: 0;
+  }
+  .checkout-page h1 {
+    font-size: 14px;
+  }
+
+  .checkout-tabs button {
+    font-size: 13px;
+  }
+
+  .form-field label,
+  .payment-form .form-field label {
+    font-size: 11px;
+  }
+
+  .order-summary-header {
+    margin-top: 4px;
+  }
+
+  .order-summary-header h2,
+  .order-summary-header .order-total {
+    font-size: 14px;
+  }
+
+  .order-summary-footer,
+  .order-summary-footer .order-subtotal-shipping,
+  .order-summary-footer .order-subtotal-shipping span {
+    font-size: 13px;
+  }
+
+  .order-subtotal-shipping span:first-child {
+    margin-right: 12px;
+  }
+
+  .order-subtotal-shipping span:last-child {
+    margin-left: 12px;
+  }
+
+  .order-item-image {
+    margin-right: 12px;
+  }
+
+  .order-item-info h3 {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .order-item-info p {
+    font-size: 11px;
+  }
+
+  .order-item-quantity,
+  .order-item-price {
+    font-size: 11px;
   }
 }
