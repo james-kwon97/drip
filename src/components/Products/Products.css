@@ -1,7 +1,6 @@
 /* Global container */
 .products-container {
   padding: 0 38px;
-  max-width: 1400px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -100,7 +99,7 @@
 
 .products-image {
   width: 100%;
-  max-width: 326px;
+  max-width: 350px;
   height: auto;
 }
 
@@ -175,7 +174,7 @@
 
   .products-name,
   .products-price {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .products-name {
