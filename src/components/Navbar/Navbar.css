@@ -249,7 +249,7 @@
     height: 20px;
   }
   .navbar-bg {
-    height: 130px;
+    height: 120px;
   }
   .menu-toggle {
     background: none;
@@ -265,7 +265,7 @@
   }
 
   .navbar-bg .navbar-middle img {
-    margin-top: 0;
+    margin-bottom: 10px;
     width: 85px;
     height: auto;
   }
