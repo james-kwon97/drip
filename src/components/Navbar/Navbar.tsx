@@ -94,7 +94,7 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
               {isMenuOpen ? (
                 <XMarkIcon className="icon icons" />
               ) : (
-                <Bars3Icon className="icon" />
+                <Bars3Icon className="icon menu-icons" />
               )}
             </button>
           )}
@@ -143,10 +143,10 @@ function Navbar({ isEnglish, onLanguageSwitch }: NavbarProps) {
             !isMenuOpen && (
               <div className="icons-container">
                 <a href="/cart" className="navbar-icon">
-                  <ShoppingCartIcon className="icon" />
+                  <ShoppingCartIcon className="icon right-icons" />
                 </a>
                 <a href="#user" className="navbar-icon">
-                  <UserIcon className="icon" />
+                  <UserIcon className="icon right-icons" />
                 </a>
               </div>
             )
