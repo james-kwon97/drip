@@ -159,6 +159,7 @@
   }
   .navbar-left {
     order: 1;
+    margin-bottom: 10px;
   }
   .navbar-middle {
     order: 2;
