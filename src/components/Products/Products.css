@@ -50,7 +50,7 @@
 .products-left-categories,
 .products-right-filters {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   flex-shrink: 0;
 }
 
@@ -142,7 +142,7 @@
 
 @media (max-width: 768px) {
   .products-info {
-    margin-top: 4px;
+    margin-top: 8px;
     margin-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -150,9 +150,34 @@
     align-items: flex-start;
   }
 
+  .products-page-intro p {
+    font-size: 15px;
+  }
+
+  .products-category-button,
+  .products-filter-button,
+  .products-sort-button {
+    font-size: 13px;
+    gap: 2px;
+  }
+
+  .products-left-categories,
+  .products-right-filters {
+    gap: 15px;
+  }
+
+  .products-right-filters {
+    gap: 18px;
+  }
+
+  .products-chevron-icon {
+    width: 14px;
+    height: 14px;
+  }
+
   .products-name,
   .products-price {
-    font-size: 13px;
+    font-size: calc(13px + 1 * ((100vw - 480px) / (768 - 480)));
   }
 
   .products-name {
@@ -168,13 +193,27 @@
 }
 
 @media (max-width: 480px) {
+  .products-page-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .products-page-intro p {
+    max-width: 380px;
+    font-size: 14px;
+  }
+
+  .products-right-filters {
+    gap: 12px;
+  }
+
   .products-info {
     margin-bottom: 30px;
   }
 
   .products-name,
   .products-price {
-    font-size: 11px;
+    font-size: 13px;
   }
 
   .products-name {
