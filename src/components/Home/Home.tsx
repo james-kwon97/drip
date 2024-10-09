@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css'
+import './Home.media.css'
 import arrowIcon from '../../assets/arrow_icon.png'
 import aboutImage from '../../assets/about_image.png'
 import originalImage from '../../assets/original_product.png'
