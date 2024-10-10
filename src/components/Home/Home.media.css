@@ -1,3 +1,5 @@
+/* About us section media queries */
+
 @media (max-width: 1200px) {
   .about-info {
     width: 50%;
@@ -44,5 +46,30 @@
 
   .about-image {
     width: calc(100% - 32px);
+  }
+}
+
+/* Product section media queries */
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 1024px) {
+  .products {
+    margin: 0 16px;
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 480px) {
+  .product {
+    width: calc(50% - 8px); /* 2 items per row */
+    margin-bottom: 20px;
+  }
+
+  .product-details {
+    font-size: 14px;
   }
 }

@@ -97,9 +97,9 @@
 
 /* Products section CSS */
 .products {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 21px;
   margin: 0 38px;
 }
 
@@ -110,19 +110,17 @@
 }
 
 .product-image {
-  width: 441px;
-  height: 427px;
-  object-fit: cover;
+  width: 100%;
+  max-width: 441px;
+  height: auto;
 }
 
-.product-details {
+.product-detail {
   color: #000000cc;
   font-size: 18px;
-  line-height: 140%;
   display: flex;
   justify-content: space-between;
   width: 100%;
-  text-align: left;
   margin-top: 22px;
 }
 
