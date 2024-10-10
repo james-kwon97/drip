@@ -95,7 +95,6 @@
   margin-left: 5px;
 }
 
-/* Products section CSS */
 .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
