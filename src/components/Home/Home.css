@@ -173,7 +173,7 @@
 .process-item {
   display: flex;
   flex-direction: column;
-  max-width: 360px;
+  max-width: 350px;
 }
 
 .process-header {
@@ -188,7 +188,6 @@
 .process-text {
   font-size: 18px;
   color: #000000cc;
-  max-width: 409px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
@@ -196,7 +195,7 @@
 .divider {
   width: 1px;
   background-color: #d0d0d0;
-  height: 115px;
+  height: 110px;
   align-self: flex-start;
   margin-top: 6px;
 }
