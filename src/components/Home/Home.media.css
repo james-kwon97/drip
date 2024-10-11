@@ -154,6 +154,10 @@
     max-width: 200px;
   }
 
+  .process-info {
+    margin-top: 2px;
+  }
+
   .divider {
     height: 88px;
   }
@@ -162,15 +166,32 @@
 @media (max-width: 768px) {
   .process-title {
     font-size: 16px;
+    white-space: nowrap;
   }
 
   .process-info {
     font-size: 14px;
-    margin-top: 1px;
+  }
+
+  .process-detail {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .process-item {
+    width: 100%;
   }
 
   .process-header {
     font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .process-text {
+    font-size: 14px;
+    width: 100%;
+    white-space: nowrap;
+    margin-bottom: 40px;
   }
 
   .divider {
@@ -179,10 +200,6 @@
 }
 
 @media (max-width: 480px) {
-  .process-detail {
-    margin: 20px 10px 0;
-  }
-
   .process-header {
     font-size: 24px;
   }
