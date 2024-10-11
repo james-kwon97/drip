@@ -92,3 +92,89 @@
     margin-bottom: 20px;
   }
 }
+
+/* Process section media queries */
+
+@media (max-width: 1200px) {
+  .process-header {
+    font-size: 36px;
+  }
+
+  .process-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .process-section {
+    margin: 0 16px;
+  }
+
+  .process-title {
+    font-size: 18px;
+  }
+
+  .process-info {
+    font-size: 16px;
+  }
+
+  .process-detail {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .process-item {
+    width: calc(33% - 16px);
+  }
+
+  .process-item:not(:last-child)::after {
+    display: none;
+  }
+
+  .process-header {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-title {
+    font-size: 16px;
+  }
+
+  .process-info {
+    font-size: 14px;
+    margin-top: 1px;
+  }
+
+  .process-detail {
+    margin: 30px 15px 0;
+  }
+
+  .process-item {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .process-header {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .process-text {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-detail {
+    margin: 20px 10px 0;
+  }
+
+  .process-header {
+    font-size: 24px;
+  }
+
+  .process-text {
+    font-size: 12px;
+  }
+}
