@@ -232,7 +232,7 @@
   line-height: 140%;
   margin-top: 0;
   margin-bottom: 0;
-  width: 400px;
+  max-width: 400px;
 }
 
 .locations-link {
@@ -242,7 +242,7 @@
   display: inline-flex;
   align-items: center;
   border-bottom: 1px solid #000000cc;
-  margin-top: 260px;
+  margin-top: calc(427px - 167px);
 }
 
 .arrow-icon {
