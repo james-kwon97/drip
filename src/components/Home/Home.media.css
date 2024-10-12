@@ -118,6 +118,10 @@
     margin: 0 16px;
   }
 
+  .process-image {
+    margin-top: 180px;
+  }
+
   .process-title {
     font-size: 18px;
   }
@@ -152,6 +156,10 @@
 @media (max-width: 900px) {
   .process-item {
     max-width: 200px;
+  }
+
+  .process-image {
+    margin-top: 120px;
   }
 
   .process-info {
@@ -201,10 +209,10 @@
 
 @media (max-width: 480px) {
   .process-header {
-    font-size: 24px;
+    font-size: 26px;
   }
 
   .process-text {
-    font-size: 12px;
+    font-size: 13px;
   }
 }
