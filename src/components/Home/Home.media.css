@@ -208,12 +208,22 @@
 }
 
 @media (max-width: 480px) {
+  .process-content {
+    margin-top: 38px;
+  }
   .process-header {
+    margin-top: -18px;
     font-size: 26px;
+  }
+
+  .process-item {
+    max-width: 480px;
   }
 
   .process-text {
     font-size: 13px;
+    width: calc(100% - 32px);
+    white-space: initial;
   }
 }
 
