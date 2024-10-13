@@ -53,14 +53,10 @@
   padding-right: 38px;
 }
 
-.footer-logo p {
-  font-family: 'EB Garamond', serif;
-  font-size: 64px;
-  font-weight: normal;
+.footer-logo-image {
   width: 112px;
-  height: 39px;
-  margin: 0 0 10px 0;
-  color: black;
+  height: auto;
+  margin-top: 4px;
 }
 
 .language-switch {

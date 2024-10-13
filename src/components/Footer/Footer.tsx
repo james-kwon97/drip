@@ -1,6 +1,7 @@
 import React from 'react'
 import Switch from '../Switch/Switch'
 import './Footer.css'
+import footerImage from '../../assets/black_drip_logo.png'
 
 interface FooterProps {
   isEnglish: boolean
@@ -87,7 +88,11 @@ function Footer({ isEnglish, onLanguageSwitch }: FooterProps) {
           </ul>
         </div>
         <div className="footer-logo">
-          <p>drip:</p>
+          <img
+            src={footerImage}
+            alt="Drip Logo"
+            className="footer-logo-image"
+          />
         </div>
       </div>
     </footer>
