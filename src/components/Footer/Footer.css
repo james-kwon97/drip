@@ -1,16 +1,14 @@
-.footer {
-  height: 236px;
-}
-
 .footer-content {
   display: flex;
   justify-content: space-between;
+  margin-top: 216px;
+  margin-bottom: 20px;
 }
 
 .footer-section {
   font-size: 12px;
   flex: 1.2;
-  margin: 98px 38px 45px 38px;
+  margin: 0 38px;
 }
 
 .footer-menu {
@@ -57,7 +55,7 @@
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  margin-top: 34px;
+  margin-top: -14px;
   padding-right: 38px;
 }
 
