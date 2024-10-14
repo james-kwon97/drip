@@ -121,4 +121,8 @@
   .about-page-content h1 {
     margin-bottom: 30px;
   }
+
+  .about-text-two {
+    margin-bottom: 0;
+  }
 }

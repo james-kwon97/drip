@@ -12,7 +12,7 @@ function Footer({ isEnglish, onLanguageSwitch }: FooterProps) {
   return (
     <footer className="footer">
       <div className="footer-content">
-        {/* Original content - unchanged */}
+        {/* Original footer content  */}
         <div className="footer-section">
           <ul className="footer-menu">
             <li>

@@ -116,7 +116,6 @@
   cursor: pointer;
   width: 48%;
   max-width: 326px;
-  margin-bottom: 216px;
 }
 
 .card-holder-hr,
@@ -494,7 +493,7 @@
 
 @media screen and (max-width: 480px) {
   .checkout-page {
-    padding-top: 170px;
+    padding-top: 150px;
     padding-left: 16px;
     padding-right: 16px;
   }
