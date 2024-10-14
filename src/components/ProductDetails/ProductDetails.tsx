@@ -40,6 +40,7 @@ function ProductDetails({ isEnglish, onLanguageSwitch }: ProductsProps) {
             price: parseFloat(product.price.replace('$', '')),
             quantity: quantity,
             imageUrl: product.imageUrl,
+            cartImageUrl: product.cartImageUrl,
           },
         })
         console.log('Dispatched ADD_TO_CART action')

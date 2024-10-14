@@ -2,18 +2,21 @@
   display: flex;
   justify-content: space-between;
   margin-top: 144px;
+  padding: 0 38px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .locations-left-section {
   flex-basis: 25%;
   display: flex;
   flex-direction: column;
-  margin-left: 38px;
   font-size: 16px;
 }
 
 .locations-title {
   color: #868686;
+  font-size: 16px;
   margin-top: 0;
   margin-bottom: 24px;
 }
@@ -43,7 +46,8 @@
 .locations-divider {
   border: none;
   border-top: 1px solid #cccccc;
-  width: 234px;
+  width: 100%;
+  max-width: 234px;
   margin: 56px 0;
 }
 
@@ -51,20 +55,14 @@
   flex-basis: 75%;
   display: flex;
   justify-content: flex-end;
-  margin-right: 38px;
 }
 
 .locations-image {
-  width: calc(100% - 76px);
+  width: 100%;
   max-width: 980px;
   height: auto;
+  object-fit: contain;
   margin-top: 24px;
-  margin-bottom: 216px;
-  transition: opacity 0.3s ease;
-}
-
-.locations-image.fade {
-  opacity: 0;
 }
 
 /* Active state for the clicked location */
@@ -88,8 +86,127 @@
 }
 
 /* Add hover effect for inactive items */
-.location-item:not(.active) h2:hover,
-.location-item:not(.active) .locations-address:hover,
-.location-item:not(.active) .locations-hour:hover {
+.location-item:not(.active):hover {
   cursor: pointer;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+  .locations-left-section {
+    flex-basis: 30%;
+  }
+
+  .locations-right-section {
+    flex-basis: 70%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .locations-page-container {
+    padding: 0 16px;
+  }
+
+  .location-item h2 {
+    font-size: clamp(24px, 3vw, 32px);
+  }
+
+  .location-item .locations-address,
+  .location-item .locations-hour,
+  .locations-title {
+    font-size: clamp(14px, 1.5vw, 16px);
+  }
+
+  .locations-divider {
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .locations-page-container {
+    flex-direction: column;
+    margin-top: 140px;
+    padding: 0 16px;
+  }
+
+  .locations-left-section,
+  .locations-right-section {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  .locations-title {
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 26px;
+  }
+
+  .location-item h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #000;
+  }
+
+  .location-item .locations-address {
+    font-size: 15px;
+    color: #000000cc;
+  }
+
+  .location-item .locations-hour {
+    font-size: 15px;
+    color: #868686;
+  }
+
+  .locations-divider {
+    width: 100%;
+    max-width: none;
+    margin: 30px 0;
+  }
+
+  .locations-image {
+    width: 100%;
+    margin: 30px 0 40px;
+  }
+
+  .locations-right-section {
+    display: none;
+  }
+
+  /* Override inactive styles for tablet and mobile */
+  .location-item:not(.active) h2,
+  .location-item:not(.active) .locations-address {
+    color: inherit;
+  }
+
+  .location-item:not(.active) .locations-hour {
+    color: #868686;
+  }
+
+  /* Remove hover effect for tablet and mobile */
+  .location-item:not(.active):hover {
+    cursor: default;
+  }
+}
+
+/* Small Mobile styles */
+@media screen and (max-width: 480px) {
+  .locations-page-container {
+    margin-top: 120px;
+  }
+
+  .location-item h2 {
+    font-size: 24px;
+  }
+
+  .location-item .locations-address,
+  .location-item .locations-hour {
+    font-size: 14px;
+  }
+
+  .locations-divider {
+    margin: 25px 0;
+  }
+
+  .locations-image {
+    margin: 25px 0 30px;
+  }
 }

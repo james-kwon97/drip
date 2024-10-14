@@ -1,6 +1,7 @@
 import React from 'react'
 import Switch from '../Switch/Switch'
 import './Footer.css'
+import footerImage from '../../assets/black_drip_logo.png'
 
 interface FooterProps {
   isEnglish: boolean
@@ -11,6 +12,7 @@ function Footer({ isEnglish, onLanguageSwitch }: FooterProps) {
   return (
     <footer className="footer">
       <div className="footer-content">
+        {/* Original footer content  */}
         <div className="footer-section">
           <ul className="footer-menu">
             <li>
@@ -87,7 +89,68 @@ function Footer({ isEnglish, onLanguageSwitch }: FooterProps) {
           </ul>
         </div>
         <div className="footer-logo">
-          <p>drip:</p>
+          <img
+            src={footerImage}
+            alt="Drip Logo"
+            className="footer-logo-image"
+          />
+        </div>
+
+        {/* New mobile-specific content */}
+        <div className="footer-mobile">
+          <div className="footer-column">
+            <ul className="footer-menu">
+              <li>
+                <a href="/about">{isEnglish ? 'Mō mātou' : 'About Us'}</a>
+              </li>
+              <li>
+                <a href="/products">{isEnglish ? 'Toa' : 'Shop'}</a>
+              </li>
+              <li>
+                <a href="/locations">{isEnglish ? 'Wāhi' : 'Locations'}</a>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-column">
+            <ul className="footer-menu">
+              <li>
+                <a href="#shipping">{isEnglish ? 'Tukunga' : 'Shipping'}</a>
+              </li>
+              <li>
+                <a href="#terms-of-use">
+                  {isEnglish ? 'Ngā Tikanga' : 'Terms of Use'}
+                </a>
+              </li>
+              <li>
+                <a href="#privacy-policy">
+                  {isEnglish ? 'Kaupapahere Tūmataiti' : 'Privacy Policy'}
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-column">
+            <ul className="footer-contact">
+              <li>
+                <a className="contact-title">
+                  {isEnglish ? 'WHAKAPĀ' : 'CONTACTS'}
+                </a>
+              </li>
+              <li>
+                <a href="mailto:info@drip.co.nz" target="_blank">
+                  info@drip.co.nz
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/drip__nz"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @drip_nz
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>

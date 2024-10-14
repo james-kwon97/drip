@@ -154,7 +154,7 @@ function Checkout({ isEnglish }: CheckoutProps) {
             {cart.map((item) => (
               <div key={item.id} className="order-item">
                 <img
-                  src={item.imageUrl}
+                  src={item.cartImageUrl}
                   alt={item.name}
                   className="order-item-image"
                 />
@@ -199,9 +199,10 @@ function Checkout({ isEnglish }: CheckoutProps) {
           ? 'Whakatau ota'
           : 'Place order'}{' '}
         — $
-        {cart
-          .reduce((total, item) => total + item.price * item.quantity, 0)
-          .toFixed(2)}
+        {(
+          cart.reduce((total, item) => total + item.price * item.quantity, 0) +
+          10
+        ).toFixed(2)}
       </button>
     </div>
   )

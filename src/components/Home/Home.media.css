@@ -1,0 +1,320 @@
+/* About us section media queries */
+
+@media (max-width: 1200px) {
+  .about-info {
+    width: 50%;
+  }
+
+  .about-image {
+    width: calc(65% - 38px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-section {
+    padding: 0 16px;
+  }
+
+  .about {
+    font-size: 18px;
+  }
+
+  .about-info,
+  .about-link {
+    font-size: 16px;
+  }
+
+  .about-info {
+    width: 55%;
+    margin-left: 16px;
+  }
+
+  .about-image {
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    font-size: 16px;
+  }
+
+  .about-info,
+  .about-link {
+    font-size: 14px;
+  }
+
+  .about-image {
+    width: calc(100% - 32px);
+  }
+}
+
+/* Product section media queries */
+
+@media (max-width: 1024px) {
+  .product-header {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .product-title {
+    font-size: 18px;
+  }
+
+  .product-link {
+    font-size: 16px;
+  }
+
+  .products {
+    margin: 0 16px;
+  }
+
+  .product-detail {
+    font-size: calc(13px + 3 * ((100vw - 480px) / (1024 - 480)));
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-detail {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-detail {
+    font-size: 13px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Process section media queries */
+
+@media (max-width: 1200px) {
+  .process-item {
+    max-width: 280px;
+  }
+
+  .process-header {
+    font-size: 36px;
+  }
+
+  .process-text {
+    font-size: 16px;
+  }
+
+  .divider {
+    height: 105px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .process-section {
+    margin: 0 16px;
+  }
+
+  .process-image {
+    margin-top: 180px;
+  }
+
+  .process-title {
+    font-size: 18px;
+  }
+
+  .process-info {
+    font-size: 16px;
+  }
+
+  .process-detail {
+    margin-left: 16px;
+    margin-right: 16px;
+    width: calc(100% - 32px);
+  }
+
+  .process-item {
+    max-width: 270px;
+  }
+
+  .process-header {
+    font-size: 28px;
+  }
+
+  .process-text {
+    font-size: 14px;
+  }
+
+  .divider {
+    height: 88px;
+  }
+}
+
+@media (max-width: 900px) {
+  .process-item {
+    max-width: 200px;
+  }
+
+  .process-image {
+    margin-top: 120px;
+  }
+
+  .process-info {
+    margin-top: 2px;
+  }
+
+  .divider {
+    height: 88px;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-title {
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
+  .process-info {
+    font-size: 14px;
+  }
+
+  .process-detail {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .process-item {
+    width: 100%;
+  }
+
+  .process-header {
+    font-size: 24px;
+    margin-bottom: 18px;
+  }
+
+  .process-text {
+    font-size: 14px;
+    width: 100%;
+    white-space: nowrap;
+    margin-bottom: 40px;
+  }
+
+  .divider {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-content {
+    margin-top: 38px;
+  }
+  .process-header {
+    margin-top: -18px;
+    font-size: 26px;
+  }
+
+  .process-item {
+    max-width: 480px;
+  }
+
+  .process-text {
+    font-size: 13px;
+    width: calc(100% - 32px);
+    white-space: initial;
+  }
+}
+
+/* Locations section media queries */
+
+@media (max-width: 1200px) {
+  .location-section {
+    margin-top: 170px;
+  }
+  .location-image {
+    width: 60%;
+    height: auto;
+    margin-right: 80px;
+  }
+
+  .locations-link {
+    margin-top: calc(60vw * 0.5 - 167px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .location-section {
+    margin: 120px 30px 80px 16px;
+  }
+
+  .location-image {
+    width: 55%;
+    margin-right: 60px;
+  }
+
+  .location-content h2 {
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+
+  .location-content p {
+    font-size: 16px;
+  }
+
+  .locations-link {
+    margin-top: calc(55vw * 0.58 - 167px);
+  }
+}
+
+@media (max-width: 768px) {
+  .location-section {
+    flex-direction: column;
+    margin: 80px 20px 60px 20px;
+  }
+
+  .location-image {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .location-content {
+    width: 100%;
+  }
+
+  .location-content p {
+    max-width: none;
+  }
+
+  .locations-link {
+    font-size: 16px;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .location-section {
+    margin: 60px 15px 40px 15px;
+  }
+
+  .location-content h2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .location-content p {
+    font-size: 14px;
+  }
+
+  .locations-link {
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+  .arrow-icon {
+    width: 24px;
+    height: 4px;
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react'
 import './Home.css'
+import './Home.media.css'
 import arrowIcon from '../../assets/arrow_icon.png'
 import aboutImage from '../../assets/about_image.png'
 import originalImage from '../../assets/original_product.png'
@@ -55,7 +56,7 @@ function Home({ isEnglish }: HomeProps) {
                 />
               </a>
 
-              <div className="product-details">
+              <div className="product-detail">
                 <span className="product-name">drip: original</span>
                 <span className="product-price">$34.99</span>
               </div>
@@ -68,7 +69,7 @@ function Home({ isEnglish }: HomeProps) {
                   className="product-image"
                 />
               </a>
-              <div className="product-details">
+              <div className="product-detail">
                 <span className="product-name">drip: hazelnut</span>
                 <span className="product-price">$34.99</span>
               </div>
@@ -81,7 +82,7 @@ function Home({ isEnglish }: HomeProps) {
                   className="product-image"
                 />
               </a>
-              <div className="product-details">
+              <div className="product-detail">
                 <span className="product-name">drip: mug</span>
                 <span className="product-price">$24.99</span>
               </div>
@@ -107,7 +108,7 @@ function Home({ isEnglish }: HomeProps) {
           </div>
         </div>
 
-        <div className="process-details">
+        <div className="process-detail">
           <div className="process-item">
             <h3 className="process-header">
               {isEnglish ? 'Hou' : 'Freshness'}

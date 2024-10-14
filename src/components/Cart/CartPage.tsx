@@ -53,25 +53,22 @@ export default function CartPage({ isEnglish }: CartPageProps) {
   return (
     <div className="cart-page">
       <div className="cart-headers">
-        <span className="cart-header">Your cart</span>
-        <span>Product</span>
-        <span>Quantity</span>
-        <span>Price</span>
-        <span></span>
+        <span className="cart-header cart-header-main">Your cart</span>
+        <span className="cart-header cart-header-product">Product</span>
+        <span className="cart-header cart-header-quantity">Quantity</span>
+        <span className="cart-header cart-header-price">Price</span>
+        <span className="cart-header cart-header-remove"></span>
       </div>
       <div className="cart-items">
         {cart.map((item) => (
           <div key={item.id} className="cart-item">
-            <div className="product-info">
-              <img
-                src={item.imageUrl}
-                alt={item.name}
-                className="cart-item-image"
-              />
-              <div className="product-details">
-                <h2>{item.name}</h2>
-                <p>{item.info}</p>
-              </div>
+            <div className="cart-item-image">
+              <img src={item.cartImageUrl} alt={item.name} />
+            </div>
+
+            <div className="product-details">
+              <h2>{item.name}</h2>
+              <p>{item.info}</p>
             </div>
             <div className="cart-quantity-wrapper">
               <button

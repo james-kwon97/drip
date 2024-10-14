@@ -1,7 +1,6 @@
 .checkout-page {
-  max-width: 1400px;
-  margin: 0 38px;
-  padding-top: 164px;
+  margin: 0 auto;
+  padding: 164px 38px 0;
 }
 
 .checkout-page h1 {
@@ -11,7 +10,8 @@
 }
 
 .checkout-line {
-  width: 672px;
+  width: 52%;
+  max-width: 672px;
   height: 0;
   border: none;
   border-top: 1px solid #f0f0f0;
@@ -24,7 +24,8 @@
 }
 
 .checkout-form {
-  width: 672px;
+  width: 55%;
+  max-width: 672px;
 }
 
 .checkout-tabs {
@@ -58,7 +59,7 @@
 }
 
 .form-field {
-  width: 326px;
+  width: 48%;
   position: relative;
 }
 
@@ -74,7 +75,7 @@
 
 .form-field input {
   width: 100%;
-  height: 38px;
+  height: 54px;
   padding: 20px 0 0;
   border: none;
   border-bottom: 1px solid #ccc;
@@ -89,7 +90,7 @@
 
 .phone-input {
   display: flex;
-  width: 326px;
+  width: 100%;
 }
 
 .phone-input select {
@@ -113,8 +114,8 @@
   padding: 14px 20px;
   font-size: 16px;
   cursor: pointer;
-  width: 326px;
-  margin-bottom: 216px;
+  width: 48%;
+  max-width: 326px;
 }
 
 .card-holder-hr,
@@ -126,7 +127,6 @@
 .payment-form .form-row {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 18px;
 }
 
 .payment-form .form-field {
@@ -159,16 +159,16 @@
 /* Specific widths for payment form fields */
 .payment-form .form-field.card-number,
 .payment-form .form-field.card-holder {
-  width: 326px;
+  width: 48%;
 }
 
 .payment-form .form-field.month,
 .payment-form .form-field.year {
-  width: 157px;
+  width: 23%;
 }
 
 .payment-form .form-field.cvc {
-  width: 326px;
+  width: 48%;
 }
 
 /* Gaps between fields */
@@ -185,10 +185,10 @@
 }
 
 /* Order summary section css */
-
 .order-summary {
-  width: 557px;
-  margin-top: -58px;
+  width: 40%;
+  max-width: 557px;
+  margin-top: -63px;
   margin-left: 20px;
 }
 
@@ -260,7 +260,7 @@
   color: #000000cc;
   min-width: 60px;
   text-align: right;
-  margin-left: 100px;
+  margin-left: 90px;
 }
 
 .order-summary-footer {
@@ -283,4 +283,223 @@
 
 .order-subtotal-shipping span:last-child {
   margin-left: 14px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1400px) {
+  .checkout-form {
+    width: 55%;
+  }
+
+  .order-summary {
+    width: 40%;
+  }
+
+  .checkout-line,
+  .order-items,
+  .order-summary-footer {
+    border-top-width: 0.5px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .checkout-form {
+    width: 52%;
+  }
+
+  .order-summary {
+    width: 43%;
+  }
+
+  .order-item-price {
+    margin-left: 35px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .checkout-page {
+    padding: 164px 16px 0;
+  }
+
+  .checkout-form {
+    width: 50%;
+  }
+
+  .checkout-line {
+    width: 50%;
+  }
+
+  .order-summary {
+    width: 45%;
+  }
+
+  .order-item-price {
+    margin-left: 15px;
+  }
+
+  .form-field {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .payment-form .form-field.card-number,
+  .payment-form .form-field.card-holder,
+  .payment-form .form-field.cvc {
+    width: 100%;
+  }
+
+  .payment-form .form-field.month,
+  .payment-form .form-field.year {
+    width: 48%;
+  }
+
+  .payment-form .form-row {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .payment-form .form-field.month,
+  .payment-form .form-field.year,
+  .payment-form .form-field.cvc {
+    margin-left: 0;
+  }
+
+  .payment-form .form-field.year {
+    margin-left: 4%;
+  }
+
+  .card-holder-hr,
+  .postal-code-hr {
+    margin-bottom: 0;
+  }
+
+  .continue-button {
+    width: 50%;
+    max-width: none;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .order-item-price {
+    margin-left: 0;
+  }
+  .checkout-page h1 {
+    font-size: 14px;
+  }
+
+  .checkout-tabs button {
+    font-size: 13px;
+  }
+
+  .form-field label,
+  .payment-form .form-field label {
+    font-size: 11px;
+  }
+
+  .order-summary-header {
+    margin-top: 4px;
+  }
+
+  .order-summary-header h2,
+  .order-summary-header .order-total {
+    font-size: 14px;
+  }
+
+  .order-summary-footer,
+  .order-summary-footer .order-subtotal-shipping,
+  .order-summary-footer .order-subtotal-shipping span {
+    font-size: 13px;
+  }
+
+  .order-subtotal-shipping span:first-child {
+    margin-right: 12px;
+  }
+
+  .order-subtotal-shipping span:last-child {
+    margin-left: 12px;
+  }
+
+  .order-item-image {
+    margin-right: 12px;
+  }
+
+  .order-item-info h3 {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  .order-item-info p {
+    font-size: 11px;
+  }
+
+  .order-item-quantity,
+  .order-item-price {
+    font-size: 11px;
+  }
+
+  .continue-button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .checkout-page {
+    padding-top: 160px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .checkout-content {
+    flex-direction: column;
+  }
+
+  .checkout-form {
+    width: 100%;
+    max-width: none;
+  }
+
+  .checkout-line {
+    width: 100%;
+  }
+
+  .order-summary {
+    display: none;
+  }
+
+  .form-row {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .form-field {
+    width: calc(50% - 14px);
+  }
+
+  .continue-button {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .form-field input {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .checkout-page {
+    padding-top: 150px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .continue-button {
+    width: 100%;
+    margin-top: 60px;
+  }
 }

@@ -54,27 +54,28 @@
   padding: 14px 20px;
   text-decoration: none;
   margin-top: 62px;
-  margin-bottom: 131px;
+  margin-bottom: 64px;
 }
 
 .home-button:hover {
   opacity: 0.9;
 }
 
-/* Media queries for responsive design: */
+/* Media queries for order-confirmation page */
 
 @media screen and (max-width: 1024px) {
-  .order-content {
-    padding-top: 180px;
-  }
   .order-details {
     max-width: 90%;
+  }
+
+  .home-button {
+    margin-bottom: 90px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .order-content {
-    padding-top: 120px;
+    padding-top: 230px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -95,7 +96,7 @@
     width: 180px;
     font-size: 14px;
     margin-top: 40px;
-    margin-bottom: 80px;
+    margin-bottom: 150px;
   }
 }
 
@@ -117,6 +118,6 @@
     width: 160px;
     font-size: 13px;
     margin-top: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 145px;
   }
 }

@@ -7,6 +7,7 @@ export type CartItem = {
   price: number
   quantity: number
   imageUrl: string
+  cartImageUrl: string
 }
 
 export type CartAction =
