@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { PlusIcon, MinusIcon } from '@heroicons/react/24/outline'
 import Navbar from '../Navbar/Navbar'

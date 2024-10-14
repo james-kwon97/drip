@@ -1,4 +1,3 @@
-import React from 'react'
 import { useCart } from '../Cart/CartContext'
 import { useNavigate } from 'react-router-dom'
 import { XMarkIcon, PlusIcon, MinusIcon } from '@heroicons/react/24/outline'

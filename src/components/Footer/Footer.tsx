@@ -1,4 +1,3 @@
-import React from 'react'
 import Switch from '../Switch/Switch'
 import './Footer.css'
 import footerImage from '../../assets/black_drip_logo.png'

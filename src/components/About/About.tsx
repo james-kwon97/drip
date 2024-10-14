@@ -1,4 +1,3 @@
-import React from 'react'
 import Navbar from '../Navbar/Navbar'
 import './About.css'
 import aboutImage from '../../assets/about_page.png'

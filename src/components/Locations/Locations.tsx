@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from '../Navbar/Navbar'
 import './Locations.css'
 import LocationImageAuckland from '../../assets/location_image.png'

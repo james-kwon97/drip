@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './HeroSection.css'
 import mouseGif from '../../assets/mouse_gif.gif'
 

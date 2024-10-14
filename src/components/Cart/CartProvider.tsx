@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from 'react'
+import { useReducer, useEffect } from 'react'
 import { CartContext, cartReducer, CartAction } from './CartContext'
 
 type CartProviderProps = {
