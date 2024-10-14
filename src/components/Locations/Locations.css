@@ -124,32 +124,9 @@
 
 @media screen and (max-width: 768px) {
   .locations-page-container {
-    margin-top: 140px;
-  }
-
-  .locations-left-section {
-    flex-basis: 35%;
-  }
-
-  .locations-right-section {
-    flex-basis: 65%;
-  }
-
-  .locations-divider {
-    margin: 40px 0;
-    max-width: 180px;
-  }
-
-  .locations-image {
-    margin-bottom: 100px;
-  }
-}
-
-/* Mobile styles */
-@media screen and (max-width: 480px) {
-  .locations-page-container {
     flex-direction: column;
-    margin-top: 120px;
+    margin-top: 140px;
+    padding: 0 16px;
   }
 
   .locations-left-section,
@@ -169,19 +146,19 @@
   }
 
   .location-item h2 {
-    font-size: 24px;
+    font-size: 28px;
     margin-bottom: 20px;
-    color: #000; /* Ensure all location titles are black */
+    color: #000;
   }
 
   .location-item .locations-address {
-    font-size: 14px;
-    color: #000000cc; /* Ensure all addresses are visible */
+    font-size: 15px;
+    color: #000000cc;
   }
 
   .location-item .locations-hour {
-    font-size: 14px;
-    color: #868686; /* Ensure all hours are visible */
+    font-size: 15px;
+    color: #868686;
   }
 
   .locations-divider {
@@ -199,18 +176,42 @@
     display: none;
   }
 
-  /* Override inactive styles for mobile */
+  /* Override inactive styles for tablet and mobile */
   .location-item:not(.active) h2,
   .location-item:not(.active) .locations-address {
-    color: inherit; /* This will use the colors defined above */
+    color: inherit;
   }
 
   .location-item:not(.active) .locations-hour {
     color: #868686;
   }
 
-  /* Remove hover effect for mobile */
+  /* Remove hover effect for tablet and mobile */
   .location-item:not(.active):hover {
     cursor: default;
+  }
+}
+
+/* Small Mobile styles */
+@media screen and (max-width: 480px) {
+  .locations-page-container {
+    margin-top: 120px;
+  }
+
+  .location-item h2 {
+    font-size: 24px;
+  }
+
+  .location-item .locations-address,
+  .location-item .locations-hour {
+    font-size: 14px;
+  }
+
+  .locations-divider {
+    margin: 25px 0;
+  }
+
+  .locations-image {
+    margin: 25px 0 30px;
   }
 }
