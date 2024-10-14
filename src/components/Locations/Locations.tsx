@@ -11,11 +11,13 @@ interface LocationsProps {
 
 function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
   const [activeLocation, setActiveLocation] = useState<string>('auckland')
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480)
+  const [isMobileOrTablet, setIsMobileOrTablet] = useState(
+    window.innerWidth <= 768
+  )
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 480)
+      setIsMobileOrTablet(window.innerWidth <= 768)
     }
 
     window.addEventListener('resize', handleResize)
@@ -49,7 +51,7 @@ function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
             <p className="locations-hour">
               {isEnglish ? 'Rāhoroi-Rātapu 7:00-14:00' : 'Sat-Sun 7:00-14:00'}
             </p>
-            {isMobile && (
+            {isMobileOrTablet && (
               <img
                 src={LocationImageAuckland}
                 alt="Auckland Location"
@@ -73,7 +75,7 @@ function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
             <p className="locations-hour">
               {isEnglish ? 'Rāhoroi-Rātapu 7:00-14:00' : 'Sat-Sun 7:00-14:00'}
             </p>
-            {isMobile && (
+            {isMobileOrTablet && (
               <img
                 src={LocationImageQueenstown}
                 alt="Queenstown Location"
@@ -82,7 +84,7 @@ function Locations({ isEnglish, onLanguageSwitch }: LocationsProps) {
             )}
           </div>
         </div>
-        {!isMobile && (
+        {!isMobileOrTablet && (
           <div className="locations-right-section">
             <img
               src={
