@@ -60,7 +60,7 @@
   font-size: 24px;
   font-family: 'EB garamond', serif;
   font-weight: 400;
-  margin: -22px 0 11px 0;
+  margin: -10px 0 11px 0;
 }
 
 .product-details p {
@@ -223,7 +223,8 @@
 
   .product-details h2 {
     font-size: 19px;
-    margin-bottom: 0;
+    margin-top: -5px;
+    margin-bottom: 4px;
   }
 
   .item-price {
@@ -311,6 +312,7 @@
   }
 
   .cart-headers {
+    margin-top: 120px;
     padding-bottom: 0;
     border-bottom: 1px solid #e0e0e0;
   }
@@ -352,7 +354,7 @@
 
   .product-details h2 {
     font-size: 18px;
-    margin-top: -26px;
+    margin-top: -8px;
   }
 
   .product-details p {
