@@ -118,10 +118,6 @@
     padding-right: 8px;
     box-sizing: border-box;
   }
-
-  .language-switch {
-    margin-right: 8px;
-  }
 }
 
 @media (max-width: 768px) {

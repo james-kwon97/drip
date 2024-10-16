@@ -173,6 +173,14 @@
   margin-top: 14px;
 }
 
+.language-switch {
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
 .menu-language {
   font-size: 16px;
   margin-left: 10px;
@@ -201,10 +209,6 @@
   .navbar-left,
   .navbar-right {
     transform: scale(0.9);
-  }
-
-  .language-switch {
-    margin-right: 0px;
   }
 }
 
