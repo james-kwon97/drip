@@ -215,8 +215,8 @@
 
 @media screen and (max-width: 480px) {
   .navbar {
-    height: 120px;
-    padding: 55px 16px 0 16px;
+    height: 100px;
+    padding: 0 16px 0 16px;
     align-items: center;
   }
   .navbar-left,
