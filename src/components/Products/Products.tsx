@@ -1,3 +1,4 @@
+import React, { useState } from 'react'
 import Navbar from '../Navbar/Navbar'
 import './Products.css'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
@@ -13,7 +14,74 @@ interface ProductsProps {
   onLanguageSwitch: () => void
 }
 
+interface Product {
+  id: number
+  name: string
+  price: string
+  image: string
+  href: string
+  category: 'coffee' | 'extras'
+}
+
 function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
+  const [activeCategory, setActiveCategory] = useState('all')
+
+  const products: Product[] = [
+    {
+      id: 1,
+      name: 'drip: original',
+      price: '$34.99',
+      image: originalProduct,
+      href: '/products/original',
+      category: 'coffee',
+    },
+    {
+      id: 2,
+      name: 'drip: hazelnut',
+      price: '$34.99',
+      image: hazelnutProduct,
+      href: '/products/hazelnut',
+      category: 'coffee',
+    },
+    {
+      id: 3,
+      name: 'drip: chocolate',
+      price: '$34.99',
+      image: chocolateProduct,
+      href: '/products/chocolate',
+      category: 'coffee',
+    },
+    {
+      id: 4,
+      name: 'drip: original decaf',
+      price: '$34.99',
+      image: originalDecafProduct,
+      href: '/products/original-decaf',
+      category: 'coffee',
+    },
+    {
+      id: 5,
+      name: 'drip: mug',
+      price: '$24.99',
+      image: mugCupProduct,
+      href: '/products/mug-cup',
+      category: 'extras',
+    },
+    {
+      id: 6,
+      name: 'drip: disposable cups',
+      price: '$29.99',
+      image: disposableCupProduct,
+      href: '/products/disposable-cups',
+      category: 'extras',
+    },
+  ]
+
+  const filteredProducts = products.filter((product) => {
+    if (activeCategory === 'all') return true
+    return product.category === activeCategory
+  })
+
   return (
     <div>
       <Navbar isEnglish={isEnglish} onLanguageSwitch={onLanguageSwitch} />
@@ -29,13 +97,28 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
 
         <div className="products-page-categories">
           <div className="products-left-categories">
-            <button className="products-category-button">
+            <button
+              className={`products-category-button ${
+                activeCategory === 'all' ? 'active' : ''
+              }`}
+              onClick={() => setActiveCategory('all')}
+            >
               {isEnglish ? 'Katoa' : 'All'}
             </button>
-            <button className="products-category-button">
+            <button
+              className={`products-category-button ${
+                activeCategory === 'coffee' ? 'active' : ''
+              }`}
+              onClick={() => setActiveCategory('coffee')}
+            >
               {isEnglish ? 'Kawhe' : 'Coffee'}
             </button>
-            <button className="products-category-button">
+            <button
+              className={`products-category-button ${
+                activeCategory === 'extras' ? 'active' : ''
+              }`}
+              onClick={() => setActiveCategory('extras')}
+            >
               {isEnglish ? 'Tāpiri' : 'Extras'}
             </button>
           </div>
@@ -53,85 +136,26 @@ function Products({ isEnglish, onLanguageSwitch }: ProductsProps) {
         </div>
 
         <div className="products-page-grid">
-          <div className="products-item">
-            <a href="/products/original">
-              <img
-                src={originalProduct}
-                alt="Product 1"
-                className="products-image"
-              />
-            </a>
-
-            <div className="products-info">
-              <span className="products-name">drip: original</span>
-              <span className="products-price">$34.99</span>
+          {filteredProducts.map((product, index) => (
+            <div
+              key={product.id}
+              className={`products-item ${
+                index > 3 ? 'products-bottom-row' : ''
+              }`}
+            >
+              <a href={product.href}>
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="products-image"
+                />
+              </a>
+              <div className="products-info">
+                <span className="products-name">{product.name}</span>
+                <span className="products-price">{product.price}</span>
+              </div>
             </div>
-          </div>
-          <div className="products-item">
-            <a href="/products/hazelnut">
-              <img
-                src={hazelnutProduct}
-                alt="Product 2"
-                className="products-image"
-              />
-            </a>
-            <div className="products-info">
-              <span className="products-name">drip: hazelnut</span>
-              <span className="products-price">$34.99</span>
-            </div>
-          </div>
-          <div className="products-item">
-            <a href="/products/chocolate">
-              <img
-                src={chocolateProduct}
-                alt="Product 3"
-                className="products-image"
-              />
-            </a>
-            <div className="products-info">
-              <span className="products-name">drip: chocolate</span>
-              <span className="products-price">$34.99</span>
-            </div>
-          </div>
-          <div className="products-item">
-            <a href="/products/original-decaf">
-              <img
-                src={originalDecafProduct}
-                alt="Product 4"
-                className="products-image"
-              />
-            </a>
-            <div className="products-info">
-              <span className="products-name">drip: original decaf</span>
-              <span className="products-price">$34.99 </span>
-            </div>
-          </div>
-          <div className="products-item products-bottom-row">
-            <a href="/products/mug-cup">
-              <img
-                src={mugCupProduct}
-                alt="Product 5"
-                className="products-image"
-              />
-            </a>
-            <div className="products-info">
-              <span className="products-name">drip: mug</span>
-              <span className="products-price">$24.99</span>
-            </div>
-          </div>
-          <div className="products-item products-bottom-row">
-            <a href="/products/disposable-cups">
-              <img
-                src={disposableCupProduct}
-                alt="Product 6"
-                className="products-image"
-              />
-            </a>
-            <div className="products-info">
-              <span className="products-name">drip: disposable cups</span>
-              <span className="products-price">$29.99</span>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
