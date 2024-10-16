@@ -216,7 +216,7 @@
 @media screen and (max-width: 480px) {
   .navbar {
     height: 100px;
-    padding: 0 16px 0 16px;
+    padding: 0 16px;
     align-items: center;
   }
   .navbar-left,
@@ -228,7 +228,12 @@
   }
   .navbar-left {
     order: 1;
-    margin-bottom: 10px;
+    margin-top: 4px;
+  }
+
+  .icons-container {
+    margin-top: 6px;
+    margin-bottom: 0;
   }
 
   .menu-icons {
@@ -248,9 +253,11 @@
     width: 20px;
     height: 20px;
   }
+
   .navbar-bg {
-    height: 120px;
+    height: 80px;
   }
+
   .menu-toggle {
     background: none;
     border: none;
@@ -265,9 +272,8 @@
   }
 
   .navbar-bg .navbar-middle img {
-    margin-bottom: 10px;
+    margin-top: 5px;
     width: 85px;
-    height: auto;
   }
 }
 
