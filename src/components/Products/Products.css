@@ -76,6 +76,15 @@
   white-space: nowrap;
 }
 
+.products-category-button {
+  color: #adadad;
+  transition: color 0.3s ease;
+}
+
+.products-category-button.active {
+  color: black;
+}
+
 .products-chevron-icon {
   width: 16px;
   height: 16px;
