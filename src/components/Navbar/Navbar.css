@@ -202,6 +202,10 @@
   .navbar-right {
     transform: scale(0.9);
   }
+
+  .language-switch {
+    margin-right: 0px;
+  }
 }
 
 @media screen and (max-width: 768px) {
