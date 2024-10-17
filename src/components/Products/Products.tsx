@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import Navbar from '../Navbar/Navbar'
 import './Products.css'
 import { ChevronDownIcon } from '@heroicons/react/24/solid'
